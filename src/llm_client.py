@@ -217,6 +217,65 @@ class OpenAIClient(LLMClient):
 
 
 # ---------------------------------------------------------------------------
+# Groq client (Ultra-fast, uses Groq OpenAI-compatible API)
+# ---------------------------------------------------------------------------
+
+class GroqClient(LLMClient):
+    """
+    Groq API client. Uses standard library urllib.request to call
+    Groq's OpenAI-compatible completions endpoint without requiring external SDKs.
+    """
+
+    def __init__(self, api_key: str, model: str = "llama-3.3-70b-versatile", **kwargs):
+        kwargs.setdefault("request_delay", 1.0)
+        super().__init__(model=model, **kwargs)
+        self.provider = "groq"
+        self.api_key = api_key
+        logger.info(f"Groq client initialized: model={model}")
+
+    def _call_api(self, prompt: str) -> str:
+        import urllib.request
+        import urllib.error
+
+        url = "https://api.groq.com/openai/v1/chat/completions"
+        payload = {
+            "model": self.model,
+            "messages": [
+                {
+                    "role": "system",
+                    "content": "You are an expert microdrama screenplay analyst. Always respond in valid JSON format only."
+                },
+                {"role": "user", "content": prompt}
+            ],
+            "temperature": self.temperature,
+            "response_format": {"type": "json_object"},
+        }
+        data = json.dumps(payload).encode("utf-8")
+        req = urllib.request.Request(
+            url,
+            data=data,
+            headers={
+                "Content-Type": "application/json",
+                "Authorization": f"Bearer {self.api_key}",
+                "User-Agent": "Kuku-Promo-Discovery/1.0",
+            },
+            method="POST",
+        )
+
+        try:
+            with urllib.request.urlopen(req, timeout=30) as resp:
+                res_data = json.loads(resp.read().decode("utf-8"))
+                return res_data["choices"][0]["message"]["content"] or ""
+        except urllib.error.HTTPError as e:
+            err_body = e.read().decode("utf-8", errors="replace")
+            logger.error(f"Groq API HTTP Error {e.code}: {err_body}")
+            raise RuntimeError(f"Groq API Error ({e.code}): {err_body}")
+        except Exception as e:
+            logger.error(f"Groq API Request failed: {e}")
+            raise
+
+
+# ---------------------------------------------------------------------------
 # Mock client (for testing without API key)
 # ---------------------------------------------------------------------------
 
@@ -318,11 +377,20 @@ def create_llm_client(config: dict, cache_dir: Optional[Path] = None) -> LLMClie
             )
         return OpenAIClient(api_key=api_key, model=model or "gpt-4o-mini", **kwargs)
 
+    elif provider == "groq":
+        api_key = os.environ.get("GROQ_API_KEY", "")
+        if not api_key:
+            raise ValueError(
+                "GROQ_API_KEY environment variable not set. "
+                "Add it to your .env file or set provider=mock in config.yaml."
+            )
+        return GroqClient(api_key=api_key, model=model or "llama-3.3-70b-versatile", **kwargs)
+
     elif provider == "mock":
         return MockLLMClient(**kwargs)
 
     else:
-        raise ValueError(f"Unknown LLM provider: '{provider}'. Choose: gemini | openai | mock")
+        raise ValueError(f"Unknown LLM provider: '{provider}'. Choose: gemini | openai | groq | mock")
 
 
 # ---------------------------------------------------------------------------

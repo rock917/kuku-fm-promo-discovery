@@ -368,13 +368,14 @@ def main():
         Examples:
           python src/pipeline.py                     # run with config.yaml defaults
           python src/pipeline.py --provider mock     # no API key needed (testing)
+          python src/pipeline.py --provider groq     # Groq API (needs GROQ_API_KEY in .env)
           python src/pipeline.py --provider gemini   # real Gemini API (needs GEMINI_API_KEY in .env)
           python src/pipeline.py --top-n 10          # keep top 10 promos
           python src/pipeline.py --episodes 1 10 36  # specific episodes only
           python src/pipeline.py --verbose            # detailed logging
         """),
     )
-    parser.add_argument("--provider", choices=["gemini", "openai", "mock"],
+    parser.add_argument("--provider", choices=["gemini", "openai", "groq", "mock"],
                         help="Override LLM provider from config.yaml")
     parser.add_argument("--model", help="Override LLM model name")
     parser.add_argument("--top-n", type=int, default=None,

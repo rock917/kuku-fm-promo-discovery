@@ -11,11 +11,11 @@ paths:
   cache_dir: "outputs/cache"
 
 llm:
-  # Provider: "gemini" | "openai" | "mock"
+  # Provider: "groq" | "gemini" | "openai" | "mock"
   # Set to "mock" to run the full pipeline without any API key (for testing)
-  provider: "gemini"
-  # Model name for the chosen provider
-  model: "gemini-1.5-flash"
+  provider: "groq"
+  # Model name for the chosen provider (Groq: "llama-3.3-70b-versatile" or "llama-3.1-8b-instant")
+  model: "llama-3.3-70b-versatile"
   # Seconds to wait between API calls (rate limiting)
   request_delay: 4
   # Maximum retries on API error
