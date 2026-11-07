@@ -9,6 +9,9 @@ import PipelineRunTab from './components/PipelineRunTab';
 import { fetchHealth, fetchPromos, fetchQualityReport, fetchFailureAnalysis } from './api';
 
 export default function App() {
+  const [theme, setTheme] = useState(() => {
+    return localStorage.getItem('kuku_theme') || 'dark';
+  });
   const [activeTab, setActiveTab] = useState('studio');
   const [backendStatus, setBackendStatus] = useState('checking');
   const [promos, setPromos] = useState([]);
@@ -17,6 +20,22 @@ export default function App() {
   const [metadata, setMetadata] = useState(null);
   const [loading, setLoading] = useState(true);
   const [searchQuery, setSearchQuery] = useState('');
+
+  useEffect(() => {
+    const root = document.documentElement;
+    if (theme === 'light') {
+      root.classList.remove('dark');
+      root.classList.add('light');
+    } else {
+      root.classList.remove('light');
+      root.classList.add('dark');
+    }
+    localStorage.setItem('kuku_theme', theme);
+  }, [theme]);
+
+  const toggleTheme = () => {
+    setTheme(prev => prev === 'dark' ? 'light' : 'dark');
+  };
 
   const loadData = async () => {
     setLoading(true);
@@ -77,9 +96,9 @@ export default function App() {
   };
 
   return (
-    <div className="flex h-screen w-screen overflow-hidden bg-[#090a0f] text-gray-100 font-sans antialiased">
+    <div className="flex h-screen w-screen overflow-hidden bg-slate-50 text-slate-900 dark:bg-[#090a0f] dark:text-gray-100 font-sans antialiased transition-colors duration-200">
       {/* Linear-Style Left Navigation Dock */}
-      <Sidebar activeTab={activeTab} setActiveTab={setActiveTab} />
+      <Sidebar activeTab={activeTab} setActiveTab={setActiveTab} theme={theme} />
 
       {/* Main Content Area */}
       <div className="flex-1 flex flex-col min-w-0 overflow-hidden">
@@ -91,6 +110,8 @@ export default function App() {
           totalPromos={promos.length}
           onExportJSON={exportJSON}
           onExportCSV={exportCSV}
+          theme={theme}
+          toggleTheme={toggleTheme}
         />
 
         {/* Dynamic Tab Views */}
@@ -98,14 +119,14 @@ export default function App() {
           {loading ? (
             <div className="flex-1 flex flex-col items-center justify-center space-y-4">
               <div className="w-10 h-10 border-4 border-rose-500/20 border-t-rose-500 rounded-full animate-spin"></div>
-              <p className="text-xs text-gray-400 font-mono tracking-wider uppercase">
+              <p className="text-xs text-slate-500 dark:text-gray-400 font-mono tracking-wider uppercase">
                 Loading Kuku FM Promo Studio...
               </p>
             </div>
           ) : (
             <>
               {activeTab === 'studio' && (
-                <StudioView promos={promos} searchQuery={searchQuery} />
+                <StudioView promos={promos} searchQuery={searchQuery} theme={theme} />
               )}
               {activeTab === 'quality' && (
                 <div className="flex-1 overflow-y-auto p-6 max-w-7xl mx-auto w-full">

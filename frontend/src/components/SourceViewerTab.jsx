@@ -21,23 +21,23 @@ export default function SourceViewerTab() {
 
   return (
     <div className="space-y-6">
-      <div className="bg-[#141824] border border-[#232838] rounded-xl p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+      <div className="bg-white dark:bg-[#141824] border border-slate-200 dark:border-[#232838] rounded-xl p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4 shadow-sm">
         <div>
-          <h3 className="text-sm font-bold text-white flex items-center space-x-2">
-            <FileText className="w-4 h-4 text-red-400" />
+          <h3 className="text-sm font-bold text-slate-900 dark:text-white flex items-center space-x-2">
+            <FileText className="w-4 h-4 text-rose-500 dark:text-red-400" />
             <span>Screenplay Source Verification & Traceability Viewer</span>
           </h3>
-          <p className="text-xs text-gray-400 mt-1">
+          <p className="text-xs text-slate-500 dark:text-gray-400 mt-1">
             Every promo recommendation links directly to an episode, scene, and scene-relative timestamp.
           </p>
         </div>
 
         <div className="flex items-center space-x-3">
-          <label className="text-xs font-medium text-gray-300">Select Episode:</label>
+          <label className="text-xs font-medium text-slate-700 dark:text-gray-300">Select Episode:</label>
           <select
             value={episodeNum}
             onChange={(e) => setEpisodeNum(Number(e.target.value))}
-            className="bg-[#1b2030] border border-[#2b354c] rounded-lg px-3 py-1.5 text-sm text-gray-200 font-bold focus:outline-none focus:border-red-500"
+            className="bg-slate-50 dark:bg-[#1b2030] border border-slate-200 dark:border-[#2b354c] rounded-lg px-3 py-1.5 text-sm text-slate-900 dark:text-gray-200 font-bold focus:outline-none focus:border-rose-500 shadow-sm"
           >
             {Array.from({ length: 50 }, (_, i) => i + 1).map((n) => (
               <option key={n} value={n}>Episode {n}</option>
@@ -47,21 +47,21 @@ export default function SourceViewerTab() {
       </div>
 
       {/* Screenplay Content Card */}
-      <div className="bg-[#141824] border border-[#232838] rounded-xl overflow-hidden shadow-sm">
-        <div className="bg-[#181d2c] px-4 py-3 border-b border-[#232838] flex items-center justify-between text-xs">
-          <span className="font-mono text-gray-300 font-bold">
+      <div className="bg-white dark:bg-[#141824] border border-slate-200 dark:border-[#232838] rounded-xl overflow-hidden shadow-sm">
+        <div className="bg-slate-50 dark:bg-[#181d2c] px-4 py-3 border-b border-slate-200 dark:border-[#232838] flex items-center justify-between text-xs">
+          <span className="font-mono text-slate-800 dark:text-gray-300 font-bold">
             Episode {episodeNum} — Raw Screenplay
           </span>
-          <span className="text-amber-400 font-mono text-[11px] bg-amber-500/10 px-2 py-0.5 rounded border border-amber-500/20">
+          <span className="text-amber-600 dark:text-amber-400 font-mono text-[11px] bg-amber-500/10 px-2 py-0.5 rounded border border-amber-500/20">
             ⚠️ Scene-Relative Timestamps (resets to 00:00.00 each scene)
           </span>
         </div>
 
-        <div className="p-4 bg-[#0d0f17]">
+        <div className="p-4 bg-slate-100/50 dark:bg-[#0d0f17]">
           {loading ? (
-            <div className="text-center py-16 text-gray-500 text-xs">Loading screenplay...</div>
+            <div className="text-center py-16 text-slate-400 dark:text-gray-500 text-xs">Loading screenplay...</div>
           ) : (
-            <pre className="font-mono text-xs text-gray-300 whitespace-pre-wrap leading-relaxed max-h-[600px] overflow-y-auto">
+            <pre className="font-mono text-xs text-slate-800 dark:text-gray-300 whitespace-pre-wrap leading-relaxed max-h-[600px] overflow-y-auto">
               {content}
             </pre>
           )}
@@ -70,4 +70,3 @@ export default function SourceViewerTab() {
     </div>
   );
 }
-
