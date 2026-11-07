@@ -26,3 +26,4 @@ EXPOSE 8000
 
 # Run FastAPI via Gunicorn with Uvicorn workers
 CMD exec gunicorn -w 4 -k uvicorn.workers.UvicornWorker src.api:app --bind 0.0.0.0:${PORT}
+
