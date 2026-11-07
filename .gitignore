@@ -1,0 +1,43 @@
+# Environment
+.env
+*.env
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+*.egg-info/
+dist/
+build/
+
+# Data (screenplay scripts — not for public repos)
+data/scripts/
+*.zip
+*.pdf
+
+# Outputs (regenerate with pipeline)
+# outputs/ — keep outputs in repo for submission
+
+# Cache
+outputs/cache/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Streamlit
+.streamlit/
+
+# Logs
+*.log
+

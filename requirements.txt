@@ -1,0 +1,15 @@
+# Kuku FM — Promo Discovery System · Requirements
+# Install: pip install -r requirements.txt
+
+# Core runtime
+pyyaml>=6.0
+python-dotenv>=1.0
+
+# UI
+streamlit>=1.28
+pandas>=2.0
+
+# LLM providers (install only what you need)
+# google-generativeai>=0.3    # Gemini (free tier)
+# openai>=1.0                 # OpenAI
+

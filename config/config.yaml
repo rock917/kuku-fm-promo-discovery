@@ -1,0 +1,45 @@
+# Kuku FM — AI Promo Discovery System Configuration
+# All paths are relative to the project root (DATA_DIR, OUTPUT_DIR)
+# Change these to run on a new show without touching source code.
+
+paths:
+  # Directory containing the screenplay .txt files
+  scripts_dir: "data/scripts/I Married a Broken Soldier. He was a Duke"
+  # Output directory for all generated files
+  output_dir: "outputs"
+  # LLM response cache directory (avoid re-calling API on reruns)
+  cache_dir: "outputs/cache"
+
+llm:
+  # Provider: "gemini" | "openai" | "mock"
+  # Set to "mock" to run the full pipeline without any API key (for testing)
+  provider: "gemini"
+  # Model name for the chosen provider
+  model: "gemini-1.5-flash"
+  # Seconds to wait between API calls (rate limiting)
+  request_delay: 4
+  # Maximum retries on API error
+  max_retries: 3
+  # Temperature for scoring (lower = more deterministic)
+  temperature: 0.2
+
+scoring:
+  weights:
+    hook_strength: 0.25
+    cliffhanger_strength: 0.30
+    standalone_clarity: 0.20
+    emotional_impact: 0.15
+    duration_quality: 0.10
+  # Ideal promo duration range in seconds
+  ideal_min_seconds: 25
+  ideal_max_seconds: 45
+  # Hard limits (enforced by validator — not scoring)
+  hard_min_seconds: 20
+  hard_max_seconds: 60
+
+output:
+  # Maximum promo candidates to retain after ranking
+  top_n: 20
+  # Include rejected candidates in failure_analysis.json
+  include_failures: true
+
