@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-07T13:49:03.648270",
+  "generated_at": "2026-11-08T02:51:44.531909",
   "summary": {
     "total_generated": 218,
     "passed_validation": 122,
@@ -1099,7 +1099,9 @@
       "failures": [
         "DUPLICATE_OF: overlaps with PROMO_EP29_SC2_128 — Ep29 Sc2: 00:20.10–01:04.50 overlaps with 00:20.10–00:53.60 (≥60%)"
       ],
-      "warnings": [],
+      "warnings": [
+        "POSSIBLY_RESOLVED_ENDING: closing text matches resolved pattern '\\b(fade\\s+out|cut\\s+to\\s+black|the\\s+end|credits\\s+roll)\\b'"
+      ],
       "segments": [
         {
           "ep": 29,

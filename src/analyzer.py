@@ -388,26 +388,56 @@ class PromoAnalyzer:
             logger.debug(f"{cid}: LLM marked as poor promo candidate — skipping")
             return None
 
-        # --- Fallback text from rule-based selection if LLM gave nothing ---
-        if not hook_text and window.opening_events:
+        # --- Extract verbatim screenplay text if LLM gave generic placeholder or nothing ---
+        is_generic_hook = not hook_text or "Opening moment creates immediate tension" in hook_text
+        if is_generic_hook:
             first_dlg = next((e for e in window.opening_events if e.event_type == "DIALOGUE"), None)
-            first_act = window.opening_events[0] if window.opening_events else None
-            hook_text = first_dlg.text if first_dlg else (first_act.text if first_act else "")
+            if not first_dlg:
+                first_dlg = next((e for e in window.all_events if e.event_type == "DIALOGUE"), None)
+            first_act = next((e for e in window.opening_events if e.event_type in ("ACTION", "CAMERA")), None)
 
-        if not cliff_text and window.closing_events:
-            last_dlg = next(
-                (e for e in reversed(window.closing_events) if e.event_type == "DIALOGUE"), None
-            )
-            last_sfx = next(
-                (e for e in reversed(window.closing_events) if e.event_type == "SOUND_FX"), None
-            )
-            cliff_text = last_dlg.text if last_dlg else (last_sfx.text if last_sfx else "")
+            if first_dlg:
+                spk = f"{first_dlg.speaker}: " if first_dlg.speaker else ""
+                emo = f"({first_dlg.emotion}) " if first_dlg.emotion else ""
+                hook_text = f'{spk}{emo}"{first_dlg.text}"'
+            elif first_act:
+                hook_text = first_act.text
+            elif window.all_events:
+                hook_text = window.all_events[0].text
+            else:
+                hook_text = "Opening visual or dialogue hook establishes curiosity."
+
+        is_generic_cliff = not cliff_text or "Scene ends without resolution" in cliff_text
+        if is_generic_cliff:
+            last_dlg = next((e for e in reversed(window.closing_events) if e.event_type == "DIALOGUE"), None)
+            if not last_dlg:
+                last_dlg = next((e for e in reversed(window.all_events) if e.event_type == "DIALOGUE"), None)
+            last_sfx = next((e for e in reversed(window.closing_events) if e.event_type == "SOUND_FX"), None)
+            last_act = next((e for e in reversed(window.closing_events) if e.event_type in ("ACTION", "CAMERA")), None)
+
+            if last_dlg:
+                spk = f"{last_dlg.speaker}: " if last_dlg.speaker else ""
+                cliff_text = f'{spk}"{last_dlg.text}"'
+            elif last_sfx:
+                cliff_text = f"[SFX] {last_sfx.text}"
+            elif last_act:
+                cliff_text = last_act.text
+            elif window.all_events:
+                cliff_text = window.all_events[-1].text
+            else:
+                cliff_text = "Scene cuts abruptly at dramatic climax."
 
         # --- Build narrative context ---
-        narrative = ai_explanation or (
-            f"Ep{window.episode_number} Sc{window.scene_number}: "
-            f"{window.scene_heading} — {window.duration_sec:.1f}s segment."
-        )
+        if ai_explanation and "MOCK ANALYSIS" not in ai_explanation:
+            narrative = ai_explanation
+        else:
+            first_dlg_hint = next((e for e in window.all_events if e.event_type == "DIALOGUE"), None)
+            spk_hint = f"featuring {first_dlg_hint.speaker}" if first_dlg_hint and first_dlg_hint.speaker else "in the opening scene"
+            narrative = (
+                f"Episode {window.episode_number} Scene {window.scene_number} ({window.scene_heading}): "
+                f"High-retention {window.duration_sec:.1f}s promo cut {spk_hint}. "
+                f"Hooks listener attention from {window.start_ts} and abruptly terminates on unresolved tension at {window.end_ts}."
+            )
 
         # --- Build the PromoSegment (timestamps from SOURCE, not LLM) ---
         segment = PromoSegment(

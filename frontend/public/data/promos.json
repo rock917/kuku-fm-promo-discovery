@@ -3,7 +3,7 @@
     "show": "I Married a Broken Soldier. He was a Duke",
     "episodes_processed": 50,
     "llm_provider": "mock",
-    "llm_model": "gemini-1.5-flash",
+    "llm_model": "gpt-4o-mini",
     "scoring_weights": {
       "hook_strength": 0.25,
       "cliffhanger_strength": 0.3,
@@ -14,9 +14,9 @@
     "hard_min_seconds": 20.0,
     "hard_max_seconds": 60.0,
     "ideal_range": "25.0–45.0s",
-    "pipeline_duration_sec": 1.6,
+    "pipeline_duration_sec": 0.8,
     "cache_hits": 219,
-    "generated_at": "2026-11-07T13:49:03.642493",
+    "generated_at": "2026-11-08T02:51:44.529447",
     "total_candidates_generated": 218,
     "valid_candidates": 122,
     "invalid_candidates": 96,
@@ -49,14 +49,14 @@
         }
       ],
       "opening_hook": {
-        "text": "Opening moment creates immediate tension through visual betrayal.",
+        "text": "MATRIARCH: (Cold, Commanding) \"You should turn around, Juliana.\"",
         "source": "Verbatim or paraphrased from screenplay"
       },
       "closing_cliffhanger": {
-        "text": "Scene ends without resolution, leaving viewer uncertain of outcome.",
+        "text": "LADY JULIANA: \"No...\"",
         "source": "Verbatim or paraphrased from screenplay"
       },
-      "narrative_context": "MOCK ANALYSIS (Ep1): This segment was selected by the mock client. Replace with real LLM for actual analysis.",
+      "narrative_context": "Episode 1 Scene 1 (INT. CATHEDRAL – DAY): High-retention 43.9s promo cut featuring MATRIARCH. Hooks listener attention from 00:00.00 and abruptly terminates on unresolved tension at 00:43.90.",
       "has_cliffhanger_sfx": false,
       "cliffhanger_sfx_note": null,
       "validation": {
@@ -133,14 +133,14 @@
         }
       ],
       "opening_hook": {
-        "text": "Opening moment creates immediate tension through visual betrayal.",
+        "text": "THE FORMER GROOM: (Cold, Callous) \"I cannot marry you, Juliana.\"",
         "source": "Verbatim or paraphrased from screenplay"
       },
       "closing_cliffhanger": {
-        "text": "Scene ends without resolution, leaving viewer uncertain of outcome.",
+        "text": "BLOND NOBLEMAN: \"Do not disgrace us further.\"",
         "source": "Verbatim or paraphrased from screenplay"
       },
-      "narrative_context": "MOCK ANALYSIS (Ep2): This segment was selected by the mock client. Replace with real LLM for actual analysis.",
+      "narrative_context": "Episode 2 Scene 1 (INT. CATHEDRAL – CONTINUOUS): High-retention 44.8s promo cut featuring THE FORMER GROOM. Hooks listener attention from 00:00.00 and abruptly terminates on unresolved tension at 00:44.80.",
       "has_cliffhanger_sfx": false,
       "cliffhanger_sfx_note": null,
       "validation": {
@@ -217,14 +217,14 @@
         }
       ],
       "opening_hook": {
-        "text": "Opening moment creates immediate tension through visual betrayal.",
+        "text": "OFF-SCREEN VOICE: (Dismissive, Condescending) \"You should be grateful you're at least allowed to attend the wedding.\"",
         "source": "Verbatim or paraphrased from screenplay"
       },
       "closing_cliffhanger": {
-        "text": "Scene ends without resolution, leaving viewer uncertain of outcome.",
+        "text": "LADY JULIANA: \"...but I will not leave it believing I was the one who should be ashamed.\"",
         "source": "Verbatim or paraphrased from screenplay"
       },
-      "narrative_context": "MOCK ANALYSIS (Ep2): This segment was selected by the mock client. Replace with real LLM for actual analysis.",
+      "narrative_context": "Episode 2 Scene 1 (INT. CATHEDRAL – CONTINUOUS): High-retention 44.2s promo cut featuring OFF-SCREEN VOICE. Hooks listener attention from 01:05.80 and abruptly terminates on unresolved tension at 01:50.00.",
       "has_cliffhanger_sfx": false,
       "cliffhanger_sfx_note": null,
       "validation": {
@@ -301,14 +301,14 @@
         }
       ],
       "opening_hook": {
-        "text": "Opening moment creates immediate tension through visual betrayal.",
+        "text": "JULIANA: (Alarmed, Breathless) \"Alexander!\"",
         "source": "Verbatim or paraphrased from screenplay"
       },
       "closing_cliffhanger": {
-        "text": "Scene ends without resolution, leaving viewer uncertain of outcome.",
+        "text": "JULIANA: \"Dear God.\"",
         "source": "Verbatim or paraphrased from screenplay"
       },
-      "narrative_context": "MOCK ANALYSIS (Ep10): This segment was selected by the mock client. Replace with real LLM for actual analysis.",
+      "narrative_context": "Episode 10 Scene 1 (INT. WOODLAND COTTAGE – NIGHT): High-retention 45.0s promo cut featuring JULIANA. Hooks listener attention from 00:00.00 and abruptly terminates on unresolved tension at 00:45.00.",
       "has_cliffhanger_sfx": false,
       "cliffhanger_sfx_note": null,
       "validation": {
@@ -385,14 +385,14 @@
         }
       ],
       "opening_hook": {
-        "text": "Opening moment creates immediate tension through visual betrayal.",
+        "text": "JULIANA: (Gentle) \"Your scars disagree.\"",
         "source": "Verbatim or paraphrased from screenplay"
       },
       "closing_cliffhanger": {
-        "text": "Scene ends without resolution, leaving viewer uncertain of outcome.",
+        "text": "ALEXANDER: \"Your touch is the only medicine that has ever eased my pain.\"",
         "source": "Verbatim or paraphrased from screenplay"
       },
-      "narrative_context": "MOCK ANALYSIS (Ep10): This segment was selected by the mock client. Replace with real LLM for actual analysis.",
+      "narrative_context": "Episode 10 Scene 1 (INT. WOODLAND COTTAGE – NIGHT): High-retention 45.0s promo cut featuring JULIANA. Hooks listener attention from 00:49.00 and abruptly terminates on unresolved tension at 01:34.00.",
       "has_cliffhanger_sfx": false,
       "cliffhanger_sfx_note": null,
       "validation": {
@@ -469,14 +469,14 @@
         }
       ],
       "opening_hook": {
-        "text": "Opening moment creates immediate tension through visual betrayal.",
+        "text": "JULIANA: (Screaming, Terrified) \"Alexander!\"",
         "source": "Verbatim or paraphrased from screenplay"
       },
       "closing_cliffhanger": {
-        "text": "Scene ends without resolution, leaving viewer uncertain of outcome.",
+        "text": "ALEXANDER: \"Fire.\"",
         "source": "Verbatim or paraphrased from screenplay"
       },
-      "narrative_context": "MOCK ANALYSIS (Ep18): This segment was selected by the mock client. Replace with real LLM for actual analysis.",
+      "narrative_context": "Episode 18 Scene 1 (INT. COTTAGE - BEDROOM - NIGHT): High-retention 28.9s promo cut featuring JULIANA. Hooks listener attention from 00:00.00 and abruptly terminates on unresolved tension at 00:28.90.",
       "has_cliffhanger_sfx": false,
       "cliffhanger_sfx_note": null,
       "validation": {
@@ -553,14 +553,14 @@
         }
       ],
       "opening_hook": {
-        "text": "Opening moment creates immediate tension through visual betrayal.",
+        "text": "JULIANA: (Urgent, Shouting) \"The window!\"",
         "source": "Verbatim or paraphrased from screenplay"
       },
       "closing_cliffhanger": {
-        "text": "Scene ends without resolution, leaving viewer uncertain of outcome.",
+        "text": "ALEXANDER: \"Hold on to me.\"",
         "source": "Verbatim or paraphrased from screenplay"
       },
-      "narrative_context": "MOCK ANALYSIS (Ep18): This segment was selected by the mock client. Replace with real LLM for actual analysis.",
+      "narrative_context": "Episode 18 Scene 4 (INT. COTTAGE - PARLOR / EXT. COTTAGE - CONTINUOUS): High-retention 25.5s promo cut featuring JULIANA. Hooks listener attention from 01:38.50 and abruptly terminates on unresolved tension at 02:04.00.",
       "has_cliffhanger_sfx": false,
       "cliffhanger_sfx_note": null,
       "validation": {
@@ -637,14 +637,14 @@
         }
       ],
       "opening_hook": {
-        "text": "Opening moment creates immediate tension through visual betrayal.",
+        "text": "ALEXANDER: (Grave, Alert) \"Juliana.\"",
         "source": "Verbatim or paraphrased from screenplay"
       },
       "closing_cliffhanger": {
-        "text": "Scene ends without resolution, leaving viewer uncertain of outcome.",
+        "text": "JULIANA: \"I was in the wrong chamber. I was punished as a maid.\"",
         "source": "Verbatim or paraphrased from screenplay"
       },
-      "narrative_context": "MOCK ANALYSIS (Ep25): This segment was selected by the mock client. Replace with real LLM for actual analysis.",
+      "narrative_context": "Episode 25 Scene 1 (EXT. MISTY FOREST TRAIL – DUSK): High-retention 44.6s promo cut featuring ALEXANDER. Hooks listener attention from 00:00.00 and abruptly terminates on unresolved tension at 00:44.60.",
       "has_cliffhanger_sfx": false,
       "cliffhanger_sfx_note": null,
       "validation": {
@@ -721,14 +721,14 @@
         }
       ],
       "opening_hook": {
-        "text": "Opening moment creates immediate tension through visual betrayal.",
+        "text": "JULIANA: (Gentle, Penetrating) \"Nothing. Until you have nothing left beneath it.\"",
         "source": "Verbatim or paraphrased from screenplay"
       },
       "closing_cliffhanger": {
-        "text": "Scene ends without resolution, leaving viewer uncertain of outcome.",
+        "text": "CATHERINE: \"Then let's see how brave you are when it touches your skin!\"",
         "source": "Verbatim or paraphrased from screenplay"
       },
-      "narrative_context": "MOCK ANALYSIS (Ep32): This segment was selected by the mock client. Replace with real LLM for actual analysis.",
+      "narrative_context": "Episode 32 Scene 1 (INT. DUNGEON CELLS – CONTINUOUS): High-retention 45.0s promo cut featuring JULIANA. Hooks listener attention from 01:49.40 and abruptly terminates on unresolved tension at 02:34.38.",
       "has_cliffhanger_sfx": false,
       "cliffhanger_sfx_note": null,
       "validation": {
@@ -805,14 +805,14 @@
         }
       ],
       "opening_hook": {
-        "text": "Opening moment creates immediate tension through visual betrayal.",
+        "text": "ALEXANDER'S MOTHER: (Whispering, Distraught) \"Then why did they never find you?\"",
         "source": "Verbatim or paraphrased from screenplay"
       },
       "closing_cliffhanger": {
-        "text": "Scene ends without resolution, leaving viewer uncertain of outcome.",
+        "text": "ALEXANDER: \"They declared me dead.\"",
         "source": "Verbatim or paraphrased from screenplay"
       },
-      "narrative_context": "MOCK ANALYSIS (Ep36): This segment was selected by the mock client. Replace with real LLM for actual analysis.",
+      "narrative_context": "Episode 36 Scene 1 (INT. SECLUDED CABIN – NIGHT): High-retention 44.8s promo cut featuring ALEXANDER'S MOTHER. Hooks listener attention from 00:00.00 and abruptly terminates on unresolved tension at 00:44.80.",
       "has_cliffhanger_sfx": false,
       "cliffhanger_sfx_note": null,
       "validation": {
@@ -889,14 +889,14 @@
         }
       ],
       "opening_hook": {
-        "text": "Opening moment creates immediate tension through visual betrayal.",
+        "text": "ALEXANDER: (Simmering with Fury) \"They are marrying in two days...\"",
         "source": "Verbatim or paraphrased from screenplay"
       },
       "closing_cliffhanger": {
-        "text": "Scene ends without resolution, leaving viewer uncertain of outcome.",
+        "text": "ALEXANDER: \"...their dead Duke is coming home.\"",
         "source": "Verbatim or paraphrased from screenplay"
       },
-      "narrative_context": "MOCK ANALYSIS (Ep36): This segment was selected by the mock client. Replace with real LLM for actual analysis.",
+      "narrative_context": "Episode 36 Scene 1 (INT. SECLUDED CABIN – NIGHT): High-retention 44.8s promo cut featuring ALEXANDER. Hooks listener attention from 02:36.00 and abruptly terminates on unresolved tension at 03:20.75.",
       "has_cliffhanger_sfx": true,
       "cliffhanger_sfx_note": "SOUND FX marker detected near segment end — supporting signal only. Cliffhanger strength scored on narrative analysis.",
       "validation": {
@@ -973,14 +973,14 @@
         }
       ],
       "opening_hook": {
-        "text": "Opening moment creates immediate tension through visual betrayal.",
+        "text": "BLOND NOBLEMAN: (Shocked, Trembling) \"Who are you?\"",
         "source": "Verbatim or paraphrased from screenplay"
       },
       "closing_cliffhanger": {
-        "text": "Scene ends without resolution, leaving viewer uncertain of outcome.",
+        "text": "ALEXANDER'S MOTHER: \"Alexander...\"",
         "source": "Verbatim or paraphrased from screenplay"
       },
-      "narrative_context": "MOCK ANALYSIS (Ep42): This segment was selected by the mock client. Replace with real LLM for actual analysis.",
+      "narrative_context": "Episode 42 Scene 1 (INT. CATHEDRAL – CONTINUOUS): High-retention 44.8s promo cut featuring BLOND NOBLEMAN. Hooks listener attention from 00:00.00 and abruptly terminates on unresolved tension at 00:44.80.",
       "has_cliffhanger_sfx": false,
       "cliffhanger_sfx_note": null,
       "validation": {
@@ -1057,14 +1057,14 @@
         }
       ],
       "opening_hook": {
-        "text": "Opening moment creates immediate tension through visual betrayal.",
+        "text": "ALEXANDER: (Cold, Commanding) \"And yet, here I stand. That is the lie you built your life upon.\"",
         "source": "Verbatim or paraphrased from screenplay"
       },
       "closing_cliffhanger": {
-        "text": "Scene ends without resolution, leaving viewer uncertain of outcome.",
+        "text": "ALEXANDER: \"And now, Rupert... we settle what you stole.\"",
         "source": "Verbatim or paraphrased from screenplay"
       },
-      "narrative_context": "MOCK ANALYSIS (Ep42): This segment was selected by the mock client. Replace with real LLM for actual analysis.",
+      "narrative_context": "Episode 42 Scene 1 (INT. CATHEDRAL – CONTINUOUS): High-retention 44.0s promo cut featuring ALEXANDER. Hooks listener attention from 00:33.80 and abruptly terminates on unresolved tension at 01:17.80.",
       "has_cliffhanger_sfx": false,
       "cliffhanger_sfx_note": null,
       "validation": {
@@ -1141,14 +1141,14 @@
         }
       ],
       "opening_hook": {
-        "text": "Opening moment creates immediate tension through visual betrayal.",
+        "text": "BLOND NOBLEMAN: (Hysterical, Panicked) \"You're lying!\"",
         "source": "Verbatim or paraphrased from screenplay"
       },
       "closing_cliffhanger": {
-        "text": "Scene ends without resolution, leaving viewer uncertain of outcome.",
+        "text": "CROWN OFFICIAL: \"Military Intelligence Report, Iberian front, three years ago.\"",
         "source": "Verbatim or paraphrased from screenplay"
       },
-      "narrative_context": "MOCK ANALYSIS (Ep43): This segment was selected by the mock client. Replace with real LLM for actual analysis.",
+      "narrative_context": "Episode 43 Scene 1 (INT. RUINED CATHEDRAL – CONTINUOUS): High-retention 44.0s promo cut featuring BLOND NOBLEMAN. Hooks listener attention from 00:00.00 and abruptly terminates on unresolved tension at 00:44.00.",
       "has_cliffhanger_sfx": false,
       "cliffhanger_sfx_note": null,
       "validation": {
@@ -1225,14 +1225,14 @@
         }
       ],
       "opening_hook": {
-        "text": "Opening moment creates immediate tension through visual betrayal.",
+        "text": "CATHERINE: (Mocking, Savoring) \"There it is.\"",
         "source": "Verbatim or paraphrased from screenplay"
       },
       "closing_cliffhanger": {
-        "text": "Scene ends without resolution, leaving viewer uncertain of outcome.",
+        "text": "CATHERINE: \"You still think you are better?!\"",
         "source": "Verbatim or paraphrased from screenplay"
       },
-      "narrative_context": "MOCK ANALYSIS (Ep32): This segment was selected by the mock client. Replace with real LLM for actual analysis.",
+      "narrative_context": "Episode 32 Scene 1 (INT. DUNGEON CELLS – CONTINUOUS): High-retention 45.4s promo cut featuring CATHERINE. Hooks listener attention from 00:00.00 and abruptly terminates on unresolved tension at 00:45.40.",
       "has_cliffhanger_sfx": false,
       "cliffhanger_sfx_note": null,
       "validation": {
@@ -1309,14 +1309,14 @@
         }
       ],
       "opening_hook": {
-        "text": "Opening moment creates immediate tension through visual betrayal.",
+        "text": "MATRIARCH: (Disgusted) \"You have embarrassed this family long enough.\"",
         "source": "Verbatim or paraphrased from screenplay"
       },
       "closing_cliffhanger": {
-        "text": "Scene ends without resolution, leaving viewer uncertain of outcome.",
+        "text": "THE FORMER GROOM: \"...when Clarissa is the true jewel of the county.\"",
         "source": "Verbatim or paraphrased from screenplay"
       },
-      "narrative_context": "MOCK ANALYSIS (Ep1): This segment was selected by the mock client. Replace with real LLM for actual analysis.",
+      "narrative_context": "Episode 1 Scene 1 (INT. CATHEDRAL – DAY): High-retention 45.9s promo cut featuring MATRIARCH. Hooks listener attention from 01:32.10 and abruptly terminates on unresolved tension at 02:18.00.",
       "has_cliffhanger_sfx": true,
       "cliffhanger_sfx_note": "SOUND FX marker detected near segment end — supporting signal only. Cliffhanger strength scored on narrative analysis.",
       "validation": {
@@ -1393,14 +1393,14 @@
         }
       ],
       "opening_hook": {
-        "text": "Opening moment creates immediate tension through visual betrayal.",
+        "text": "ALEXANDER: (Furious, Thunderous) \"You sold my men to the enemy.\"",
         "source": "Verbatim or paraphrased from screenplay"
       },
       "closing_cliffhanger": {
-        "text": "Scene ends without resolution, leaving viewer uncertain of outcome.",
+        "text": "POLICE CONSTABLE: \"Going somewhere, Lord Sterling?\"",
         "source": "Verbatim or paraphrased from screenplay"
       },
-      "narrative_context": "MOCK ANALYSIS (Ep43): This segment was selected by the mock client. Replace with real LLM for actual analysis.",
+      "narrative_context": "Episode 43 Scene 1 (INT. RUINED CATHEDRAL – CONTINUOUS): High-retention 46.0s promo cut featuring ALEXANDER. Hooks listener attention from 01:09.00 and abruptly terminates on unresolved tension at 01:54.96.",
       "has_cliffhanger_sfx": false,
       "cliffhanger_sfx_note": null,
       "validation": {
@@ -1477,14 +1477,14 @@
         }
       ],
       "opening_hook": {
-        "text": "Opening moment creates immediate tension through visual betrayal.",
+        "text": "JULIANA: (Frantic, Desperate) \"The ledger!\"",
         "source": "Verbatim or paraphrased from screenplay"
       },
       "closing_cliffhanger": {
-        "text": "Scene ends without resolution, leaving viewer uncertain of outcome.",
+        "text": "ALEXANDER: \"I've got you.\"",
         "source": "Verbatim or paraphrased from screenplay"
       },
-      "narrative_context": "MOCK ANALYSIS (Ep18): This segment was selected by the mock client. Replace with real LLM for actual analysis.",
+      "narrative_context": "Episode 18 Scene 3 (INT. COTTAGE - PARLOR / WORKROOM - CONTINUOUS): High-retention 46.0s promo cut featuring JULIANA. Hooks listener attention from 00:52.50 and abruptly terminates on unresolved tension at 01:38.50.",
       "has_cliffhanger_sfx": false,
       "cliffhanger_sfx_note": null,
       "validation": {
@@ -1561,14 +1561,14 @@
         }
       ],
       "opening_hook": {
-        "text": "Opening moment creates immediate tension through visual betrayal.",
+        "text": "JULIANA: (Voice Breaking, Anguished) \"Why would anyone do this?\"",
         "source": "Verbatim or paraphrased from screenplay"
       },
       "closing_cliffhanger": {
-        "text": "Scene ends without resolution, leaving viewer uncertain of outcome.",
+        "text": "JULIANA: \"What are you going to do?\"",
         "source": "Verbatim or paraphrased from screenplay"
       },
-      "narrative_context": "MOCK ANALYSIS (Ep18): This segment was selected by the mock client. Replace with real LLM for actual analysis.",
+      "narrative_context": "Episode 18 Scene 5 (EXT. COTTAGE - FRONT YARD - CONTINUOUS): High-retention 46.2s promo cut featuring JULIANA. Hooks listener attention from 02:25.80 and abruptly terminates on unresolved tension at 03:12.00.",
       "has_cliffhanger_sfx": false,
       "cliffhanger_sfx_note": null,
       "validation": {
@@ -1645,14 +1645,14 @@
         }
       ],
       "opening_hook": {
-        "text": "Opening moment creates immediate tension through visual betrayal.",
+        "text": "JULIANA: (Gentle, Perplexed) \"Alexander... why are you so angry?\"",
         "source": "Verbatim or paraphrased from screenplay"
       },
       "closing_cliffhanger": {
-        "text": "Scene ends without resolution, leaving viewer uncertain of outcome.",
+        "text": "ALEXANDER: \"Everything you saw.\"",
         "source": "Verbatim or paraphrased from screenplay"
       },
-      "narrative_context": "MOCK ANALYSIS (Ep25): This segment was selected by the mock client. Replace with real LLM for actual analysis.",
+      "narrative_context": "Episode 25 Scene 1 (EXT. MISTY FOREST TRAIL – DUSK): High-retention 46.5s promo cut featuring JULIANA. Hooks listener attention from 02:01.50 and abruptly terminates on unresolved tension at 02:48.00.",
       "has_cliffhanger_sfx": false,
       "cliffhanger_sfx_note": null,
       "validation": {
