@@ -378,7 +378,9 @@ def create_llm_client(config: dict, cache_dir: Optional[Path] = None) -> LLMClie
         return OpenAIClient(api_key=api_key, model=model or "gpt-4o-mini", **kwargs)
 
     elif provider == "groq":
-        api_key = os.environ.get("GROQ_API_KEY", "")
+        api_key = os.environ.get("GROQ_API_KEY", "").strip().strip('"\'')
+        if api_key.upper().startswith("GROQ_API_KEY="):
+            api_key = api_key.split("=", 1)[1].strip().strip('"\'')
         if not api_key:
             raise ValueError(
                 "GROQ_API_KEY environment variable not set. "

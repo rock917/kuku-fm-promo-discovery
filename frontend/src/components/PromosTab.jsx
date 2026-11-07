@@ -318,3 +318,4 @@ export default function PromosTab({ promos, loading, metadata }) {
     </div>
   );
 }
+
