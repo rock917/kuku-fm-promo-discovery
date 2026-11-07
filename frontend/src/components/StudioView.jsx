@@ -15,6 +15,7 @@ import {
 } from 'lucide-react';
 import TimelineScrubber from './TimelineScrubber';
 import RadarScoreCard from './RadarScoreCard';
+import MobileAdPreview from './MobileAdPreview';
 
 export default function StudioView({ promos, searchQuery }) {
   const [selectedId, setSelectedId] = useState(promos[0]?.candidate_id || null);
@@ -24,6 +25,7 @@ export default function StudioView({ promos, searchQuery }) {
   const [maxDuration, setMaxDuration] = useState(60);
   const [activePreset, setActivePreset] = useState('all');
   const [copied, setCopied] = useState(false);
+  const [showAdSimulator, setShowAdSimulator] = useState(true);
 
   // Available episodes
   const allEpisodes = Array.from(
@@ -228,6 +230,17 @@ export default function StudioView({ promos, searchQuery }) {
 
                 <div className="flex items-center space-x-2">
                   <button
+                    onClick={() => setShowAdSimulator(!showAdSimulator)}
+                    className={`flex items-center space-x-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold transition shadow-sm ${
+                      showAdSimulator
+                        ? 'bg-gradient-to-r from-rose-600 to-red-600 text-white shadow-rose-600/25'
+                        : 'bg-white dark:bg-[#161a26] hover:bg-slate-100 dark:hover:bg-[#202638] text-slate-700 dark:text-gray-300 border border-slate-200 dark:border-[#262f44]'
+                    }`}
+                  >
+                    <span>📱 9:16 Ad Simulator</span>
+                  </button>
+
+                  <button
                     onClick={copyTimestamps}
                     className="flex items-center space-x-1.5 px-3 py-1.5 rounded-lg bg-white dark:bg-[#161a26] hover:bg-slate-100 dark:hover:bg-[#202638] text-xs font-medium text-slate-700 dark:text-gray-300 border border-slate-200 dark:border-[#262f44] transition shadow-sm"
                   >
@@ -243,6 +256,11 @@ export default function StudioView({ promos, searchQuery }) {
                   </div>
                 </div>
               </div>
+
+              {/* 9:16 Vertical Video Ad Simulator (TikTok / Reels / Shorts Mode) */}
+              {showAdSimulator && (
+                <MobileAdPreview promo={selectedPromo} onClose={() => setShowAdSimulator(false)} />
+              )}
 
               {/* 5-Dimension Radar & Telemetry Card (Exact match from screenshot) */}
               <RadarScoreCard selectedPromo={selectedPromo} />
