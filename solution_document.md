@@ -28,23 +28,25 @@ Promo discovery is the highest-leverage task in content distribution: a 30-secon
 ```
 Raw .txt screenplays (50 episodes)
    │
-   ▼ parser.py        — extracts episodes, scenes, events, scene-relative timestamps
+   ▼ parser.py          — extracts episodes, scenes, events, scene-relative timestamps
    │
-   ▼ analyzer.py      — generates candidate windows (full-scene / first-45s / last-45s / SFX-anchor)
-   │                    sends each to LLM with explicit rubric
-   ▼ llm_client.py    — Mock | Gemini | OpenAI  +  file-based response cache
+   ▼ analyzer.py        — generates candidate windows (full-scene / first-45s / last-45s / SFX-anchor)
+   │                      sends each to LLM with explicit rubric
+   ▼ llm_client.py      — Groq | Gemini | OpenAI | Mock  +  file-based response cache
    │
-   ▼ validator.py     — deterministic Python checks (no LLM):
-   │                    duration 20–60s · timestamps exist in source · no hallucinated quotes
-   │                    no cross-scene contamination · duplicate/overlap detection
-   ▼ scorer.py        — 5-dimension weighted score (see below)
+   ▼ validator.py       — deterministic Python checks (no LLM):
+   │                      duration 20–60s · timestamps exist in source · no hallucinated quotes
+   │                      no cross-scene contamination · duplicate/overlap detection
+   ▼ scorer.py          — 5-dimension weighted score (see below)
    │
-   ▼ reporter.py      — promos.json · promos.csv · quality_report.json · failure_analysis.json
+   ▼ reporter.py        — promos.json · promos.csv · quality_report.json · failure_analysis.json
    │
-   ▼ app.py           — Streamlit UI: browse, filter, trace, export, re-run
+   ├──▶ api.py          — FastAPI REST API (Azure App Service / Container Apps)
+   ├──▶ sync_supabase.py— Supabase PostgreSQL database sync
+   └──▶ frontend/       — Vercel React + Tailwind CSS Web Dashboard
 ```
 
-**LLM provider is fully swappable** via `config/config.yaml` — no source code changes needed to switch between Mock, Gemini, or OpenAI.
+**LLM provider is fully swappable** via `config/config.yaml` or `.env` — supports Groq, Gemini, OpenAI, or Mock with zero source code changes.
 
 ---
 
@@ -139,10 +141,11 @@ The parser auto-detects episode numbers, scene boundaries, event types, and time
 |---|---|---|
 | Solution document | `solution_document.md` (this file) | ✅ |
 | Working prototype (source code) | `src/` | ✅ |
+| Azure FastAPI Backend | `src/api.py`, `Dockerfile`, `startup.sh` | ✅ |
+| Vercel Frontend Web App | `frontend/` (React + Tailwind CSS) | ✅ |
+| Supabase Database Schema | `supabase_schema.sql`, `src/sync_supabase.py` | ✅ |
 | Raw outputs — promos.json | `outputs/promos.json` | ✅ |
 | Raw outputs — promos.csv | `outputs/promos.csv` | ✅ |
 | Quality report | `outputs/quality_report.json` | ✅ |
 | Failure analysis | `outputs/failure_analysis.json` | ✅ |
-| Streamlit UI | `src/app.py` → `streamlit run src/app.py` | ✅ |
-| README | `README.md` | ✅ |
-| Real LLM run (Gemini) | Requires `GEMINI_API_KEY` | ⏳ Pending API key |
+| Documentation & Setup | `README.md`, `frontend/README.md` | ✅ |
