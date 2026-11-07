@@ -105,3 +105,23 @@ export async function triggerPipelineRun(params) {
   return await res.json();
 }
 
+export async function analyzeCustomScript(params) {
+  const res = await fetch(`${API_BASE}/api/analyze/custom`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      source_type: params.sourceType,
+      url: params.url,
+      script_text: params.scriptText,
+      provider: params.provider || 'openai',
+      model: params.model || 'gpt-4o-mini',
+      top_n: params.topN || 5,
+    }),
+  });
+  if (!res.ok) {
+    const err = await res.json().catch(() => ({ detail: res.statusText }));
+    throw new Error(err.detail || 'Custom episode analysis failed');
+  }
+  return await res.json();
+}
+

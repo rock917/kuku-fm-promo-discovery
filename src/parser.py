@@ -349,19 +349,12 @@ def _parse_scene_block(scene_num: int, block_text: str, is_caps_format: bool) ->
     return scene, warnings
 
 
-def parse_episode(filepath: Path) -> Episode:
+def parse_episode_text(raw: str, episode_id: str = "custom", filename: str = "custom_script.txt") -> Episode:
     """
-    Parse a single episode .txt file into an Episode object.
+    Parse a raw screenplay string into a structured Episode object.
     Handles both standard and Episode-6 ALL-CAPS format automatically.
-    Never modifies the original file.
     """
-    raw = filepath.read_text(encoding='utf-8', errors='replace')
     warnings: list[str] = []
-
-    # --- Extract filename metadata ---
-    fname = filepath.name
-    ep_id_match = re.search(r'Episode (\d+)\.txt$', fname)
-    episode_id = ep_id_match.group(1) if ep_id_match else "unknown"
 
     # --- Extract header metadata ---
     ep_num_match  = re.search(r'EPISODE NUMBER:\s*Episode\s+(\d+)', raw, re.IGNORECASE)
@@ -369,25 +362,23 @@ def parse_episode(filepath: Path) -> Episode:
     cont_match    = re.search(r'CONTINUITY NOTES:\s*(.+)', raw)
 
     if not ep_num_match:
-        warnings.append("Could not parse EPISODE NUMBER from file header")
-    episode_number = int(ep_num_match.group(1)) if ep_num_match else -1
-    logline        = logline_match.group(1).strip() if logline_match else ""
+        warnings.append("Could not parse EPISODE NUMBER from file header (using 1)")
+    episode_number = int(ep_num_match.group(1)) if ep_num_match else 1
+    logline        = logline_match.group(1).strip() if logline_match else "Custom Screenplay"
     continuity     = cont_match.group(1).strip() if cont_match else ""
 
     # --- Detect format variant ---
-    # Episode 6 uses SCENE HEADING: (all-caps), others use Scene heading:
     is_caps_format = bool(re.search(r'^SCENE HEADING:', raw, re.MULTILINE))
 
     # --- Extract script body ---
     script_match = re.search(r'--- SCRIPT START ---(.+?)(?:--- SCRIPT END ---|$)', raw, re.DOTALL)
     if not script_match:
-        warnings.append("Could not locate --- SCRIPT START --- marker")
+        warnings.append("Could not locate --- SCRIPT START --- marker — analyzing full text")
         script_body = raw
     else:
         script_body = script_match.group(1)
 
     # --- Split into scene blocks ---
-    # Find all SCENE NN markers and their positions
     scene_markers = list(re.finditer(r'^SCENE\s+(\d+)\s*$', script_body, re.MULTILINE))
 
     if not scene_markers:
@@ -409,16 +400,28 @@ def parse_episode(filepath: Path) -> Episode:
         warnings.extend(scene_warnings)
         scenes.append(scene)
 
-    episode = Episode(
+    return Episode(
         episode_number=episode_number,
         episode_id=episode_id,
-        filename=fname,
+        filename=filename,
         logline=logline,
         continuity_notes=continuity,
         scenes=scenes,
         parse_warnings=warnings,
     )
-    return episode
+
+
+def parse_episode(filepath: Path) -> Episode:
+    """
+    Parse a single episode .txt file into an Episode object.
+    Handles both standard and Episode-6 ALL-CAPS format automatically.
+    Never modifies the original file.
+    """
+    raw = filepath.read_text(encoding='utf-8', errors='replace')
+    fname = filepath.name
+    ep_id_match = re.search(r'Episode (\d+)\.txt$', fname)
+    episode_id = ep_id_match.group(1) if ep_id_match else "unknown"
+    return parse_episode_text(raw, episode_id=episode_id, filename=fname)
 
 
 # ---------------------------------------------------------------------------
