@@ -305,6 +305,61 @@ def _parse_scene_block(scene_num: int, block_text: str, is_caps_format: bool) ->
         )
         events.append(evt)
 
+    # --- Fallback: if standard **HEADER:** blocks not found, attempt inline bracket line matching ---
+    # e.g.: [00:35.00] JULIANA: (Whispering) "That ring... it belongs to the Duke."
+    if not events:
+        line_re = re.compile(
+            r'\[(?P<start>\d{1,2}:\d{2}(?:\.\d{1,3})?)'
+            r'(?:\s*(?:–|-|to)\s*(?P<end>\d{1,2}:\d{2}(?:\.\d{1,3})?))?\]\s*'
+            r'(?P<content>.+)',
+            re.MULTILINE
+        )
+        matches = list(line_re.finditer(block_text))
+        for idx, lm in enumerate(matches):
+            raw_start = lm.group('start')
+            raw_end = lm.group('end')
+            content = lm.group('content').strip()
+            start_sec = parse_timestamp(raw_start)
+            if start_sec is None:
+                continue
+            if raw_end:
+                end_sec = parse_timestamp(raw_end) or (start_sec + 4.0)
+            else:
+                if idx + 1 < len(matches):
+                    next_start = parse_timestamp(matches[idx + 1].group('start'))
+                    end_sec = next_start if (next_start and next_start > start_sec) else (start_sec + 4.0)
+                else:
+                    end_sec = start_sec + 4.0
+
+            speaker, emotion, body, event_type = None, None, content, "ACTION"
+            dlg_m = re.match(
+                r'^(?P<name>[A-Z\s\'-]+?)(?::\s*\(|\s*\(|\s*:\s*)(?:(?P<emotion>[^)]+)\))?:?\s*(?P<text>.*)$',
+                content
+            )
+            if dlg_m and dlg_m.group('name').strip().upper() not in ("SOUND FX", "ACTION", "CAMERA"):
+                speaker = dlg_m.group('name').strip()
+                emotion = dlg_m.group('emotion').strip() if dlg_m.group('emotion') else None
+                event_type = "DIALOGUE"
+                raw_body = dlg_m.group('text').strip()
+                body = raw_body.strip('"').strip()
+            elif "SOUND" in content.upper() and "FX" in content.upper():
+                event_type = "SOUND_FX"
+                body = re.sub(r'^(?:SOUND\s*FX|SFX):?\s*', '', content, flags=re.IGNORECASE)
+
+            all_starts.append(start_sec)
+            evt = TimestampedEvent(
+                event_type=event_type,
+                speaker=speaker,
+                emotion=emotion,
+                start_ts=raw_start,
+                end_ts=seconds_to_ts(end_sec),
+                start_sec=start_sec,
+                end_sec=end_sec,
+                text=body,
+                is_cliffhanger_sfx=_is_cliffhanger_sfx(body) if event_type == "SOUND_FX" else False,
+            )
+            events.append(evt)
+
     # --- Resolve scene start/end seconds ---
     start_sec_scene = parse_timestamp(start_ts_str) if start_ts_str else None
     end_sec_scene   = parse_timestamp(end_ts_str) if end_ts_str else None

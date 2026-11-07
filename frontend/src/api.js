@@ -114,32 +114,55 @@ export async function fetchEpisodeContent(episodeNumber) {
 }
 
 export async function triggerPipelineRun(params) {
-  const res = await fetch(`${API_BASE}/api/pipeline/run`, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(params),
-  });
-  if (!res.ok) throw new Error(`API error: ${res.statusText}`);
-  return await res.json();
+  const directAzure = 'https://kuku-fm-rg-f4bsfnb0ejcbdkeb.centralindia-01.azurewebsites.net';
+  const endpoints = [`${API_BASE}/api/pipeline/run`, `${directAzure}/api/pipeline/run`];
+  
+  let lastErr = null;
+  for (const endpoint of endpoints) {
+    try {
+      const res = await fetch(endpoint, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(params),
+      });
+      if (res.ok) return await res.json();
+      const err = await res.json().catch(() => ({ detail: res.statusText }));
+      throw new Error(err.detail || 'Pipeline execution failed');
+    } catch (e) {
+      lastErr = e;
+    }
+  }
+  throw lastErr || new Error('Pipeline trigger failed');
 }
 
 export async function analyzeCustomScript(params) {
-  const res = await fetch(`${API_BASE}/api/analyze/custom`, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      source_type: params.sourceType,
-      url: params.url,
-      script_text: params.scriptText,
-      provider: params.provider || 'openai',
-      model: params.model || 'gpt-4o-mini',
-      top_n: params.topN || 5,
-    }),
-  });
-  if (!res.ok) {
-    const err = await res.json().catch(() => ({ detail: res.statusText }));
-    throw new Error(err.detail || 'Custom episode analysis failed');
+  const directAzure = 'https://kuku-fm-rg-f4bsfnb0ejcbdkeb.centralindia-01.azurewebsites.net';
+  const endpoints = [`${API_BASE}/api/analyze/custom`, `${directAzure}/api/analyze/custom`];
+
+  let lastErr = null;
+  for (const endpoint of endpoints) {
+    try {
+      const res = await fetch(endpoint, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          source_type: params.sourceType,
+          url: params.url,
+          script_text: params.scriptText,
+          provider: params.provider || 'openai',
+          model: params.model || 'gpt-4o-mini',
+          top_n: params.topN || 5,
+        }),
+      });
+      if (res.ok) {
+        return await res.json();
+      }
+      const err = await res.json().catch(() => ({ detail: res.statusText }));
+      throw new Error(err.detail || `Analysis server error: ${res.status}`);
+    } catch (e) {
+      lastErr = e;
+    }
   }
-  return await res.json();
+  throw lastErr || new Error('Failed to reach episode analysis backend.');
 }
 

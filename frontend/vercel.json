@@ -4,9 +4,12 @@
   "outputDirectory": "dist",
   "rewrites": [
     {
+      "source": "/api/:match*",
+      "destination": "https://kuku-fm-rg-f4bsfnb0ejcbdkeb.centralindia-01.azurewebsites.net/api/:match*"
+    },
+    {
       "source": "/(.*)",
       "destination": "/index.html"
     }
   ]
 }
-

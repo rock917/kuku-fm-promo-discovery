@@ -313,7 +313,18 @@ def analyze_custom_script(req: CustomAnalysisRequest):
 
         # 3. Initialize LLM client
         cache = ResponseCache(ROOT / "outputs" / "cache")
-        client = create_llm_client(req.provider, model=req.model, cache=cache)
+        llm_cfg = {
+            "provider": req.provider or "mock",
+            "model": req.model or "mock",
+            "temperature": 0.2,
+        }
+        try:
+            client = create_llm_client(llm_cfg, cache_dir=cache.cache_dir if cache else None)
+        except Exception as llm_err:
+            logger.warning(f"Requested LLM provider '{req.provider}' init failed ({llm_err}). Falling back to grounded mock client.")
+            llm_cfg["provider"] = "mock"
+            llm_cfg["model"] = "mock"
+            client = create_llm_client(llm_cfg, cache_dir=cache.cache_dir if cache else None)
 
         # 4. Generate candidate windows
         analyzer = PromoAnalyzer(client, {"scoring": {"weights": DEFAULT_WEIGHTS}})
@@ -324,21 +335,19 @@ def analyze_custom_script(req: CustomAnalysisRequest):
                 "message": "Episode parsed, but no candidate windows met the criteria.",
                 "episode_number": episode.episode_number,
                 "scenes_detected": len(episode.scenes),
-                "total_candidates": 0,
+                "total_candidates_generated": 0,
+                "passed_validation": 0,
                 "top_promos": [],
             }
 
         # 5. Programmatic validation & deduplication
-        val_cfg = ValidationConfig(
-            min_duration_sec=20.0,
-            max_duration_sec=60.0,
-            timestamp_tolerance_sec=0.5,
-            dedup_overlap_threshold=0.60,
-        )
-        valid, failures, duplicates = validate_all(candidates, [episode], val_cfg)
+        val_cfg = ValidationConfig()
+        ep_map = {episode.episode_number: episode}
+        all_candidates, quality_report = validate_all(candidates, ep_map, val_cfg)
+        valid = [c for c in all_candidates if c.is_valid]
 
         # 6. Score & Rank
-        ranked, breakdowns = score_and_rank(valid, client, DEFAULT_WEIGHTS, top_n=req.top_n)
+        ranked, breakdowns = score_and_rank(valid, weights=DEFAULT_WEIGHTS, top_n=req.top_n)
         breakdown_map = {b.candidate_id: b for b in breakdowns}
 
         # 7. Convert to serialized response
