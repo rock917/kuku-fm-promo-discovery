@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-08T02:51:44.533251",
+  "generated_at": "2026-11-08T03:54:47.790901",
   "pipeline_metadata": {
     "show": "I Married a Broken Soldier. He was a Duke",
     "episodes_processed": 50,
@@ -15,7 +15,7 @@
     "hard_min_seconds": 20.0,
     "hard_max_seconds": 60.0,
     "ideal_range": "25.0–45.0s",
-    "pipeline_duration_sec": 0.8,
+    "pipeline_duration_sec": 0.9,
     "cache_hits": 219
   },
   "candidate_counts": {
@@ -36,24 +36,24 @@
     "duration_errors": 0
   },
   "score_distribution": {
-    "average": 6.7118,
-    "top": 8.225,
-    "minimum": 5.935,
+    "average": 6.9247,
+    "top": 8.5344,
+    "minimum": 6.2021,
     "count": 122,
     "confidence_distribution": {
       "mock": 218
     },
     "top_10_scores": [
-      8.225,
-      8.225,
-      8.225,
-      8.225,
-      8.225,
-      8.225,
-      8.225,
-      8.225,
-      8.225,
-      8.225
+      8.5344,
+      8.1213,
+      8.0965,
+      8.0738,
+      8.0585,
+      8.0559,
+      8.0249,
+      7.9346,
+      7.9284,
+      7.8741
     ]
   },
   "coverage": {

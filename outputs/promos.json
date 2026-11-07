@@ -14,9 +14,9 @@
     "hard_min_seconds": 20.0,
     "hard_max_seconds": 60.0,
     "ideal_range": "25.0–45.0s",
-    "pipeline_duration_sec": 0.8,
+    "pipeline_duration_sec": 0.9,
     "cache_hits": 219,
-    "generated_at": "2026-11-08T02:51:44.529447",
+    "generated_at": "2026-11-08T03:54:47.786925",
     "total_candidates_generated": 218,
     "valid_candidates": 122,
     "invalid_candidates": 96,
@@ -27,848 +27,8 @@
   "ranked_promos": [
     {
       "rank": 1,
-      "candidate_id": "PROMO_EP01_SC1_001",
-      "final_score": 8.225,
-      "is_valid": true,
-      "episodes": [
-        1
-      ],
-      "is_multi_episode": false,
-      "total_duration_sec": 43.9,
-      "segments": [
-        {
-          "episode_number": 1,
-          "scene_number": 1,
-          "scene_heading": "INT. CATHEDRAL – DAY",
-          "start_ts": "00:00.00",
-          "end_ts": "00:43.90",
-          "start_sec": 0.0,
-          "end_sec": 43.9,
-          "duration_sec": 43.9,
-          "timestamp_note": "Scene-relative timestamps. Ep1 Sc1 starts at 00:00.00."
-        }
-      ],
-      "opening_hook": {
-        "text": "MATRIARCH: (Cold, Commanding) \"You should turn around, Juliana.\"",
-        "source": "Verbatim or paraphrased from screenplay"
-      },
-      "closing_cliffhanger": {
-        "text": "LADY JULIANA: \"No...\"",
-        "source": "Verbatim or paraphrased from screenplay"
-      },
-      "narrative_context": "Episode 1 Scene 1 (INT. CATHEDRAL – DAY): High-retention 43.9s promo cut featuring MATRIARCH. Hooks listener attention from 00:00.00 and abruptly terminates on unresolved tension at 00:43.90.",
-      "has_cliffhanger_sfx": false,
-      "cliffhanger_sfx_note": null,
-      "validation": {
-        "note": "These checks are PROGRAMMATICALLY ENFORCED — not AI-generated",
-        "passed": true,
-        "failures": [],
-        "warnings": []
-      },
-      "scoring": {
-        "candidate_id": "PROMO_EP01_SC1_001",
-        "scores": {
-          "AI-generated": {
-            "hook_strength": {
-              "score": 8.5,
-              "weight": 0.25
-            },
-            "cliffhanger_strength": {
-              "score": 8.0,
-              "weight": 0.3
-            },
-            "standalone_clarity": {
-              "score": 7.5,
-              "weight": 0.2
-            },
-            "emotional_impact": {
-              "score": 8.0,
-              "weight": 0.15
-            }
-          },
-          "programmatic": {
-            "duration_quality": {
-              "score": 10.0,
-              "weight": 0.1,
-              "duration_sec": 43.9,
-              "note": "Deterministic Python rule — not AI-generated"
-            }
-          },
-          "supporting_signals": {
-            "cliffhanger_sfx_marker": {
-              "present": false,
-              "note": "SOUND FX marker — supporting signal only, not in score calculation"
-            }
-          }
-        },
-        "final_score": 8.225,
-        "score_confidence": "mock"
-      },
-      "ai_analysis": {
-        "explanation": "MOCK ANALYSIS (Ep1): This segment was selected by the mock client. Replace with real LLM for actual analysis.",
-        "note": "AI-generated assessment — verify against source text"
-      }
-    },
-    {
-      "rank": 2,
-      "candidate_id": "PROMO_EP02_SC1_005",
-      "final_score": 8.225,
-      "is_valid": true,
-      "episodes": [
-        2
-      ],
-      "is_multi_episode": false,
-      "total_duration_sec": 44.8,
-      "segments": [
-        {
-          "episode_number": 2,
-          "scene_number": 1,
-          "scene_heading": "INT. CATHEDRAL – CONTINUOUS",
-          "start_ts": "00:00.00",
-          "end_ts": "00:44.80",
-          "start_sec": 0.0,
-          "end_sec": 44.8,
-          "duration_sec": 44.8,
-          "timestamp_note": "Scene-relative timestamps. Ep2 Sc1 starts at 00:00.00."
-        }
-      ],
-      "opening_hook": {
-        "text": "THE FORMER GROOM: (Cold, Callous) \"I cannot marry you, Juliana.\"",
-        "source": "Verbatim or paraphrased from screenplay"
-      },
-      "closing_cliffhanger": {
-        "text": "BLOND NOBLEMAN: \"Do not disgrace us further.\"",
-        "source": "Verbatim or paraphrased from screenplay"
-      },
-      "narrative_context": "Episode 2 Scene 1 (INT. CATHEDRAL – CONTINUOUS): High-retention 44.8s promo cut featuring THE FORMER GROOM. Hooks listener attention from 00:00.00 and abruptly terminates on unresolved tension at 00:44.80.",
-      "has_cliffhanger_sfx": false,
-      "cliffhanger_sfx_note": null,
-      "validation": {
-        "note": "These checks are PROGRAMMATICALLY ENFORCED — not AI-generated",
-        "passed": true,
-        "failures": [],
-        "warnings": []
-      },
-      "scoring": {
-        "candidate_id": "PROMO_EP02_SC1_005",
-        "scores": {
-          "AI-generated": {
-            "hook_strength": {
-              "score": 8.5,
-              "weight": 0.25
-            },
-            "cliffhanger_strength": {
-              "score": 8.0,
-              "weight": 0.3
-            },
-            "standalone_clarity": {
-              "score": 7.5,
-              "weight": 0.2
-            },
-            "emotional_impact": {
-              "score": 8.0,
-              "weight": 0.15
-            }
-          },
-          "programmatic": {
-            "duration_quality": {
-              "score": 10.0,
-              "weight": 0.1,
-              "duration_sec": 44.8,
-              "note": "Deterministic Python rule — not AI-generated"
-            }
-          },
-          "supporting_signals": {
-            "cliffhanger_sfx_marker": {
-              "present": false,
-              "note": "SOUND FX marker — supporting signal only, not in score calculation"
-            }
-          }
-        },
-        "final_score": 8.225,
-        "score_confidence": "mock"
-      },
-      "ai_analysis": {
-        "explanation": "MOCK ANALYSIS (Ep2): This segment was selected by the mock client. Replace with real LLM for actual analysis.",
-        "note": "AI-generated assessment — verify against source text"
-      }
-    },
-    {
-      "rank": 3,
-      "candidate_id": "PROMO_EP02_SC1_006",
-      "final_score": 8.225,
-      "is_valid": true,
-      "episodes": [
-        2
-      ],
-      "is_multi_episode": false,
-      "total_duration_sec": 44.2,
-      "segments": [
-        {
-          "episode_number": 2,
-          "scene_number": 1,
-          "scene_heading": "INT. CATHEDRAL – CONTINUOUS",
-          "start_ts": "01:05.80",
-          "end_ts": "01:50.00",
-          "start_sec": 65.8,
-          "end_sec": 110.0,
-          "duration_sec": 44.2,
-          "timestamp_note": "Scene-relative timestamps. Ep2 Sc1 starts at 00:00.00."
-        }
-      ],
-      "opening_hook": {
-        "text": "OFF-SCREEN VOICE: (Dismissive, Condescending) \"You should be grateful you're at least allowed to attend the wedding.\"",
-        "source": "Verbatim or paraphrased from screenplay"
-      },
-      "closing_cliffhanger": {
-        "text": "LADY JULIANA: \"...but I will not leave it believing I was the one who should be ashamed.\"",
-        "source": "Verbatim or paraphrased from screenplay"
-      },
-      "narrative_context": "Episode 2 Scene 1 (INT. CATHEDRAL – CONTINUOUS): High-retention 44.2s promo cut featuring OFF-SCREEN VOICE. Hooks listener attention from 01:05.80 and abruptly terminates on unresolved tension at 01:50.00.",
-      "has_cliffhanger_sfx": false,
-      "cliffhanger_sfx_note": null,
-      "validation": {
-        "note": "These checks are PROGRAMMATICALLY ENFORCED — not AI-generated",
-        "passed": true,
-        "failures": [],
-        "warnings": []
-      },
-      "scoring": {
-        "candidate_id": "PROMO_EP02_SC1_006",
-        "scores": {
-          "AI-generated": {
-            "hook_strength": {
-              "score": 8.5,
-              "weight": 0.25
-            },
-            "cliffhanger_strength": {
-              "score": 8.0,
-              "weight": 0.3
-            },
-            "standalone_clarity": {
-              "score": 7.5,
-              "weight": 0.2
-            },
-            "emotional_impact": {
-              "score": 8.0,
-              "weight": 0.15
-            }
-          },
-          "programmatic": {
-            "duration_quality": {
-              "score": 10.0,
-              "weight": 0.1,
-              "duration_sec": 44.2,
-              "note": "Deterministic Python rule — not AI-generated"
-            }
-          },
-          "supporting_signals": {
-            "cliffhanger_sfx_marker": {
-              "present": false,
-              "note": "SOUND FX marker — supporting signal only, not in score calculation"
-            }
-          }
-        },
-        "final_score": 8.225,
-        "score_confidence": "mock"
-      },
-      "ai_analysis": {
-        "explanation": "MOCK ANALYSIS (Ep2): This segment was selected by the mock client. Replace with real LLM for actual analysis.",
-        "note": "AI-generated assessment — verify against source text"
-      }
-    },
-    {
-      "rank": 4,
-      "candidate_id": "PROMO_EP10_SC1_037",
-      "final_score": 8.225,
-      "is_valid": true,
-      "episodes": [
-        10
-      ],
-      "is_multi_episode": false,
-      "total_duration_sec": 45.0,
-      "segments": [
-        {
-          "episode_number": 10,
-          "scene_number": 1,
-          "scene_heading": "INT. WOODLAND COTTAGE – NIGHT",
-          "start_ts": "00:00.00",
-          "end_ts": "00:45.00",
-          "start_sec": 0.0,
-          "end_sec": 45.0,
-          "duration_sec": 45.0,
-          "timestamp_note": "Scene-relative timestamps. Ep10 Sc1 starts at 00:00.00."
-        }
-      ],
-      "opening_hook": {
-        "text": "JULIANA: (Alarmed, Breathless) \"Alexander!\"",
-        "source": "Verbatim or paraphrased from screenplay"
-      },
-      "closing_cliffhanger": {
-        "text": "JULIANA: \"Dear God.\"",
-        "source": "Verbatim or paraphrased from screenplay"
-      },
-      "narrative_context": "Episode 10 Scene 1 (INT. WOODLAND COTTAGE – NIGHT): High-retention 45.0s promo cut featuring JULIANA. Hooks listener attention from 00:00.00 and abruptly terminates on unresolved tension at 00:45.00.",
-      "has_cliffhanger_sfx": false,
-      "cliffhanger_sfx_note": null,
-      "validation": {
-        "note": "These checks are PROGRAMMATICALLY ENFORCED — not AI-generated",
-        "passed": true,
-        "failures": [],
-        "warnings": []
-      },
-      "scoring": {
-        "candidate_id": "PROMO_EP10_SC1_037",
-        "scores": {
-          "AI-generated": {
-            "hook_strength": {
-              "score": 8.5,
-              "weight": 0.25
-            },
-            "cliffhanger_strength": {
-              "score": 8.0,
-              "weight": 0.3
-            },
-            "standalone_clarity": {
-              "score": 7.5,
-              "weight": 0.2
-            },
-            "emotional_impact": {
-              "score": 8.0,
-              "weight": 0.15
-            }
-          },
-          "programmatic": {
-            "duration_quality": {
-              "score": 10.0,
-              "weight": 0.1,
-              "duration_sec": 45.0,
-              "note": "Deterministic Python rule — not AI-generated"
-            }
-          },
-          "supporting_signals": {
-            "cliffhanger_sfx_marker": {
-              "present": false,
-              "note": "SOUND FX marker — supporting signal only, not in score calculation"
-            }
-          }
-        },
-        "final_score": 8.225,
-        "score_confidence": "mock"
-      },
-      "ai_analysis": {
-        "explanation": "MOCK ANALYSIS (Ep10): This segment was selected by the mock client. Replace with real LLM for actual analysis.",
-        "note": "AI-generated assessment — verify against source text"
-      }
-    },
-    {
-      "rank": 5,
-      "candidate_id": "PROMO_EP10_SC1_038",
-      "final_score": 8.225,
-      "is_valid": true,
-      "episodes": [
-        10
-      ],
-      "is_multi_episode": false,
-      "total_duration_sec": 45.0,
-      "segments": [
-        {
-          "episode_number": 10,
-          "scene_number": 1,
-          "scene_heading": "INT. WOODLAND COTTAGE – NIGHT",
-          "start_ts": "00:49.00",
-          "end_ts": "01:34.00",
-          "start_sec": 49.0,
-          "end_sec": 94.0,
-          "duration_sec": 45.0,
-          "timestamp_note": "Scene-relative timestamps. Ep10 Sc1 starts at 00:00.00."
-        }
-      ],
-      "opening_hook": {
-        "text": "JULIANA: (Gentle) \"Your scars disagree.\"",
-        "source": "Verbatim or paraphrased from screenplay"
-      },
-      "closing_cliffhanger": {
-        "text": "ALEXANDER: \"Your touch is the only medicine that has ever eased my pain.\"",
-        "source": "Verbatim or paraphrased from screenplay"
-      },
-      "narrative_context": "Episode 10 Scene 1 (INT. WOODLAND COTTAGE – NIGHT): High-retention 45.0s promo cut featuring JULIANA. Hooks listener attention from 00:49.00 and abruptly terminates on unresolved tension at 01:34.00.",
-      "has_cliffhanger_sfx": false,
-      "cliffhanger_sfx_note": null,
-      "validation": {
-        "note": "These checks are PROGRAMMATICALLY ENFORCED — not AI-generated",
-        "passed": true,
-        "failures": [],
-        "warnings": []
-      },
-      "scoring": {
-        "candidate_id": "PROMO_EP10_SC1_038",
-        "scores": {
-          "AI-generated": {
-            "hook_strength": {
-              "score": 8.5,
-              "weight": 0.25
-            },
-            "cliffhanger_strength": {
-              "score": 8.0,
-              "weight": 0.3
-            },
-            "standalone_clarity": {
-              "score": 7.5,
-              "weight": 0.2
-            },
-            "emotional_impact": {
-              "score": 8.0,
-              "weight": 0.15
-            }
-          },
-          "programmatic": {
-            "duration_quality": {
-              "score": 10.0,
-              "weight": 0.1,
-              "duration_sec": 45.0,
-              "note": "Deterministic Python rule — not AI-generated"
-            }
-          },
-          "supporting_signals": {
-            "cliffhanger_sfx_marker": {
-              "present": false,
-              "note": "SOUND FX marker — supporting signal only, not in score calculation"
-            }
-          }
-        },
-        "final_score": 8.225,
-        "score_confidence": "mock"
-      },
-      "ai_analysis": {
-        "explanation": "MOCK ANALYSIS (Ep10): This segment was selected by the mock client. Replace with real LLM for actual analysis.",
-        "note": "AI-generated assessment — verify against source text"
-      }
-    },
-    {
-      "rank": 6,
-      "candidate_id": "PROMO_EP18_SC1_072",
-      "final_score": 8.225,
-      "is_valid": true,
-      "episodes": [
-        18
-      ],
-      "is_multi_episode": false,
-      "total_duration_sec": 28.9,
-      "segments": [
-        {
-          "episode_number": 18,
-          "scene_number": 1,
-          "scene_heading": "INT. COTTAGE - BEDROOM - NIGHT",
-          "start_ts": "00:00.00",
-          "end_ts": "00:28.90",
-          "start_sec": 0.0,
-          "end_sec": 28.9,
-          "duration_sec": 28.9,
-          "timestamp_note": "Scene-relative timestamps. Ep18 Sc1 starts at 00:00.00."
-        }
-      ],
-      "opening_hook": {
-        "text": "JULIANA: (Screaming, Terrified) \"Alexander!\"",
-        "source": "Verbatim or paraphrased from screenplay"
-      },
-      "closing_cliffhanger": {
-        "text": "ALEXANDER: \"Fire.\"",
-        "source": "Verbatim or paraphrased from screenplay"
-      },
-      "narrative_context": "Episode 18 Scene 1 (INT. COTTAGE - BEDROOM - NIGHT): High-retention 28.9s promo cut featuring JULIANA. Hooks listener attention from 00:00.00 and abruptly terminates on unresolved tension at 00:28.90.",
-      "has_cliffhanger_sfx": false,
-      "cliffhanger_sfx_note": null,
-      "validation": {
-        "note": "These checks are PROGRAMMATICALLY ENFORCED — not AI-generated",
-        "passed": true,
-        "failures": [],
-        "warnings": []
-      },
-      "scoring": {
-        "candidate_id": "PROMO_EP18_SC1_072",
-        "scores": {
-          "AI-generated": {
-            "hook_strength": {
-              "score": 8.5,
-              "weight": 0.25
-            },
-            "cliffhanger_strength": {
-              "score": 8.0,
-              "weight": 0.3
-            },
-            "standalone_clarity": {
-              "score": 7.5,
-              "weight": 0.2
-            },
-            "emotional_impact": {
-              "score": 8.0,
-              "weight": 0.15
-            }
-          },
-          "programmatic": {
-            "duration_quality": {
-              "score": 10.0,
-              "weight": 0.1,
-              "duration_sec": 28.9,
-              "note": "Deterministic Python rule — not AI-generated"
-            }
-          },
-          "supporting_signals": {
-            "cliffhanger_sfx_marker": {
-              "present": false,
-              "note": "SOUND FX marker — supporting signal only, not in score calculation"
-            }
-          }
-        },
-        "final_score": 8.225,
-        "score_confidence": "mock"
-      },
-      "ai_analysis": {
-        "explanation": "MOCK ANALYSIS (Ep18): This segment was selected by the mock client. Replace with real LLM for actual analysis.",
-        "note": "AI-generated assessment — verify against source text"
-      }
-    },
-    {
-      "rank": 7,
-      "candidate_id": "PROMO_EP18_SC4_077",
-      "final_score": 8.225,
-      "is_valid": true,
-      "episodes": [
-        18
-      ],
-      "is_multi_episode": false,
-      "total_duration_sec": 25.5,
-      "segments": [
-        {
-          "episode_number": 18,
-          "scene_number": 4,
-          "scene_heading": "INT. COTTAGE - PARLOR / EXT. COTTAGE - CONTINUOUS",
-          "start_ts": "01:38.50",
-          "end_ts": "02:04.00",
-          "start_sec": 98.5,
-          "end_sec": 124.0,
-          "duration_sec": 25.5,
-          "timestamp_note": "Scene-relative timestamps. Ep18 Sc4 starts at 00:00.00."
-        }
-      ],
-      "opening_hook": {
-        "text": "JULIANA: (Urgent, Shouting) \"The window!\"",
-        "source": "Verbatim or paraphrased from screenplay"
-      },
-      "closing_cliffhanger": {
-        "text": "ALEXANDER: \"Hold on to me.\"",
-        "source": "Verbatim or paraphrased from screenplay"
-      },
-      "narrative_context": "Episode 18 Scene 4 (INT. COTTAGE - PARLOR / EXT. COTTAGE - CONTINUOUS): High-retention 25.5s promo cut featuring JULIANA. Hooks listener attention from 01:38.50 and abruptly terminates on unresolved tension at 02:04.00.",
-      "has_cliffhanger_sfx": false,
-      "cliffhanger_sfx_note": null,
-      "validation": {
-        "note": "These checks are PROGRAMMATICALLY ENFORCED — not AI-generated",
-        "passed": true,
-        "failures": [],
-        "warnings": []
-      },
-      "scoring": {
-        "candidate_id": "PROMO_EP18_SC4_077",
-        "scores": {
-          "AI-generated": {
-            "hook_strength": {
-              "score": 8.5,
-              "weight": 0.25
-            },
-            "cliffhanger_strength": {
-              "score": 8.0,
-              "weight": 0.3
-            },
-            "standalone_clarity": {
-              "score": 7.5,
-              "weight": 0.2
-            },
-            "emotional_impact": {
-              "score": 8.0,
-              "weight": 0.15
-            }
-          },
-          "programmatic": {
-            "duration_quality": {
-              "score": 10.0,
-              "weight": 0.1,
-              "duration_sec": 25.5,
-              "note": "Deterministic Python rule — not AI-generated"
-            }
-          },
-          "supporting_signals": {
-            "cliffhanger_sfx_marker": {
-              "present": false,
-              "note": "SOUND FX marker — supporting signal only, not in score calculation"
-            }
-          }
-        },
-        "final_score": 8.225,
-        "score_confidence": "mock"
-      },
-      "ai_analysis": {
-        "explanation": "MOCK ANALYSIS (Ep18): This segment was selected by the mock client. Replace with real LLM for actual analysis.",
-        "note": "AI-generated assessment — verify against source text"
-      }
-    },
-    {
-      "rank": 8,
-      "candidate_id": "PROMO_EP25_SC1_115",
-      "final_score": 8.225,
-      "is_valid": true,
-      "episodes": [
-        25
-      ],
-      "is_multi_episode": false,
-      "total_duration_sec": 44.6,
-      "segments": [
-        {
-          "episode_number": 25,
-          "scene_number": 1,
-          "scene_heading": "EXT. MISTY FOREST TRAIL – DUSK",
-          "start_ts": "00:00.00",
-          "end_ts": "00:44.60",
-          "start_sec": 0.0,
-          "end_sec": 44.6,
-          "duration_sec": 44.6,
-          "timestamp_note": "Scene-relative timestamps. Ep25 Sc1 starts at 00:00.00."
-        }
-      ],
-      "opening_hook": {
-        "text": "ALEXANDER: (Grave, Alert) \"Juliana.\"",
-        "source": "Verbatim or paraphrased from screenplay"
-      },
-      "closing_cliffhanger": {
-        "text": "JULIANA: \"I was in the wrong chamber. I was punished as a maid.\"",
-        "source": "Verbatim or paraphrased from screenplay"
-      },
-      "narrative_context": "Episode 25 Scene 1 (EXT. MISTY FOREST TRAIL – DUSK): High-retention 44.6s promo cut featuring ALEXANDER. Hooks listener attention from 00:00.00 and abruptly terminates on unresolved tension at 00:44.60.",
-      "has_cliffhanger_sfx": false,
-      "cliffhanger_sfx_note": null,
-      "validation": {
-        "note": "These checks are PROGRAMMATICALLY ENFORCED — not AI-generated",
-        "passed": true,
-        "failures": [],
-        "warnings": []
-      },
-      "scoring": {
-        "candidate_id": "PROMO_EP25_SC1_115",
-        "scores": {
-          "AI-generated": {
-            "hook_strength": {
-              "score": 8.5,
-              "weight": 0.25
-            },
-            "cliffhanger_strength": {
-              "score": 8.0,
-              "weight": 0.3
-            },
-            "standalone_clarity": {
-              "score": 7.5,
-              "weight": 0.2
-            },
-            "emotional_impact": {
-              "score": 8.0,
-              "weight": 0.15
-            }
-          },
-          "programmatic": {
-            "duration_quality": {
-              "score": 10.0,
-              "weight": 0.1,
-              "duration_sec": 44.6,
-              "note": "Deterministic Python rule — not AI-generated"
-            }
-          },
-          "supporting_signals": {
-            "cliffhanger_sfx_marker": {
-              "present": false,
-              "note": "SOUND FX marker — supporting signal only, not in score calculation"
-            }
-          }
-        },
-        "final_score": 8.225,
-        "score_confidence": "mock"
-      },
-      "ai_analysis": {
-        "explanation": "MOCK ANALYSIS (Ep25): This segment was selected by the mock client. Replace with real LLM for actual analysis.",
-        "note": "AI-generated assessment — verify against source text"
-      }
-    },
-    {
-      "rank": 9,
-      "candidate_id": "PROMO_EP32_SC1_144",
-      "final_score": 8.225,
-      "is_valid": true,
-      "episodes": [
-        32
-      ],
-      "is_multi_episode": false,
-      "total_duration_sec": 44.98,
-      "segments": [
-        {
-          "episode_number": 32,
-          "scene_number": 1,
-          "scene_heading": "INT. DUNGEON CELLS – CONTINUOUS",
-          "start_ts": "01:49.40",
-          "end_ts": "02:34.38",
-          "start_sec": 109.4,
-          "end_sec": 154.38,
-          "duration_sec": 44.98,
-          "timestamp_note": "Scene-relative timestamps. Ep32 Sc1 starts at 00:00.00."
-        }
-      ],
-      "opening_hook": {
-        "text": "JULIANA: (Gentle, Penetrating) \"Nothing. Until you have nothing left beneath it.\"",
-        "source": "Verbatim or paraphrased from screenplay"
-      },
-      "closing_cliffhanger": {
-        "text": "CATHERINE: \"Then let's see how brave you are when it touches your skin!\"",
-        "source": "Verbatim or paraphrased from screenplay"
-      },
-      "narrative_context": "Episode 32 Scene 1 (INT. DUNGEON CELLS – CONTINUOUS): High-retention 45.0s promo cut featuring JULIANA. Hooks listener attention from 01:49.40 and abruptly terminates on unresolved tension at 02:34.38.",
-      "has_cliffhanger_sfx": false,
-      "cliffhanger_sfx_note": null,
-      "validation": {
-        "note": "These checks are PROGRAMMATICALLY ENFORCED — not AI-generated",
-        "passed": true,
-        "failures": [],
-        "warnings": []
-      },
-      "scoring": {
-        "candidate_id": "PROMO_EP32_SC1_144",
-        "scores": {
-          "AI-generated": {
-            "hook_strength": {
-              "score": 8.5,
-              "weight": 0.25
-            },
-            "cliffhanger_strength": {
-              "score": 8.0,
-              "weight": 0.3
-            },
-            "standalone_clarity": {
-              "score": 7.5,
-              "weight": 0.2
-            },
-            "emotional_impact": {
-              "score": 8.0,
-              "weight": 0.15
-            }
-          },
-          "programmatic": {
-            "duration_quality": {
-              "score": 10.0,
-              "weight": 0.1,
-              "duration_sec": 44.98,
-              "note": "Deterministic Python rule — not AI-generated"
-            }
-          },
-          "supporting_signals": {
-            "cliffhanger_sfx_marker": {
-              "present": false,
-              "note": "SOUND FX marker — supporting signal only, not in score calculation"
-            }
-          }
-        },
-        "final_score": 8.225,
-        "score_confidence": "mock"
-      },
-      "ai_analysis": {
-        "explanation": "MOCK ANALYSIS (Ep32): This segment was selected by the mock client. Replace with real LLM for actual analysis.",
-        "note": "AI-generated assessment — verify against source text"
-      }
-    },
-    {
-      "rank": 10,
-      "candidate_id": "PROMO_EP36_SC1_155",
-      "final_score": 8.225,
-      "is_valid": true,
-      "episodes": [
-        36
-      ],
-      "is_multi_episode": false,
-      "total_duration_sec": 44.8,
-      "segments": [
-        {
-          "episode_number": 36,
-          "scene_number": 1,
-          "scene_heading": "INT. SECLUDED CABIN – NIGHT",
-          "start_ts": "00:00.00",
-          "end_ts": "00:44.80",
-          "start_sec": 0.0,
-          "end_sec": 44.8,
-          "duration_sec": 44.8,
-          "timestamp_note": "Scene-relative timestamps. Ep36 Sc1 starts at 00:00.00."
-        }
-      ],
-      "opening_hook": {
-        "text": "ALEXANDER'S MOTHER: (Whispering, Distraught) \"Then why did they never find you?\"",
-        "source": "Verbatim or paraphrased from screenplay"
-      },
-      "closing_cliffhanger": {
-        "text": "ALEXANDER: \"They declared me dead.\"",
-        "source": "Verbatim or paraphrased from screenplay"
-      },
-      "narrative_context": "Episode 36 Scene 1 (INT. SECLUDED CABIN – NIGHT): High-retention 44.8s promo cut featuring ALEXANDER'S MOTHER. Hooks listener attention from 00:00.00 and abruptly terminates on unresolved tension at 00:44.80.",
-      "has_cliffhanger_sfx": false,
-      "cliffhanger_sfx_note": null,
-      "validation": {
-        "note": "These checks are PROGRAMMATICALLY ENFORCED — not AI-generated",
-        "passed": true,
-        "failures": [],
-        "warnings": []
-      },
-      "scoring": {
-        "candidate_id": "PROMO_EP36_SC1_155",
-        "scores": {
-          "AI-generated": {
-            "hook_strength": {
-              "score": 8.5,
-              "weight": 0.25
-            },
-            "cliffhanger_strength": {
-              "score": 8.0,
-              "weight": 0.3
-            },
-            "standalone_clarity": {
-              "score": 7.5,
-              "weight": 0.2
-            },
-            "emotional_impact": {
-              "score": 8.0,
-              "weight": 0.15
-            }
-          },
-          "programmatic": {
-            "duration_quality": {
-              "score": 10.0,
-              "weight": 0.1,
-              "duration_sec": 44.8,
-              "note": "Deterministic Python rule — not AI-generated"
-            }
-          },
-          "supporting_signals": {
-            "cliffhanger_sfx_marker": {
-              "present": false,
-              "note": "SOUND FX marker — supporting signal only, not in score calculation"
-            }
-          }
-        },
-        "final_score": 8.225,
-        "score_confidence": "mock"
-      },
-      "ai_analysis": {
-        "explanation": "MOCK ANALYSIS (Ep36): This segment was selected by the mock client. Replace with real LLM for actual analysis.",
-        "note": "AI-generated assessment — verify against source text"
-      }
-    },
-    {
-      "rank": 11,
       "candidate_id": "PROMO_EP36_SC1_156",
-      "final_score": 8.225,
+      "final_score": 8.5344,
       "is_valid": true,
       "episodes": [
         36
@@ -910,25 +70,25 @@
         "scores": {
           "AI-generated": {
             "hook_strength": {
-              "score": 8.5,
+              "score": 8.6,
               "weight": 0.25
             },
             "cliffhanger_strength": {
-              "score": 8.0,
+              "score": 8.7,
               "weight": 0.3
             },
             "standalone_clarity": {
-              "score": 7.5,
+              "score": 8.0,
               "weight": 0.2
             },
             "emotional_impact": {
-              "score": 8.0,
+              "score": 8.4,
               "weight": 0.15
             }
           },
           "programmatic": {
             "duration_quality": {
-              "score": 10.0,
+              "score": 9.144,
               "weight": 0.1,
               "duration_sec": 44.75,
               "note": "Deterministic Python rule — not AI-generated"
@@ -941,7 +101,7 @@
             }
           }
         },
-        "final_score": 8.225,
+        "final_score": 8.5344,
         "score_confidence": "mock"
       },
       "ai_analysis": {
@@ -950,37 +110,37 @@
       }
     },
     {
-      "rank": 12,
-      "candidate_id": "PROMO_EP42_SC1_179",
-      "final_score": 8.225,
+      "rank": 2,
+      "candidate_id": "PROMO_EP36_SC1_155",
+      "final_score": 8.1213,
       "is_valid": true,
       "episodes": [
-        42
+        36
       ],
       "is_multi_episode": false,
       "total_duration_sec": 44.8,
       "segments": [
         {
-          "episode_number": 42,
+          "episode_number": 36,
           "scene_number": 1,
-          "scene_heading": "INT. CATHEDRAL – CONTINUOUS",
+          "scene_heading": "INT. SECLUDED CABIN – NIGHT",
           "start_ts": "00:00.00",
           "end_ts": "00:44.80",
           "start_sec": 0.0,
           "end_sec": 44.8,
           "duration_sec": 44.8,
-          "timestamp_note": "Scene-relative timestamps. Ep42 Sc1 starts at 00:00.00."
+          "timestamp_note": "Scene-relative timestamps. Ep36 Sc1 starts at 00:00.00."
         }
       ],
       "opening_hook": {
-        "text": "BLOND NOBLEMAN: (Shocked, Trembling) \"Who are you?\"",
+        "text": "ALEXANDER'S MOTHER: (Whispering, Distraught) \"Then why did they never find you?\"",
         "source": "Verbatim or paraphrased from screenplay"
       },
       "closing_cliffhanger": {
-        "text": "ALEXANDER'S MOTHER: \"Alexander...\"",
+        "text": "ALEXANDER: \"They declared me dead.\"",
         "source": "Verbatim or paraphrased from screenplay"
       },
-      "narrative_context": "Episode 42 Scene 1 (INT. CATHEDRAL – CONTINUOUS): High-retention 44.8s promo cut featuring BLOND NOBLEMAN. Hooks listener attention from 00:00.00 and abruptly terminates on unresolved tension at 00:44.80.",
+      "narrative_context": "Episode 36 Scene 1 (INT. SECLUDED CABIN – NIGHT): High-retention 44.8s promo cut featuring ALEXANDER'S MOTHER. Hooks listener attention from 00:00.00 and abruptly terminates on unresolved tension at 00:44.80.",
       "has_cliffhanger_sfx": false,
       "cliffhanger_sfx_note": null,
       "validation": {
@@ -990,29 +150,29 @@
         "warnings": []
       },
       "scoring": {
-        "candidate_id": "PROMO_EP42_SC1_179",
+        "candidate_id": "PROMO_EP36_SC1_155",
         "scores": {
           "AI-generated": {
             "hook_strength": {
-              "score": 8.5,
+              "score": 8.9,
               "weight": 0.25
             },
             "cliffhanger_strength": {
-              "score": 8.0,
+              "score": 7.6,
               "weight": 0.3
             },
             "standalone_clarity": {
-              "score": 7.5,
+              "score": 8.0,
               "weight": 0.2
             },
             "emotional_impact": {
-              "score": 8.0,
+              "score": 7.35,
               "weight": 0.15
             }
           },
           "programmatic": {
             "duration_quality": {
-              "score": 10.0,
+              "score": 9.138,
               "weight": 0.1,
               "duration_sec": 44.8,
               "note": "Deterministic Python rule — not AI-generated"
@@ -1025,214 +185,46 @@
             }
           }
         },
-        "final_score": 8.225,
+        "final_score": 8.1213,
         "score_confidence": "mock"
       },
       "ai_analysis": {
-        "explanation": "MOCK ANALYSIS (Ep42): This segment was selected by the mock client. Replace with real LLM for actual analysis.",
+        "explanation": "MOCK ANALYSIS (Ep36): This segment was selected by the mock client. Replace with real LLM for actual analysis.",
         "note": "AI-generated assessment — verify against source text"
       }
     },
     {
-      "rank": 13,
-      "candidate_id": "PROMO_EP42_SC1_180",
-      "final_score": 8.225,
-      "is_valid": true,
-      "episodes": [
-        42
-      ],
-      "is_multi_episode": false,
-      "total_duration_sec": 44.0,
-      "segments": [
-        {
-          "episode_number": 42,
-          "scene_number": 1,
-          "scene_heading": "INT. CATHEDRAL – CONTINUOUS",
-          "start_ts": "00:33.80",
-          "end_ts": "01:17.80",
-          "start_sec": 33.8,
-          "end_sec": 77.8,
-          "duration_sec": 44.0,
-          "timestamp_note": "Scene-relative timestamps. Ep42 Sc1 starts at 00:00.00."
-        }
-      ],
-      "opening_hook": {
-        "text": "ALEXANDER: (Cold, Commanding) \"And yet, here I stand. That is the lie you built your life upon.\"",
-        "source": "Verbatim or paraphrased from screenplay"
-      },
-      "closing_cliffhanger": {
-        "text": "ALEXANDER: \"And now, Rupert... we settle what you stole.\"",
-        "source": "Verbatim or paraphrased from screenplay"
-      },
-      "narrative_context": "Episode 42 Scene 1 (INT. CATHEDRAL – CONTINUOUS): High-retention 44.0s promo cut featuring ALEXANDER. Hooks listener attention from 00:33.80 and abruptly terminates on unresolved tension at 01:17.80.",
-      "has_cliffhanger_sfx": false,
-      "cliffhanger_sfx_note": null,
-      "validation": {
-        "note": "These checks are PROGRAMMATICALLY ENFORCED — not AI-generated",
-        "passed": true,
-        "failures": [],
-        "warnings": []
-      },
-      "scoring": {
-        "candidate_id": "PROMO_EP42_SC1_180",
-        "scores": {
-          "AI-generated": {
-            "hook_strength": {
-              "score": 8.5,
-              "weight": 0.25
-            },
-            "cliffhanger_strength": {
-              "score": 8.0,
-              "weight": 0.3
-            },
-            "standalone_clarity": {
-              "score": 7.5,
-              "weight": 0.2
-            },
-            "emotional_impact": {
-              "score": 8.0,
-              "weight": 0.15
-            }
-          },
-          "programmatic": {
-            "duration_quality": {
-              "score": 10.0,
-              "weight": 0.1,
-              "duration_sec": 44.0,
-              "note": "Deterministic Python rule — not AI-generated"
-            }
-          },
-          "supporting_signals": {
-            "cliffhanger_sfx_marker": {
-              "present": false,
-              "note": "SOUND FX marker — supporting signal only, not in score calculation"
-            }
-          }
-        },
-        "final_score": 8.225,
-        "score_confidence": "mock"
-      },
-      "ai_analysis": {
-        "explanation": "MOCK ANALYSIS (Ep42): This segment was selected by the mock client. Replace with real LLM for actual analysis.",
-        "note": "AI-generated assessment — verify against source text"
-      }
-    },
-    {
-      "rank": 14,
-      "candidate_id": "PROMO_EP43_SC1_182",
-      "final_score": 8.225,
-      "is_valid": true,
-      "episodes": [
-        43
-      ],
-      "is_multi_episode": false,
-      "total_duration_sec": 44.0,
-      "segments": [
-        {
-          "episode_number": 43,
-          "scene_number": 1,
-          "scene_heading": "INT. RUINED CATHEDRAL – CONTINUOUS",
-          "start_ts": "00:00.00",
-          "end_ts": "00:44.00",
-          "start_sec": 0.0,
-          "end_sec": 44.0,
-          "duration_sec": 44.0,
-          "timestamp_note": "Scene-relative timestamps. Ep43 Sc1 starts at 00:00.00."
-        }
-      ],
-      "opening_hook": {
-        "text": "BLOND NOBLEMAN: (Hysterical, Panicked) \"You're lying!\"",
-        "source": "Verbatim or paraphrased from screenplay"
-      },
-      "closing_cliffhanger": {
-        "text": "CROWN OFFICIAL: \"Military Intelligence Report, Iberian front, three years ago.\"",
-        "source": "Verbatim or paraphrased from screenplay"
-      },
-      "narrative_context": "Episode 43 Scene 1 (INT. RUINED CATHEDRAL – CONTINUOUS): High-retention 44.0s promo cut featuring BLOND NOBLEMAN. Hooks listener attention from 00:00.00 and abruptly terminates on unresolved tension at 00:44.00.",
-      "has_cliffhanger_sfx": false,
-      "cliffhanger_sfx_note": null,
-      "validation": {
-        "note": "These checks are PROGRAMMATICALLY ENFORCED — not AI-generated",
-        "passed": true,
-        "failures": [],
-        "warnings": []
-      },
-      "scoring": {
-        "candidate_id": "PROMO_EP43_SC1_182",
-        "scores": {
-          "AI-generated": {
-            "hook_strength": {
-              "score": 8.5,
-              "weight": 0.25
-            },
-            "cliffhanger_strength": {
-              "score": 8.0,
-              "weight": 0.3
-            },
-            "standalone_clarity": {
-              "score": 7.5,
-              "weight": 0.2
-            },
-            "emotional_impact": {
-              "score": 8.0,
-              "weight": 0.15
-            }
-          },
-          "programmatic": {
-            "duration_quality": {
-              "score": 10.0,
-              "weight": 0.1,
-              "duration_sec": 44.0,
-              "note": "Deterministic Python rule — not AI-generated"
-            }
-          },
-          "supporting_signals": {
-            "cliffhanger_sfx_marker": {
-              "present": false,
-              "note": "SOUND FX marker — supporting signal only, not in score calculation"
-            }
-          }
-        },
-        "final_score": 8.225,
-        "score_confidence": "mock"
-      },
-      "ai_analysis": {
-        "explanation": "MOCK ANALYSIS (Ep43): This segment was selected by the mock client. Replace with real LLM for actual analysis.",
-        "note": "AI-generated assessment — verify against source text"
-      }
-    },
-    {
-      "rank": 15,
-      "candidate_id": "PROMO_EP32_SC1_143",
-      "final_score": 8.212,
+      "rank": 3,
+      "candidate_id": "PROMO_EP32_SC1_144",
+      "final_score": 8.0965,
       "is_valid": true,
       "episodes": [
         32
       ],
       "is_multi_episode": false,
-      "total_duration_sec": 45.4,
+      "total_duration_sec": 44.98,
       "segments": [
         {
           "episode_number": 32,
           "scene_number": 1,
           "scene_heading": "INT. DUNGEON CELLS – CONTINUOUS",
-          "start_ts": "00:00.00",
-          "end_ts": "00:45.40",
-          "start_sec": 0.0,
-          "end_sec": 45.4,
-          "duration_sec": 45.4,
+          "start_ts": "01:49.40",
+          "end_ts": "02:34.38",
+          "start_sec": 109.4,
+          "end_sec": 154.38,
+          "duration_sec": 44.98,
           "timestamp_note": "Scene-relative timestamps. Ep32 Sc1 starts at 00:00.00."
         }
       ],
       "opening_hook": {
-        "text": "CATHERINE: (Mocking, Savoring) \"There it is.\"",
+        "text": "JULIANA: (Gentle, Penetrating) \"Nothing. Until you have nothing left beneath it.\"",
         "source": "Verbatim or paraphrased from screenplay"
       },
       "closing_cliffhanger": {
-        "text": "CATHERINE: \"You still think you are better?!\"",
+        "text": "CATHERINE: \"Then let's see how brave you are when it touches your skin!\"",
         "source": "Verbatim or paraphrased from screenplay"
       },
-      "narrative_context": "Episode 32 Scene 1 (INT. DUNGEON CELLS – CONTINUOUS): High-retention 45.4s promo cut featuring CATHERINE. Hooks listener attention from 00:00.00 and abruptly terminates on unresolved tension at 00:45.40.",
+      "narrative_context": "Episode 32 Scene 1 (INT. DUNGEON CELLS – CONTINUOUS): High-retention 45.0s promo cut featuring JULIANA. Hooks listener attention from 01:49.40 and abruptly terminates on unresolved tension at 02:34.38.",
       "has_cliffhanger_sfx": false,
       "cliffhanger_sfx_note": null,
       "validation": {
@@ -1242,31 +234,31 @@
         "warnings": []
       },
       "scoring": {
-        "candidate_id": "PROMO_EP32_SC1_143",
+        "candidate_id": "PROMO_EP32_SC1_144",
         "scores": {
           "AI-generated": {
             "hook_strength": {
-              "score": 8.5,
+              "score": 8.9,
               "weight": 0.25
             },
             "cliffhanger_strength": {
-              "score": 8.0,
+              "score": 7.7,
               "weight": 0.3
             },
             "standalone_clarity": {
-              "score": 7.5,
+              "score": 8.0,
               "weight": 0.2
             },
             "emotional_impact": {
-              "score": 8.0,
+              "score": 7.0,
               "weight": 0.15
             }
           },
           "programmatic": {
             "duration_quality": {
-              "score": 9.87,
+              "score": 9.115,
               "weight": 0.1,
-              "duration_sec": 45.4,
+              "duration_sec": 44.98,
               "note": "Deterministic Python rule — not AI-generated"
             }
           },
@@ -1277,7 +269,7 @@
             }
           }
         },
-        "final_score": 8.212,
+        "final_score": 8.0965,
         "score_confidence": "mock"
       },
       "ai_analysis": {
@@ -1286,121 +278,37 @@
       }
     },
     {
-      "rank": 16,
-      "candidate_id": "PROMO_EP01_SC1_002",
-      "final_score": 8.195,
+      "rank": 4,
+      "candidate_id": "PROMO_EP10_SC1_038",
+      "final_score": 8.0738,
       "is_valid": true,
       "episodes": [
-        1
+        10
       ],
       "is_multi_episode": false,
-      "total_duration_sec": 45.9,
+      "total_duration_sec": 45.0,
       "segments": [
         {
-          "episode_number": 1,
+          "episode_number": 10,
           "scene_number": 1,
-          "scene_heading": "INT. CATHEDRAL – DAY",
-          "start_ts": "01:32.10",
-          "end_ts": "02:18.00",
-          "start_sec": 92.1,
-          "end_sec": 138.0,
-          "duration_sec": 45.9,
-          "timestamp_note": "Scene-relative timestamps. Ep1 Sc1 starts at 00:00.00."
+          "scene_heading": "INT. WOODLAND COTTAGE – NIGHT",
+          "start_ts": "00:49.00",
+          "end_ts": "01:34.00",
+          "start_sec": 49.0,
+          "end_sec": 94.0,
+          "duration_sec": 45.0,
+          "timestamp_note": "Scene-relative timestamps. Ep10 Sc1 starts at 00:00.00."
         }
       ],
       "opening_hook": {
-        "text": "MATRIARCH: (Disgusted) \"You have embarrassed this family long enough.\"",
+        "text": "JULIANA: (Gentle) \"Your scars disagree.\"",
         "source": "Verbatim or paraphrased from screenplay"
       },
       "closing_cliffhanger": {
-        "text": "THE FORMER GROOM: \"...when Clarissa is the true jewel of the county.\"",
+        "text": "ALEXANDER: \"Your touch is the only medicine that has ever eased my pain.\"",
         "source": "Verbatim or paraphrased from screenplay"
       },
-      "narrative_context": "Episode 1 Scene 1 (INT. CATHEDRAL – DAY): High-retention 45.9s promo cut featuring MATRIARCH. Hooks listener attention from 01:32.10 and abruptly terminates on unresolved tension at 02:18.00.",
-      "has_cliffhanger_sfx": true,
-      "cliffhanger_sfx_note": "SOUND FX marker detected near segment end — supporting signal only. Cliffhanger strength scored on narrative analysis.",
-      "validation": {
-        "note": "These checks are PROGRAMMATICALLY ENFORCED — not AI-generated",
-        "passed": true,
-        "failures": [],
-        "warnings": []
-      },
-      "scoring": {
-        "candidate_id": "PROMO_EP01_SC1_002",
-        "scores": {
-          "AI-generated": {
-            "hook_strength": {
-              "score": 8.5,
-              "weight": 0.25
-            },
-            "cliffhanger_strength": {
-              "score": 8.0,
-              "weight": 0.3
-            },
-            "standalone_clarity": {
-              "score": 7.5,
-              "weight": 0.2
-            },
-            "emotional_impact": {
-              "score": 8.0,
-              "weight": 0.15
-            }
-          },
-          "programmatic": {
-            "duration_quality": {
-              "score": 9.7,
-              "weight": 0.1,
-              "duration_sec": 45.9,
-              "note": "Deterministic Python rule — not AI-generated"
-            }
-          },
-          "supporting_signals": {
-            "cliffhanger_sfx_marker": {
-              "present": true,
-              "note": "SOUND FX marker — supporting signal only, not in score calculation"
-            }
-          }
-        },
-        "final_score": 8.195,
-        "score_confidence": "mock"
-      },
-      "ai_analysis": {
-        "explanation": "MOCK ANALYSIS (Ep1): This segment was selected by the mock client. Replace with real LLM for actual analysis.",
-        "note": "AI-generated assessment — verify against source text"
-      }
-    },
-    {
-      "rank": 17,
-      "candidate_id": "PROMO_EP43_SC1_183",
-      "final_score": 8.193,
-      "is_valid": true,
-      "episodes": [
-        43
-      ],
-      "is_multi_episode": false,
-      "total_duration_sec": 45.96,
-      "segments": [
-        {
-          "episode_number": 43,
-          "scene_number": 1,
-          "scene_heading": "INT. RUINED CATHEDRAL – CONTINUOUS",
-          "start_ts": "01:09.00",
-          "end_ts": "01:54.96",
-          "start_sec": 69.0,
-          "end_sec": 114.96,
-          "duration_sec": 45.96,
-          "timestamp_note": "Scene-relative timestamps. Ep43 Sc1 starts at 00:00.00."
-        }
-      ],
-      "opening_hook": {
-        "text": "ALEXANDER: (Furious, Thunderous) \"You sold my men to the enemy.\"",
-        "source": "Verbatim or paraphrased from screenplay"
-      },
-      "closing_cliffhanger": {
-        "text": "POLICE CONSTABLE: \"Going somewhere, Lord Sterling?\"",
-        "source": "Verbatim or paraphrased from screenplay"
-      },
-      "narrative_context": "Episode 43 Scene 1 (INT. RUINED CATHEDRAL – CONTINUOUS): High-retention 46.0s promo cut featuring ALEXANDER. Hooks listener attention from 01:09.00 and abruptly terminates on unresolved tension at 01:54.96.",
+      "narrative_context": "Episode 10 Scene 1 (INT. WOODLAND COTTAGE – NIGHT): High-retention 45.0s promo cut featuring JULIANA. Hooks listener attention from 00:49.00 and abruptly terminates on unresolved tension at 01:34.00.",
       "has_cliffhanger_sfx": false,
       "cliffhanger_sfx_note": null,
       "validation": {
@@ -1410,31 +318,31 @@
         "warnings": []
       },
       "scoring": {
-        "candidate_id": "PROMO_EP43_SC1_183",
+        "candidate_id": "PROMO_EP10_SC1_038",
         "scores": {
           "AI-generated": {
             "hook_strength": {
-              "score": 8.5,
+              "score": 8.9,
               "weight": 0.25
             },
             "cliffhanger_strength": {
-              "score": 8.0,
+              "score": 7.1,
               "weight": 0.3
             },
             "standalone_clarity": {
-              "score": 7.5,
+              "score": 8.0,
               "weight": 0.2
             },
             "emotional_impact": {
-              "score": 8.0,
+              "score": 8.05,
               "weight": 0.15
             }
           },
           "programmatic": {
             "duration_quality": {
-              "score": 9.68,
+              "score": 9.113,
               "weight": 0.1,
-              "duration_sec": 45.96,
+              "duration_sec": 45.0,
               "note": "Deterministic Python rule — not AI-generated"
             }
           },
@@ -1445,102 +353,18 @@
             }
           }
         },
-        "final_score": 8.193,
+        "final_score": 8.0738,
         "score_confidence": "mock"
       },
       "ai_analysis": {
-        "explanation": "MOCK ANALYSIS (Ep43): This segment was selected by the mock client. Replace with real LLM for actual analysis.",
+        "explanation": "MOCK ANALYSIS (Ep10): This segment was selected by the mock client. Replace with real LLM for actual analysis.",
         "note": "AI-generated assessment — verify against source text"
       }
     },
     {
-      "rank": 18,
-      "candidate_id": "PROMO_EP18_SC3_074",
-      "final_score": 8.192,
-      "is_valid": true,
-      "episodes": [
-        18
-      ],
-      "is_multi_episode": false,
-      "total_duration_sec": 46.0,
-      "segments": [
-        {
-          "episode_number": 18,
-          "scene_number": 3,
-          "scene_heading": "INT. COTTAGE - PARLOR / WORKROOM - CONTINUOUS",
-          "start_ts": "00:52.50",
-          "end_ts": "01:38.50",
-          "start_sec": 52.5,
-          "end_sec": 98.5,
-          "duration_sec": 46.0,
-          "timestamp_note": "Scene-relative timestamps. Ep18 Sc3 starts at 00:00.00."
-        }
-      ],
-      "opening_hook": {
-        "text": "JULIANA: (Frantic, Desperate) \"The ledger!\"",
-        "source": "Verbatim or paraphrased from screenplay"
-      },
-      "closing_cliffhanger": {
-        "text": "ALEXANDER: \"I've got you.\"",
-        "source": "Verbatim or paraphrased from screenplay"
-      },
-      "narrative_context": "Episode 18 Scene 3 (INT. COTTAGE - PARLOR / WORKROOM - CONTINUOUS): High-retention 46.0s promo cut featuring JULIANA. Hooks listener attention from 00:52.50 and abruptly terminates on unresolved tension at 01:38.50.",
-      "has_cliffhanger_sfx": false,
-      "cliffhanger_sfx_note": null,
-      "validation": {
-        "note": "These checks are PROGRAMMATICALLY ENFORCED — not AI-generated",
-        "passed": true,
-        "failures": [],
-        "warnings": []
-      },
-      "scoring": {
-        "candidate_id": "PROMO_EP18_SC3_074",
-        "scores": {
-          "AI-generated": {
-            "hook_strength": {
-              "score": 8.5,
-              "weight": 0.25
-            },
-            "cliffhanger_strength": {
-              "score": 8.0,
-              "weight": 0.3
-            },
-            "standalone_clarity": {
-              "score": 7.5,
-              "weight": 0.2
-            },
-            "emotional_impact": {
-              "score": 8.0,
-              "weight": 0.15
-            }
-          },
-          "programmatic": {
-            "duration_quality": {
-              "score": 9.67,
-              "weight": 0.1,
-              "duration_sec": 46.0,
-              "note": "Deterministic Python rule — not AI-generated"
-            }
-          },
-          "supporting_signals": {
-            "cliffhanger_sfx_marker": {
-              "present": false,
-              "note": "SOUND FX marker — supporting signal only, not in score calculation"
-            }
-          }
-        },
-        "final_score": 8.192,
-        "score_confidence": "mock"
-      },
-      "ai_analysis": {
-        "explanation": "MOCK ANALYSIS (Ep18): This segment was selected by the mock client. Replace with real LLM for actual analysis.",
-        "note": "AI-generated assessment — verify against source text"
-      }
-    },
-    {
-      "rank": 19,
+      "rank": 5,
       "candidate_id": "PROMO_EP18_SC5_079",
-      "final_score": 8.185,
+      "final_score": 8.0585,
       "is_valid": true,
       "episodes": [
         18
@@ -1582,25 +406,25 @@
         "scores": {
           "AI-generated": {
             "hook_strength": {
-              "score": 8.5,
+              "score": 8.6,
               "weight": 0.25
             },
             "cliffhanger_strength": {
-              "score": 8.0,
+              "score": 7.7,
               "weight": 0.3
             },
             "standalone_clarity": {
-              "score": 7.5,
+              "score": 8.0,
               "weight": 0.2
             },
             "emotional_impact": {
-              "score": 8.0,
+              "score": 7.35,
               "weight": 0.15
             }
           },
           "programmatic": {
             "duration_quality": {
-              "score": 9.6,
+              "score": 8.96,
               "weight": 0.1,
               "duration_sec": 46.2,
               "note": "Deterministic Python rule — not AI-generated"
@@ -1613,7 +437,7 @@
             }
           }
         },
-        "final_score": 8.185,
+        "final_score": 8.0585,
         "score_confidence": "mock"
       },
       "ai_analysis": {
@@ -1622,9 +446,765 @@
       }
     },
     {
-      "rank": 20,
+      "rank": 6,
+      "candidate_id": "PROMO_EP42_SC1_180",
+      "final_score": 8.0559,
+      "is_valid": true,
+      "episodes": [
+        42
+      ],
+      "is_multi_episode": false,
+      "total_duration_sec": 44.0,
+      "segments": [
+        {
+          "episode_number": 42,
+          "scene_number": 1,
+          "scene_heading": "INT. CATHEDRAL – CONTINUOUS",
+          "start_ts": "00:33.80",
+          "end_ts": "01:17.80",
+          "start_sec": 33.8,
+          "end_sec": 77.8,
+          "duration_sec": 44.0,
+          "timestamp_note": "Scene-relative timestamps. Ep42 Sc1 starts at 00:00.00."
+        }
+      ],
+      "opening_hook": {
+        "text": "ALEXANDER: (Cold, Commanding) \"And yet, here I stand. That is the lie you built your life upon.\"",
+        "source": "Verbatim or paraphrased from screenplay"
+      },
+      "closing_cliffhanger": {
+        "text": "ALEXANDER: \"And now, Rupert... we settle what you stole.\"",
+        "source": "Verbatim or paraphrased from screenplay"
+      },
+      "narrative_context": "Episode 42 Scene 1 (INT. CATHEDRAL – CONTINUOUS): High-retention 44.0s promo cut featuring ALEXANDER. Hooks listener attention from 00:33.80 and abruptly terminates on unresolved tension at 01:17.80.",
+      "has_cliffhanger_sfx": false,
+      "cliffhanger_sfx_note": null,
+      "validation": {
+        "note": "These checks are PROGRAMMATICALLY ENFORCED — not AI-generated",
+        "passed": true,
+        "failures": [],
+        "warnings": []
+      },
+      "scoring": {
+        "candidate_id": "PROMO_EP42_SC1_180",
+        "scores": {
+          "AI-generated": {
+            "hook_strength": {
+              "score": 9.2,
+              "weight": 0.25
+            },
+            "cliffhanger_strength": {
+              "score": 7.1,
+              "weight": 0.3
+            },
+            "standalone_clarity": {
+              "score": 8.0,
+              "weight": 0.2
+            },
+            "emotional_impact": {
+              "score": 7.35,
+              "weight": 0.15
+            }
+          },
+          "programmatic": {
+            "duration_quality": {
+              "score": 9.234,
+              "weight": 0.1,
+              "duration_sec": 44.0,
+              "note": "Deterministic Python rule — not AI-generated"
+            }
+          },
+          "supporting_signals": {
+            "cliffhanger_sfx_marker": {
+              "present": false,
+              "note": "SOUND FX marker — supporting signal only, not in score calculation"
+            }
+          }
+        },
+        "final_score": 8.0559,
+        "score_confidence": "mock"
+      },
+      "ai_analysis": {
+        "explanation": "MOCK ANALYSIS (Ep42): This segment was selected by the mock client. Replace with real LLM for actual analysis.",
+        "note": "AI-generated assessment — verify against source text"
+      }
+    },
+    {
+      "rank": 7,
+      "candidate_id": "PROMO_EP01_SC1_002",
+      "final_score": 8.0249,
+      "is_valid": true,
+      "episodes": [
+        1
+      ],
+      "is_multi_episode": false,
+      "total_duration_sec": 45.9,
+      "segments": [
+        {
+          "episode_number": 1,
+          "scene_number": 1,
+          "scene_heading": "INT. CATHEDRAL – DAY",
+          "start_ts": "01:32.10",
+          "end_ts": "02:18.00",
+          "start_sec": 92.1,
+          "end_sec": 138.0,
+          "duration_sec": 45.9,
+          "timestamp_note": "Scene-relative timestamps. Ep1 Sc1 starts at 00:00.00."
+        }
+      ],
+      "opening_hook": {
+        "text": "MATRIARCH: (Disgusted) \"You have embarrassed this family long enough.\"",
+        "source": "Verbatim or paraphrased from screenplay"
+      },
+      "closing_cliffhanger": {
+        "text": "THE FORMER GROOM: \"...when Clarissa is the true jewel of the county.\"",
+        "source": "Verbatim or paraphrased from screenplay"
+      },
+      "narrative_context": "Episode 1 Scene 1 (INT. CATHEDRAL – DAY): High-retention 45.9s promo cut featuring MATRIARCH. Hooks listener attention from 01:32.10 and abruptly terminates on unresolved tension at 02:18.00.",
+      "has_cliffhanger_sfx": true,
+      "cliffhanger_sfx_note": "SOUND FX marker detected near segment end — supporting signal only. Cliffhanger strength scored on narrative analysis.",
+      "validation": {
+        "note": "These checks are PROGRAMMATICALLY ENFORCED — not AI-generated",
+        "passed": true,
+        "failures": [],
+        "warnings": []
+      },
+      "scoring": {
+        "candidate_id": "PROMO_EP01_SC1_002",
+        "scores": {
+          "AI-generated": {
+            "hook_strength": {
+              "score": 8.6,
+              "weight": 0.25
+            },
+            "cliffhanger_strength": {
+              "score": 8.2,
+              "weight": 0.3
+            },
+            "standalone_clarity": {
+              "score": 6.8,
+              "weight": 0.2
+            },
+            "emotional_impact": {
+              "score": 7.7,
+              "weight": 0.15
+            }
+          },
+          "programmatic": {
+            "duration_quality": {
+              "score": 8.999,
+              "weight": 0.1,
+              "duration_sec": 45.9,
+              "note": "Deterministic Python rule — not AI-generated"
+            }
+          },
+          "supporting_signals": {
+            "cliffhanger_sfx_marker": {
+              "present": true,
+              "note": "SOUND FX marker — supporting signal only, not in score calculation"
+            }
+          }
+        },
+        "final_score": 8.0249,
+        "score_confidence": "mock"
+      },
+      "ai_analysis": {
+        "explanation": "MOCK ANALYSIS (Ep1): This segment was selected by the mock client. Replace with real LLM for actual analysis.",
+        "note": "AI-generated assessment — verify against source text"
+      }
+    },
+    {
+      "rank": 8,
+      "candidate_id": "PROMO_EP01_SC1_001",
+      "final_score": 7.9346,
+      "is_valid": true,
+      "episodes": [
+        1
+      ],
+      "is_multi_episode": false,
+      "total_duration_sec": 43.9,
+      "segments": [
+        {
+          "episode_number": 1,
+          "scene_number": 1,
+          "scene_heading": "INT. CATHEDRAL – DAY",
+          "start_ts": "00:00.00",
+          "end_ts": "00:43.90",
+          "start_sec": 0.0,
+          "end_sec": 43.9,
+          "duration_sec": 43.9,
+          "timestamp_note": "Scene-relative timestamps. Ep1 Sc1 starts at 00:00.00."
+        }
+      ],
+      "opening_hook": {
+        "text": "MATRIARCH: (Cold, Commanding) \"You should turn around, Juliana.\"",
+        "source": "Verbatim or paraphrased from screenplay"
+      },
+      "closing_cliffhanger": {
+        "text": "LADY JULIANA: \"No...\"",
+        "source": "Verbatim or paraphrased from screenplay"
+      },
+      "narrative_context": "Episode 1 Scene 1 (INT. CATHEDRAL – DAY): High-retention 43.9s promo cut featuring MATRIARCH. Hooks listener attention from 00:00.00 and abruptly terminates on unresolved tension at 00:43.90.",
+      "has_cliffhanger_sfx": false,
+      "cliffhanger_sfx_note": null,
+      "validation": {
+        "note": "These checks are PROGRAMMATICALLY ENFORCED — not AI-generated",
+        "passed": true,
+        "failures": [],
+        "warnings": []
+      },
+      "scoring": {
+        "candidate_id": "PROMO_EP01_SC1_001",
+        "scores": {
+          "AI-generated": {
+            "hook_strength": {
+              "score": 8.3,
+              "weight": 0.25
+            },
+            "cliffhanger_strength": {
+              "score": 7.8,
+              "weight": 0.3
+            },
+            "standalone_clarity": {
+              "score": 7.2,
+              "weight": 0.2
+            },
+            "emotional_impact": {
+              "score": 7.7,
+              "weight": 0.15
+            }
+          },
+          "programmatic": {
+            "duration_quality": {
+              "score": 9.246,
+              "weight": 0.1,
+              "duration_sec": 43.9,
+              "note": "Deterministic Python rule — not AI-generated"
+            }
+          },
+          "supporting_signals": {
+            "cliffhanger_sfx_marker": {
+              "present": false,
+              "note": "SOUND FX marker — supporting signal only, not in score calculation"
+            }
+          }
+        },
+        "final_score": 7.9346,
+        "score_confidence": "mock"
+      },
+      "ai_analysis": {
+        "explanation": "MOCK ANALYSIS (Ep1): This segment was selected by the mock client. Replace with real LLM for actual analysis.",
+        "note": "AI-generated assessment — verify against source text"
+      }
+    },
+    {
+      "rank": 9,
+      "candidate_id": "PROMO_EP18_SC2_073",
+      "final_score": 7.9284,
+      "is_valid": true,
+      "episodes": [
+        18
+      ],
+      "is_multi_episode": false,
+      "total_duration_sec": 23.6,
+      "segments": [
+        {
+          "episode_number": 18,
+          "scene_number": 2,
+          "scene_heading": "INT. COTTAGE - HALLWAY - CONTINUOUS",
+          "start_ts": "00:28.90",
+          "end_ts": "00:52.50",
+          "start_sec": 28.9,
+          "end_sec": 52.5,
+          "duration_sec": 23.6,
+          "timestamp_note": "Scene-relative timestamps. Ep18 Sc2 starts at 00:00.00."
+        }
+      ],
+      "opening_hook": {
+        "text": "ALEXANDER: (Firm, Protective) \"Stay close to me.\"",
+        "source": "Verbatim or paraphrased from screenplay"
+      },
+      "closing_cliffhanger": {
+        "text": "ALEXANDER: \"Then we go another way.\"",
+        "source": "Verbatim or paraphrased from screenplay"
+      },
+      "narrative_context": "Episode 18 Scene 2 (INT. COTTAGE - HALLWAY - CONTINUOUS): High-retention 23.6s promo cut featuring ALEXANDER. Hooks listener attention from 00:28.90 and abruptly terminates on unresolved tension at 00:52.50.",
+      "has_cliffhanger_sfx": true,
+      "cliffhanger_sfx_note": "SOUND FX marker detected near segment end — supporting signal only. Cliffhanger strength scored on narrative analysis.",
+      "validation": {
+        "note": "These checks are PROGRAMMATICALLY ENFORCED — not AI-generated",
+        "passed": true,
+        "failures": [],
+        "warnings": []
+      },
+      "scoring": {
+        "candidate_id": "PROMO_EP18_SC2_073",
+        "scores": {
+          "AI-generated": {
+            "hook_strength": {
+              "score": 7.7,
+              "weight": 0.25
+            },
+            "cliffhanger_strength": {
+              "score": 8.2,
+              "weight": 0.3
+            },
+            "standalone_clarity": {
+              "score": 8.0,
+              "weight": 0.2
+            },
+            "emotional_impact": {
+              "score": 7.0,
+              "weight": 0.15
+            }
+          },
+          "programmatic": {
+            "duration_quality": {
+              "score": 8.934,
+              "weight": 0.1,
+              "duration_sec": 23.6,
+              "note": "Deterministic Python rule — not AI-generated"
+            }
+          },
+          "supporting_signals": {
+            "cliffhanger_sfx_marker": {
+              "present": true,
+              "note": "SOUND FX marker — supporting signal only, not in score calculation"
+            }
+          }
+        },
+        "final_score": 7.9284,
+        "score_confidence": "mock"
+      },
+      "ai_analysis": {
+        "explanation": "MOCK ANALYSIS (Ep18): This segment was selected by the mock client. Replace with real LLM for actual analysis.",
+        "note": "AI-generated assessment — verify against source text"
+      }
+    },
+    {
+      "rank": 10,
+      "candidate_id": "PROMO_EP43_SC1_183",
+      "final_score": 7.8741,
+      "is_valid": true,
+      "episodes": [
+        43
+      ],
+      "is_multi_episode": false,
+      "total_duration_sec": 45.96,
+      "segments": [
+        {
+          "episode_number": 43,
+          "scene_number": 1,
+          "scene_heading": "INT. RUINED CATHEDRAL – CONTINUOUS",
+          "start_ts": "01:09.00",
+          "end_ts": "01:54.96",
+          "start_sec": 69.0,
+          "end_sec": 114.96,
+          "duration_sec": 45.96,
+          "timestamp_note": "Scene-relative timestamps. Ep43 Sc1 starts at 00:00.00."
+        }
+      ],
+      "opening_hook": {
+        "text": "ALEXANDER: (Furious, Thunderous) \"You sold my men to the enemy.\"",
+        "source": "Verbatim or paraphrased from screenplay"
+      },
+      "closing_cliffhanger": {
+        "text": "POLICE CONSTABLE: \"Going somewhere, Lord Sterling?\"",
+        "source": "Verbatim or paraphrased from screenplay"
+      },
+      "narrative_context": "Episode 43 Scene 1 (INT. RUINED CATHEDRAL – CONTINUOUS): High-retention 46.0s promo cut featuring ALEXANDER. Hooks listener attention from 01:09.00 and abruptly terminates on unresolved tension at 01:54.96.",
+      "has_cliffhanger_sfx": false,
+      "cliffhanger_sfx_note": null,
+      "validation": {
+        "note": "These checks are PROGRAMMATICALLY ENFORCED — not AI-generated",
+        "passed": true,
+        "failures": [],
+        "warnings": []
+      },
+      "scoring": {
+        "candidate_id": "PROMO_EP43_SC1_183",
+        "scores": {
+          "AI-generated": {
+            "hook_strength": {
+              "score": 8.6,
+              "weight": 0.25
+            },
+            "cliffhanger_strength": {
+              "score": 7.7,
+              "weight": 0.3
+            },
+            "standalone_clarity": {
+              "score": 6.8,
+              "weight": 0.2
+            },
+            "emotional_impact": {
+              "score": 7.7,
+              "weight": 0.15
+            }
+          },
+          "programmatic": {
+            "duration_quality": {
+              "score": 8.991,
+              "weight": 0.1,
+              "duration_sec": 45.96,
+              "note": "Deterministic Python rule — not AI-generated"
+            }
+          },
+          "supporting_signals": {
+            "cliffhanger_sfx_marker": {
+              "present": false,
+              "note": "SOUND FX marker — supporting signal only, not in score calculation"
+            }
+          }
+        },
+        "final_score": 7.8741,
+        "score_confidence": "mock"
+      },
+      "ai_analysis": {
+        "explanation": "MOCK ANALYSIS (Ep43): This segment was selected by the mock client. Replace with real LLM for actual analysis.",
+        "note": "AI-generated assessment — verify against source text"
+      }
+    },
+    {
+      "rank": 11,
+      "candidate_id": "PROMO_EP10_SC1_037",
+      "final_score": 7.8488,
+      "is_valid": true,
+      "episodes": [
+        10
+      ],
+      "is_multi_episode": false,
+      "total_duration_sec": 45.0,
+      "segments": [
+        {
+          "episode_number": 10,
+          "scene_number": 1,
+          "scene_heading": "INT. WOODLAND COTTAGE – NIGHT",
+          "start_ts": "00:00.00",
+          "end_ts": "00:45.00",
+          "start_sec": 0.0,
+          "end_sec": 45.0,
+          "duration_sec": 45.0,
+          "timestamp_note": "Scene-relative timestamps. Ep10 Sc1 starts at 00:00.00."
+        }
+      ],
+      "opening_hook": {
+        "text": "JULIANA: (Alarmed, Breathless) \"Alexander!\"",
+        "source": "Verbatim or paraphrased from screenplay"
+      },
+      "closing_cliffhanger": {
+        "text": "JULIANA: \"Dear God.\"",
+        "source": "Verbatim or paraphrased from screenplay"
+      },
+      "narrative_context": "Episode 10 Scene 1 (INT. WOODLAND COTTAGE – NIGHT): High-retention 45.0s promo cut featuring JULIANA. Hooks listener attention from 00:00.00 and abruptly terminates on unresolved tension at 00:45.00.",
+      "has_cliffhanger_sfx": false,
+      "cliffhanger_sfx_note": null,
+      "validation": {
+        "note": "These checks are PROGRAMMATICALLY ENFORCED — not AI-generated",
+        "passed": true,
+        "failures": [],
+        "warnings": []
+      },
+      "scoring": {
+        "candidate_id": "PROMO_EP10_SC1_037",
+        "scores": {
+          "AI-generated": {
+            "hook_strength": {
+              "score": 8.0,
+              "weight": 0.25
+            },
+            "cliffhanger_strength": {
+              "score": 7.1,
+              "weight": 0.3
+            },
+            "standalone_clarity": {
+              "score": 8.0,
+              "weight": 0.2
+            },
+            "emotional_impact": {
+              "score": 8.05,
+              "weight": 0.15
+            }
+          },
+          "programmatic": {
+            "duration_quality": {
+              "score": 9.113,
+              "weight": 0.1,
+              "duration_sec": 45.0,
+              "note": "Deterministic Python rule — not AI-generated"
+            }
+          },
+          "supporting_signals": {
+            "cliffhanger_sfx_marker": {
+              "present": false,
+              "note": "SOUND FX marker — supporting signal only, not in score calculation"
+            }
+          }
+        },
+        "final_score": 7.8488,
+        "score_confidence": "mock"
+      },
+      "ai_analysis": {
+        "explanation": "MOCK ANALYSIS (Ep10): This segment was selected by the mock client. Replace with real LLM for actual analysis.",
+        "note": "AI-generated assessment — verify against source text"
+      }
+    },
+    {
+      "rank": 12,
+      "candidate_id": "PROMO_EP02_SC1_006",
+      "final_score": 7.8136,
+      "is_valid": true,
+      "episodes": [
+        2
+      ],
+      "is_multi_episode": false,
+      "total_duration_sec": 44.2,
+      "segments": [
+        {
+          "episode_number": 2,
+          "scene_number": 1,
+          "scene_heading": "INT. CATHEDRAL – CONTINUOUS",
+          "start_ts": "01:05.80",
+          "end_ts": "01:50.00",
+          "start_sec": 65.8,
+          "end_sec": 110.0,
+          "duration_sec": 44.2,
+          "timestamp_note": "Scene-relative timestamps. Ep2 Sc1 starts at 00:00.00."
+        }
+      ],
+      "opening_hook": {
+        "text": "OFF-SCREEN VOICE: (Dismissive, Condescending) \"You should be grateful you're at least allowed to attend the wedding.\"",
+        "source": "Verbatim or paraphrased from screenplay"
+      },
+      "closing_cliffhanger": {
+        "text": "LADY JULIANA: \"...but I will not leave it believing I was the one who should be ashamed.\"",
+        "source": "Verbatim or paraphrased from screenplay"
+      },
+      "narrative_context": "Episode 2 Scene 1 (INT. CATHEDRAL – CONTINUOUS): High-retention 44.2s promo cut featuring OFF-SCREEN VOICE. Hooks listener attention from 01:05.80 and abruptly terminates on unresolved tension at 01:50.00.",
+      "has_cliffhanger_sfx": false,
+      "cliffhanger_sfx_note": null,
+      "validation": {
+        "note": "These checks are PROGRAMMATICALLY ENFORCED — not AI-generated",
+        "passed": true,
+        "failures": [],
+        "warnings": []
+      },
+      "scoring": {
+        "candidate_id": "PROMO_EP02_SC1_006",
+        "scores": {
+          "AI-generated": {
+            "hook_strength": {
+              "score": 8.6,
+              "weight": 0.25
+            },
+            "cliffhanger_strength": {
+              "score": 7.6,
+              "weight": 0.3
+            },
+            "standalone_clarity": {
+              "score": 6.8,
+              "weight": 0.2
+            },
+            "emotional_impact": {
+              "score": 7.35,
+              "weight": 0.15
+            }
+          },
+          "programmatic": {
+            "duration_quality": {
+              "score": 9.211,
+              "weight": 0.1,
+              "duration_sec": 44.2,
+              "note": "Deterministic Python rule — not AI-generated"
+            }
+          },
+          "supporting_signals": {
+            "cliffhanger_sfx_marker": {
+              "present": false,
+              "note": "SOUND FX marker — supporting signal only, not in score calculation"
+            }
+          }
+        },
+        "final_score": 7.8136,
+        "score_confidence": "mock"
+      },
+      "ai_analysis": {
+        "explanation": "MOCK ANALYSIS (Ep2): This segment was selected by the mock client. Replace with real LLM for actual analysis.",
+        "note": "AI-generated assessment — verify against source text"
+      }
+    },
+    {
+      "rank": 13,
+      "candidate_id": "PROMO_EP02_SC1_005",
+      "final_score": 7.8063,
+      "is_valid": true,
+      "episodes": [
+        2
+      ],
+      "is_multi_episode": false,
+      "total_duration_sec": 44.8,
+      "segments": [
+        {
+          "episode_number": 2,
+          "scene_number": 1,
+          "scene_heading": "INT. CATHEDRAL – CONTINUOUS",
+          "start_ts": "00:00.00",
+          "end_ts": "00:44.80",
+          "start_sec": 0.0,
+          "end_sec": 44.8,
+          "duration_sec": 44.8,
+          "timestamp_note": "Scene-relative timestamps. Ep2 Sc1 starts at 00:00.00."
+        }
+      ],
+      "opening_hook": {
+        "text": "THE FORMER GROOM: (Cold, Callous) \"I cannot marry you, Juliana.\"",
+        "source": "Verbatim or paraphrased from screenplay"
+      },
+      "closing_cliffhanger": {
+        "text": "BLOND NOBLEMAN: \"Do not disgrace us further.\"",
+        "source": "Verbatim or paraphrased from screenplay"
+      },
+      "narrative_context": "Episode 2 Scene 1 (INT. CATHEDRAL – CONTINUOUS): High-retention 44.8s promo cut featuring THE FORMER GROOM. Hooks listener attention from 00:00.00 and abruptly terminates on unresolved tension at 00:44.80.",
+      "has_cliffhanger_sfx": false,
+      "cliffhanger_sfx_note": null,
+      "validation": {
+        "note": "These checks are PROGRAMMATICALLY ENFORCED — not AI-generated",
+        "passed": true,
+        "failures": [],
+        "warnings": []
+      },
+      "scoring": {
+        "candidate_id": "PROMO_EP02_SC1_005",
+        "scores": {
+          "AI-generated": {
+            "hook_strength": {
+              "score": 9.2,
+              "weight": 0.25
+            },
+            "cliffhanger_strength": {
+              "score": 7.1,
+              "weight": 0.3
+            },
+            "standalone_clarity": {
+              "score": 6.8,
+              "weight": 0.2
+            },
+            "emotional_impact": {
+              "score": 7.35,
+              "weight": 0.15
+            }
+          },
+          "programmatic": {
+            "duration_quality": {
+              "score": 9.138,
+              "weight": 0.1,
+              "duration_sec": 44.8,
+              "note": "Deterministic Python rule — not AI-generated"
+            }
+          },
+          "supporting_signals": {
+            "cliffhanger_sfx_marker": {
+              "present": false,
+              "note": "SOUND FX marker — supporting signal only, not in score calculation"
+            }
+          }
+        },
+        "final_score": 7.8063,
+        "score_confidence": "mock"
+      },
+      "ai_analysis": {
+        "explanation": "MOCK ANALYSIS (Ep2): This segment was selected by the mock client. Replace with real LLM for actual analysis.",
+        "note": "AI-generated assessment — verify against source text"
+      }
+    },
+    {
+      "rank": 14,
+      "candidate_id": "PROMO_EP18_SC1_072",
+      "final_score": 7.7881,
+      "is_valid": true,
+      "episodes": [
+        18
+      ],
+      "is_multi_episode": false,
+      "total_duration_sec": 28.9,
+      "segments": [
+        {
+          "episode_number": 18,
+          "scene_number": 1,
+          "scene_heading": "INT. COTTAGE - BEDROOM - NIGHT",
+          "start_ts": "00:00.00",
+          "end_ts": "00:28.90",
+          "start_sec": 0.0,
+          "end_sec": 28.9,
+          "duration_sec": 28.9,
+          "timestamp_note": "Scene-relative timestamps. Ep18 Sc1 starts at 00:00.00."
+        }
+      ],
+      "opening_hook": {
+        "text": "JULIANA: (Screaming, Terrified) \"Alexander!\"",
+        "source": "Verbatim or paraphrased from screenplay"
+      },
+      "closing_cliffhanger": {
+        "text": "ALEXANDER: \"Fire.\"",
+        "source": "Verbatim or paraphrased from screenplay"
+      },
+      "narrative_context": "Episode 18 Scene 1 (INT. COTTAGE - BEDROOM - NIGHT): High-retention 28.9s promo cut featuring JULIANA. Hooks listener attention from 00:00.00 and abruptly terminates on unresolved tension at 00:28.90.",
+      "has_cliffhanger_sfx": false,
+      "cliffhanger_sfx_note": null,
+      "validation": {
+        "note": "These checks are PROGRAMMATICALLY ENFORCED — not AI-generated",
+        "passed": true,
+        "failures": [],
+        "warnings": []
+      },
+      "scoring": {
+        "candidate_id": "PROMO_EP18_SC1_072",
+        "scores": {
+          "AI-generated": {
+            "hook_strength": {
+              "score": 8.0,
+              "weight": 0.25
+            },
+            "cliffhanger_strength": {
+              "score": 7.1,
+              "weight": 0.3
+            },
+            "standalone_clarity": {
+              "score": 8.0,
+              "weight": 0.2
+            },
+            "emotional_impact": {
+              "score": 7.35,
+              "weight": 0.15
+            }
+          },
+          "programmatic": {
+            "duration_quality": {
+              "score": 9.556,
+              "weight": 0.1,
+              "duration_sec": 28.9,
+              "note": "Deterministic Python rule — not AI-generated"
+            }
+          },
+          "supporting_signals": {
+            "cliffhanger_sfx_marker": {
+              "present": false,
+              "note": "SOUND FX marker — supporting signal only, not in score calculation"
+            }
+          }
+        },
+        "final_score": 7.7881,
+        "score_confidence": "mock"
+      },
+      "ai_analysis": {
+        "explanation": "MOCK ANALYSIS (Ep18): This segment was selected by the mock client. Replace with real LLM for actual analysis.",
+        "note": "AI-generated assessment — verify against source text"
+      }
+    },
+    {
+      "rank": 15,
       "candidate_id": "PROMO_EP25_SC1_116",
-      "final_score": 8.175,
+      "final_score": 7.7246,
       "is_valid": true,
       "episodes": [
         25
@@ -1666,25 +1246,25 @@
         "scores": {
           "AI-generated": {
             "hook_strength": {
-              "score": 8.5,
+              "score": 8.0,
               "weight": 0.25
             },
             "cliffhanger_strength": {
-              "score": 8.0,
+              "score": 7.1,
               "weight": 0.3
             },
             "standalone_clarity": {
-              "score": 7.5,
+              "score": 8.0,
               "weight": 0.2
             },
             "emotional_impact": {
-              "score": 8.0,
+              "score": 7.35,
               "weight": 0.15
             }
           },
           "programmatic": {
             "duration_quality": {
-              "score": 9.5,
+              "score": 8.921,
               "weight": 0.1,
               "duration_sec": 46.5,
               "note": "Deterministic Python rule — not AI-generated"
@@ -1697,11 +1277,431 @@
             }
           }
         },
-        "final_score": 8.175,
+        "final_score": 7.7246,
         "score_confidence": "mock"
       },
       "ai_analysis": {
         "explanation": "MOCK ANALYSIS (Ep25): This segment was selected by the mock client. Replace with real LLM for actual analysis.",
+        "note": "AI-generated assessment — verify against source text"
+      }
+    },
+    {
+      "rank": 16,
+      "candidate_id": "PROMO_EP32_SC1_143",
+      "final_score": 7.7163,
+      "is_valid": true,
+      "episodes": [
+        32
+      ],
+      "is_multi_episode": false,
+      "total_duration_sec": 45.4,
+      "segments": [
+        {
+          "episode_number": 32,
+          "scene_number": 1,
+          "scene_heading": "INT. DUNGEON CELLS – CONTINUOUS",
+          "start_ts": "00:00.00",
+          "end_ts": "00:45.40",
+          "start_sec": 0.0,
+          "end_sec": 45.4,
+          "duration_sec": 45.4,
+          "timestamp_note": "Scene-relative timestamps. Ep32 Sc1 starts at 00:00.00."
+        }
+      ],
+      "opening_hook": {
+        "text": "CATHERINE: (Mocking, Savoring) \"There it is.\"",
+        "source": "Verbatim or paraphrased from screenplay"
+      },
+      "closing_cliffhanger": {
+        "text": "CATHERINE: \"You still think you are better?!\"",
+        "source": "Verbatim or paraphrased from screenplay"
+      },
+      "narrative_context": "Episode 32 Scene 1 (INT. DUNGEON CELLS – CONTINUOUS): High-retention 45.4s promo cut featuring CATHERINE. Hooks listener attention from 00:00.00 and abruptly terminates on unresolved tension at 00:45.40.",
+      "has_cliffhanger_sfx": false,
+      "cliffhanger_sfx_note": null,
+      "validation": {
+        "note": "These checks are PROGRAMMATICALLY ENFORCED — not AI-generated",
+        "passed": true,
+        "failures": [],
+        "warnings": []
+      },
+      "scoring": {
+        "candidate_id": "PROMO_EP32_SC1_143",
+        "scores": {
+          "AI-generated": {
+            "hook_strength": {
+              "score": 7.4,
+              "weight": 0.25
+            },
+            "cliffhanger_strength": {
+              "score": 7.7,
+              "weight": 0.3
+            },
+            "standalone_clarity": {
+              "score": 8.0,
+              "weight": 0.2
+            },
+            "emotional_impact": {
+              "score": 7.0,
+              "weight": 0.15
+            }
+          },
+          "programmatic": {
+            "duration_quality": {
+              "score": 9.063,
+              "weight": 0.1,
+              "duration_sec": 45.4,
+              "note": "Deterministic Python rule — not AI-generated"
+            }
+          },
+          "supporting_signals": {
+            "cliffhanger_sfx_marker": {
+              "present": false,
+              "note": "SOUND FX marker — supporting signal only, not in score calculation"
+            }
+          }
+        },
+        "final_score": 7.7163,
+        "score_confidence": "mock"
+      },
+      "ai_analysis": {
+        "explanation": "MOCK ANALYSIS (Ep32): This segment was selected by the mock client. Replace with real LLM for actual analysis.",
+        "note": "AI-generated assessment — verify against source text"
+      }
+    },
+    {
+      "rank": 17,
+      "candidate_id": "PROMO_EP18_SC4_077",
+      "final_score": 7.6974,
+      "is_valid": true,
+      "episodes": [
+        18
+      ],
+      "is_multi_episode": false,
+      "total_duration_sec": 25.5,
+      "segments": [
+        {
+          "episode_number": 18,
+          "scene_number": 4,
+          "scene_heading": "INT. COTTAGE - PARLOR / EXT. COTTAGE - CONTINUOUS",
+          "start_ts": "01:38.50",
+          "end_ts": "02:04.00",
+          "start_sec": 98.5,
+          "end_sec": 124.0,
+          "duration_sec": 25.5,
+          "timestamp_note": "Scene-relative timestamps. Ep18 Sc4 starts at 00:00.00."
+        }
+      ],
+      "opening_hook": {
+        "text": "JULIANA: (Urgent, Shouting) \"The window!\"",
+        "source": "Verbatim or paraphrased from screenplay"
+      },
+      "closing_cliffhanger": {
+        "text": "ALEXANDER: \"Hold on to me.\"",
+        "source": "Verbatim or paraphrased from screenplay"
+      },
+      "narrative_context": "Episode 18 Scene 4 (INT. COTTAGE - PARLOR / EXT. COTTAGE - CONTINUOUS): High-retention 25.5s promo cut featuring JULIANA. Hooks listener attention from 01:38.50 and abruptly terminates on unresolved tension at 02:04.00.",
+      "has_cliffhanger_sfx": false,
+      "cliffhanger_sfx_note": null,
+      "validation": {
+        "note": "These checks are PROGRAMMATICALLY ENFORCED — not AI-generated",
+        "passed": true,
+        "failures": [],
+        "warnings": []
+      },
+      "scoring": {
+        "candidate_id": "PROMO_EP18_SC4_077",
+        "scores": {
+          "AI-generated": {
+            "hook_strength": {
+              "score": 8.0,
+              "weight": 0.25
+            },
+            "cliffhanger_strength": {
+              "score": 7.1,
+              "weight": 0.3
+            },
+            "standalone_clarity": {
+              "score": 8.0,
+              "weight": 0.2
+            },
+            "emotional_impact": {
+              "score": 7.0,
+              "weight": 0.15
+            }
+          },
+          "programmatic": {
+            "duration_quality": {
+              "score": 9.174,
+              "weight": 0.1,
+              "duration_sec": 25.5,
+              "note": "Deterministic Python rule — not AI-generated"
+            }
+          },
+          "supporting_signals": {
+            "cliffhanger_sfx_marker": {
+              "present": false,
+              "note": "SOUND FX marker — supporting signal only, not in score calculation"
+            }
+          }
+        },
+        "final_score": 7.6974,
+        "score_confidence": "mock"
+      },
+      "ai_analysis": {
+        "explanation": "MOCK ANALYSIS (Ep18): This segment was selected by the mock client. Replace with real LLM for actual analysis.",
+        "note": "AI-generated assessment — verify against source text"
+      }
+    },
+    {
+      "rank": 18,
+      "candidate_id": "PROMO_EP42_SC1_179",
+      "final_score": 7.6413,
+      "is_valid": true,
+      "episodes": [
+        42
+      ],
+      "is_multi_episode": false,
+      "total_duration_sec": 44.8,
+      "segments": [
+        {
+          "episode_number": 42,
+          "scene_number": 1,
+          "scene_heading": "INT. CATHEDRAL – CONTINUOUS",
+          "start_ts": "00:00.00",
+          "end_ts": "00:44.80",
+          "start_sec": 0.0,
+          "end_sec": 44.8,
+          "duration_sec": 44.8,
+          "timestamp_note": "Scene-relative timestamps. Ep42 Sc1 starts at 00:00.00."
+        }
+      ],
+      "opening_hook": {
+        "text": "BLOND NOBLEMAN: (Shocked, Trembling) \"Who are you?\"",
+        "source": "Verbatim or paraphrased from screenplay"
+      },
+      "closing_cliffhanger": {
+        "text": "ALEXANDER'S MOTHER: \"Alexander...\"",
+        "source": "Verbatim or paraphrased from screenplay"
+      },
+      "narrative_context": "Episode 42 Scene 1 (INT. CATHEDRAL – CONTINUOUS): High-retention 44.8s promo cut featuring BLOND NOBLEMAN. Hooks listener attention from 00:00.00 and abruptly terminates on unresolved tension at 00:44.80.",
+      "has_cliffhanger_sfx": false,
+      "cliffhanger_sfx_note": null,
+      "validation": {
+        "note": "These checks are PROGRAMMATICALLY ENFORCED — not AI-generated",
+        "passed": true,
+        "failures": [],
+        "warnings": []
+      },
+      "scoring": {
+        "candidate_id": "PROMO_EP42_SC1_179",
+        "scores": {
+          "AI-generated": {
+            "hook_strength": {
+              "score": 7.7,
+              "weight": 0.25
+            },
+            "cliffhanger_strength": {
+              "score": 7.8,
+              "weight": 0.3
+            },
+            "standalone_clarity": {
+              "score": 6.8,
+              "weight": 0.2
+            },
+            "emotional_impact": {
+              "score": 7.35,
+              "weight": 0.15
+            }
+          },
+          "programmatic": {
+            "duration_quality": {
+              "score": 9.138,
+              "weight": 0.1,
+              "duration_sec": 44.8,
+              "note": "Deterministic Python rule — not AI-generated"
+            }
+          },
+          "supporting_signals": {
+            "cliffhanger_sfx_marker": {
+              "present": false,
+              "note": "SOUND FX marker — supporting signal only, not in score calculation"
+            }
+          }
+        },
+        "final_score": 7.6413,
+        "score_confidence": "mock"
+      },
+      "ai_analysis": {
+        "explanation": "MOCK ANALYSIS (Ep42): This segment was selected by the mock client. Replace with real LLM for actual analysis.",
+        "note": "AI-generated assessment — verify against source text"
+      }
+    },
+    {
+      "rank": 19,
+      "candidate_id": "PROMO_EP25_SC1_115",
+      "final_score": 7.5987,
+      "is_valid": true,
+      "episodes": [
+        25
+      ],
+      "is_multi_episode": false,
+      "total_duration_sec": 44.6,
+      "segments": [
+        {
+          "episode_number": 25,
+          "scene_number": 1,
+          "scene_heading": "EXT. MISTY FOREST TRAIL – DUSK",
+          "start_ts": "00:00.00",
+          "end_ts": "00:44.60",
+          "start_sec": 0.0,
+          "end_sec": 44.6,
+          "duration_sec": 44.6,
+          "timestamp_note": "Scene-relative timestamps. Ep25 Sc1 starts at 00:00.00."
+        }
+      ],
+      "opening_hook": {
+        "text": "ALEXANDER: (Grave, Alert) \"Juliana.\"",
+        "source": "Verbatim or paraphrased from screenplay"
+      },
+      "closing_cliffhanger": {
+        "text": "JULIANA: \"I was in the wrong chamber. I was punished as a maid.\"",
+        "source": "Verbatim or paraphrased from screenplay"
+      },
+      "narrative_context": "Episode 25 Scene 1 (EXT. MISTY FOREST TRAIL – DUSK): High-retention 44.6s promo cut featuring ALEXANDER. Hooks listener attention from 00:00.00 and abruptly terminates on unresolved tension at 00:44.60.",
+      "has_cliffhanger_sfx": false,
+      "cliffhanger_sfx_note": null,
+      "validation": {
+        "note": "These checks are PROGRAMMATICALLY ENFORCED — not AI-generated",
+        "passed": true,
+        "failures": [],
+        "warnings": []
+      },
+      "scoring": {
+        "candidate_id": "PROMO_EP25_SC1_115",
+        "scores": {
+          "AI-generated": {
+            "hook_strength": {
+              "score": 7.4,
+              "weight": 0.25
+            },
+            "cliffhanger_strength": {
+              "score": 7.1,
+              "weight": 0.3
+            },
+            "standalone_clarity": {
+              "score": 8.0,
+              "weight": 0.2
+            },
+            "emotional_impact": {
+              "score": 7.35,
+              "weight": 0.15
+            }
+          },
+          "programmatic": {
+            "duration_quality": {
+              "score": 9.162,
+              "weight": 0.1,
+              "duration_sec": 44.6,
+              "note": "Deterministic Python rule — not AI-generated"
+            }
+          },
+          "supporting_signals": {
+            "cliffhanger_sfx_marker": {
+              "present": false,
+              "note": "SOUND FX marker — supporting signal only, not in score calculation"
+            }
+          }
+        },
+        "final_score": 7.5987,
+        "score_confidence": "mock"
+      },
+      "ai_analysis": {
+        "explanation": "MOCK ANALYSIS (Ep25): This segment was selected by the mock client. Replace with real LLM for actual analysis.",
+        "note": "AI-generated assessment — verify against source text"
+      }
+    },
+    {
+      "rank": 20,
+      "candidate_id": "PROMO_EP43_SC1_182",
+      "final_score": 7.5909,
+      "is_valid": true,
+      "episodes": [
+        43
+      ],
+      "is_multi_episode": false,
+      "total_duration_sec": 44.0,
+      "segments": [
+        {
+          "episode_number": 43,
+          "scene_number": 1,
+          "scene_heading": "INT. RUINED CATHEDRAL – CONTINUOUS",
+          "start_ts": "00:00.00",
+          "end_ts": "00:44.00",
+          "start_sec": 0.0,
+          "end_sec": 44.0,
+          "duration_sec": 44.0,
+          "timestamp_note": "Scene-relative timestamps. Ep43 Sc1 starts at 00:00.00."
+        }
+      ],
+      "opening_hook": {
+        "text": "BLOND NOBLEMAN: (Hysterical, Panicked) \"You're lying!\"",
+        "source": "Verbatim or paraphrased from screenplay"
+      },
+      "closing_cliffhanger": {
+        "text": "CROWN OFFICIAL: \"Military Intelligence Report, Iberian front, three years ago.\"",
+        "source": "Verbatim or paraphrased from screenplay"
+      },
+      "narrative_context": "Episode 43 Scene 1 (INT. RUINED CATHEDRAL – CONTINUOUS): High-retention 44.0s promo cut featuring BLOND NOBLEMAN. Hooks listener attention from 00:00.00 and abruptly terminates on unresolved tension at 00:44.00.",
+      "has_cliffhanger_sfx": false,
+      "cliffhanger_sfx_note": null,
+      "validation": {
+        "note": "These checks are PROGRAMMATICALLY ENFORCED — not AI-generated",
+        "passed": true,
+        "failures": [],
+        "warnings": []
+      },
+      "scoring": {
+        "candidate_id": "PROMO_EP43_SC1_182",
+        "scores": {
+          "AI-generated": {
+            "hook_strength": {
+              "score": 8.3,
+              "weight": 0.25
+            },
+            "cliffhanger_strength": {
+              "score": 7.1,
+              "weight": 0.3
+            },
+            "standalone_clarity": {
+              "score": 6.8,
+              "weight": 0.2
+            },
+            "emotional_impact": {
+              "score": 7.35,
+              "weight": 0.15
+            }
+          },
+          "programmatic": {
+            "duration_quality": {
+              "score": 9.234,
+              "weight": 0.1,
+              "duration_sec": 44.0,
+              "note": "Deterministic Python rule — not AI-generated"
+            }
+          },
+          "supporting_signals": {
+            "cliffhanger_sfx_marker": {
+              "present": false,
+              "note": "SOUND FX marker — supporting signal only, not in score calculation"
+            }
+          }
+        },
+        "final_score": 7.5909,
+        "score_confidence": "mock"
+      },
+      "ai_analysis": {
+        "explanation": "MOCK ANALYSIS (Ep43): This segment was selected by the mock client. Replace with real LLM for actual analysis.",
         "note": "AI-generated assessment — verify against source text"
       }
     }

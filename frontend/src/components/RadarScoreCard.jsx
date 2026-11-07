@@ -79,7 +79,7 @@ export default function RadarScoreCard({ selectedPromo }) {
         </div>
         <div className="flex items-center space-x-1.5 text-slate-400 hover:text-slate-600 dark:text-gray-500 dark:hover:text-gray-300">
           <span className="text-[11px] font-mono font-bold text-emerald-600 dark:text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/20 mr-1">
-            GPT-4o Scored
+            5D Grounded Scoring
           </span>
           <button className="p-1 rounded hover:bg-slate-100 dark:hover:bg-[#1a2030] transition">
             <MoreHorizontal className="w-4 h-4" />

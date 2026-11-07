@@ -49,35 +49,25 @@ def _score_duration(
 ) -> float:
     """
     Programmatic duration quality score (1–10).
-    
-    Scoring:
-      In ideal range [25–45s]  → 10
-      Near ideal boundaries    → linear decay to 7
-      Hard limits [20s, 60s]   → 5 at exact boundary
-      Outside hard limits      → 1 (should have been filtered by validator)
+    Continuous smooth curve peaking at the 35.0s sweet spot for short-form promos,
+    decaying gracefully toward the hard boundaries [20s, 60s].
     
     This score is PROGRAMMATICALLY COMPUTED — not AI-generated.
     """
     d = duration_sec
 
-    # Outside hard limits (shouldn't reach here after validation)
+    # Outside hard limits
     if d < hard_min or d > hard_max:
         return 1.0
 
-    # Perfect range
-    if ideal_min <= d <= ideal_max:
-        return 10.0
+    # Center target is 35.0s (midpoint of ideal 25–45s)
+    center = 35.0
+    dist = abs(d - center)
+    max_dist = 25.0  # distance to 60.0s hard max
 
-    # Below ideal (between hard_min and ideal_min)
-    if d < ideal_min:
-        # Linear: hard_min → 5.0, ideal_min → 10.0
-        ratio = (d - hard_min) / (ideal_min - hard_min)
-        return round(5.0 + ratio * 5.0, 2)
-
-    # Above ideal (between ideal_max and hard_max)
-    # Linear: ideal_max → 10.0, hard_max → 5.0
-    ratio = (d - ideal_max) / (hard_max - ideal_max)
-    return round(10.0 - ratio * 5.0, 2)
+    # Continuous smooth decay: 35.0s -> 10.0, 25s/45s -> ~9.36, 20s/60s -> ~7.2
+    curve_score = 10.0 - 3.2 * ((dist / max_dist) ** 1.4)
+    return round(max(1.0, min(10.0, curve_score)), 3)
 
 
 # ---------------------------------------------------------------------------

@@ -15,7 +15,6 @@ import {
 } from 'lucide-react';
 import TimelineScrubber from './TimelineScrubber';
 import RadarScoreCard from './RadarScoreCard';
-import MobileAdPreview from './MobileAdPreview';
 
 export default function StudioView({ promos, searchQuery }) {
   const [selectedId, setSelectedId] = useState(promos[0]?.candidate_id || null);
@@ -25,7 +24,6 @@ export default function StudioView({ promos, searchQuery }) {
   const [maxDuration, setMaxDuration] = useState(60);
   const [activePreset, setActivePreset] = useState('all');
   const [copied, setCopied] = useState(false);
-  const [showAdSimulator, setShowAdSimulator] = useState(true);
 
   // Available episodes
   const allEpisodes = Array.from(
@@ -228,17 +226,11 @@ export default function StudioView({ promos, searchQuery }) {
                   </p>
                 </div>
 
-                <div className="flex items-center space-x-2">
-                  <button
-                    onClick={() => setShowAdSimulator(!showAdSimulator)}
-                    className={`flex items-center space-x-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold transition shadow-sm ${
-                      showAdSimulator
-                        ? 'bg-gradient-to-r from-rose-600 to-red-600 text-white shadow-rose-600/25'
-                        : 'bg-white dark:bg-[#161a26] hover:bg-slate-100 dark:hover:bg-[#202638] text-slate-700 dark:text-gray-300 border border-slate-200 dark:border-[#262f44]'
-                    }`}
-                  >
-                    <span>📱 9:16 Ad Simulator</span>
-                  </button>
+                <div className="flex items-center space-x-3">
+                  <span className="hidden sm:inline-flex items-center space-x-1.5 px-2.5 py-1 rounded-md bg-emerald-500/10 border border-emerald-500/20 text-emerald-600 dark:text-emerald-400 text-[11px] font-medium font-mono">
+                    <ShieldCheck className="w-3.5 h-3.5" />
+                    <span>Deterministic Verified</span>
+                  </span>
 
                   <button
                     onClick={copyTimestamps}
@@ -248,7 +240,7 @@ export default function StudioView({ promos, searchQuery }) {
                     <span>{copied ? 'Copied' : 'Copy Timestamps'}</span>
                   </button>
 
-                  <div className="text-right">
+                  <div className="text-right pl-1">
                     <div className="text-[10px] text-slate-400 dark:text-gray-500 uppercase tracking-wider font-semibold">Total Score</div>
                     <div className="text-xl font-black text-amber-600 dark:text-amber-400 font-mono leading-none">
                       {selectedPromo.final_score?.toFixed(3)}
@@ -257,12 +249,7 @@ export default function StudioView({ promos, searchQuery }) {
                 </div>
               </div>
 
-              {/* 9:16 Vertical Video Ad Simulator (TikTok / Reels / Shorts Mode) */}
-              {showAdSimulator && (
-                <MobileAdPreview promo={selectedPromo} onClose={() => setShowAdSimulator(false)} />
-              )}
-
-              {/* 5-Dimension Radar & Telemetry Card (Exact match from screenshot) */}
+              {/* 5-Dimension Radar & Telemetry Card */}
               <RadarScoreCard selectedPromo={selectedPromo} />
 
               {/* Screenplay Teleprompter Cards (Feature from Concept 2) */}
@@ -313,7 +300,7 @@ export default function StudioView({ promos, searchQuery }) {
               {/* Standalone Narrative Context */}
               <div className="bg-white dark:bg-[#111420] border border-slate-200 dark:border-[#20273a] rounded-xl p-4 space-y-2 shadow-sm">
                 <div className="text-xs font-bold text-slate-700 dark:text-gray-300 uppercase tracking-wider">
-                  Standalone Narrative Rationale (Why this ad converts)
+                  Standalone Narrative Rationale (Audience Retention & Clarity)
                 </div>
                 <p className="text-xs text-slate-600 dark:text-gray-300 leading-relaxed">
                   {selectedPromo.narrative_context}

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-08T02:51:44.531909",
+  "generated_at": "2026-11-08T03:54:47.789379",
   "summary": {
     "total_generated": 218,
     "passed_validation": 122,
@@ -1855,394 +1855,394 @@
   ],
   "weak_candidates": [
     {
-      "candidate_id": "PROMO_EP29_SC1_127",
-      "rank": 122,
-      "final_score": 5.935,
-      "episodes": [
-        29
-      ],
-      "ai_hook_strength": 6.5,
-      "ai_cliffhanger_strength": 6.0,
-      "ai_standalone_clarity": 5.5,
-      "ai_emotional_impact": 6.0,
-      "explanation": "MOCK ANALYSIS (Ep29): This segment was selected by the mock client. Replace with real LLM for actual analysis."
-    },
-    {
-      "candidate_id": "PROMO_EP11_SC2_044",
-      "rank": 121,
-      "final_score": 5.967,
-      "episodes": [
-        11
-      ],
-      "ai_hook_strength": 6.5,
-      "ai_cliffhanger_strength": 6.0,
-      "ai_standalone_clarity": 5.5,
-      "ai_emotional_impact": 6.0,
-      "explanation": "MOCK ANALYSIS (Ep11): This segment was selected by the mock client. Replace with real LLM for actual analysis."
-    },
-    {
-      "candidate_id": "PROMO_EP44_SC2_185",
-      "rank": 120,
-      "final_score": 6.035,
-      "episodes": [
-        44
-      ],
-      "ai_hook_strength": 6.5,
-      "ai_cliffhanger_strength": 6.0,
-      "ai_standalone_clarity": 5.5,
-      "ai_emotional_impact": 6.0,
-      "explanation": "MOCK ANALYSIS (Ep44): This segment was selected by the mock client. Replace with real LLM for actual analysis."
-    },
-    {
-      "candidate_id": "PROMO_EP47_SC1_200",
-      "rank": 119,
-      "final_score": 6.075,
-      "episodes": [
-        47
-      ],
-      "ai_hook_strength": 6.5,
-      "ai_cliffhanger_strength": 6.0,
-      "ai_standalone_clarity": 5.5,
-      "ai_emotional_impact": 6.0,
-      "explanation": "MOCK ANALYSIS (Ep47): This segment was selected by the mock client. Replace with real LLM for actual analysis."
-    },
-    {
       "candidate_id": "PROMO_EP11_SC1_040",
-      "rank": 118,
-      "final_score": 6.125,
+      "rank": 122,
+      "final_score": 6.2021,
       "episodes": [
         11
       ],
-      "ai_hook_strength": 6.5,
+      "ai_hook_strength": 6.8,
       "ai_cliffhanger_strength": 6.0,
-      "ai_standalone_clarity": 5.5,
+      "ai_standalone_clarity": 5.1,
       "ai_emotional_impact": 6.0,
       "explanation": "MOCK ANALYSIS (Ep11): This segment was selected by the mock client. Replace with real LLM for actual analysis."
     },
     {
-      "candidate_id": "PROMO_EP20_SC2_088",
-      "rank": 117,
-      "final_score": 6.135,
-      "episodes": [
-        20
-      ],
-      "ai_hook_strength": 6.5,
-      "ai_cliffhanger_strength": 6.0,
-      "ai_standalone_clarity": 5.5,
-      "ai_emotional_impact": 6.0,
-      "explanation": "MOCK ANALYSIS (Ep20): This segment was selected by the mock client. Replace with real LLM for actual analysis."
-    },
-    {
-      "candidate_id": "PROMO_EP37_SC2_160",
-      "rank": 116,
-      "final_score": 6.142,
-      "episodes": [
-        37
-      ],
-      "ai_hook_strength": 6.5,
-      "ai_cliffhanger_strength": 6.0,
-      "ai_standalone_clarity": 5.5,
-      "ai_emotional_impact": 6.0,
-      "explanation": "MOCK ANALYSIS (Ep37): This segment was selected by the mock client. Replace with real LLM for actual analysis."
-    },
-    {
-      "candidate_id": "PROMO_EP48_SC2_209",
-      "rank": 115,
-      "final_score": 6.148,
-      "episodes": [
-        48
-      ],
-      "ai_hook_strength": 6.5,
-      "ai_cliffhanger_strength": 6.0,
-      "ai_standalone_clarity": 5.5,
-      "ai_emotional_impact": 6.0,
-      "explanation": "MOCK ANALYSIS (Ep48): This segment was selected by the mock client. Replace with real LLM for actual analysis."
-    },
-    {
-      "candidate_id": "PROMO_EP03_SC1_008",
-      "rank": 114,
-      "final_score": 6.205,
+      "candidate_id": "PROMO_EP03_SC3_011",
+      "rank": 121,
+      "final_score": 6.3374,
       "episodes": [
         3
       ],
-      "ai_hook_strength": 6.5,
+      "ai_hook_strength": 6.8,
       "ai_cliffhanger_strength": 6.0,
-      "ai_standalone_clarity": 5.5,
+      "ai_standalone_clarity": 5.1,
       "ai_emotional_impact": 6.0,
       "explanation": "MOCK ANALYSIS (Ep3): This segment was selected by the mock client. Replace with real LLM for actual analysis."
     },
     {
-      "candidate_id": "PROMO_EP47_SC4_204",
-      "rank": 113,
-      "final_score": 6.242,
+      "candidate_id": "PROMO_EP04_SC1_014",
+      "rank": 120,
+      "final_score": 6.3813,
       "episodes": [
-        47
+        4
       ],
-      "ai_hook_strength": 6.5,
+      "ai_hook_strength": 7.0,
+      "ai_cliffhanger_strength": 6.0,
+      "ai_standalone_clarity": 5.1,
+      "ai_emotional_impact": 6.0,
+      "explanation": "MOCK ANALYSIS (Ep4): This segment was selected by the mock client. Replace with real LLM for actual analysis."
+    },
+    {
+      "candidate_id": "PROMO_EP13_SC1_051",
+      "rank": 119,
+      "final_score": 6.3962,
+      "episodes": [
+        13
+      ],
+      "ai_hook_strength": 7.1,
+      "ai_cliffhanger_strength": 6.0,
+      "ai_standalone_clarity": 5.1,
+      "ai_emotional_impact": 6.0,
+      "explanation": "MOCK ANALYSIS (Ep13): This segment was selected by the mock client. Replace with real LLM for actual analysis."
+    },
+    {
+      "candidate_id": "PROMO_EP09_SC1_033",
+      "rank": 118,
+      "final_score": 6.4037,
+      "episodes": [
+        9
+      ],
+      "ai_hook_strength": 6.8,
       "ai_cliffhanger_strength": 6.0,
       "ai_standalone_clarity": 5.5,
       "ai_emotional_impact": 6.0,
-      "explanation": "MOCK ANALYSIS (Ep47): This segment was selected by the mock client. Replace with real LLM for actual analysis."
+      "explanation": "MOCK ANALYSIS (Ep9): This segment was selected by the mock client. Replace with real LLM for actual analysis."
     },
     {
-      "candidate_id": "PROMO_EP45_SC1_189",
-      "rank": 112,
-      "final_score": 6.295,
-      "episodes": [
-        45
-      ],
-      "ai_hook_strength": 6.5,
-      "ai_cliffhanger_strength": 6.0,
-      "ai_standalone_clarity": 5.5,
-      "ai_emotional_impact": 6.0,
-      "explanation": "MOCK ANALYSIS (Ep45): This segment was selected by the mock client. Replace with real LLM for actual analysis."
-    },
-    {
-      "candidate_id": "PROMO_EP24_SC1_109",
-      "rank": 111,
-      "final_score": 6.308,
+      "candidate_id": "PROMO_EP24_SC2_113",
+      "rank": 117,
+      "final_score": 6.4068,
       "episodes": [
         24
       ],
       "ai_hook_strength": 6.5,
       "ai_cliffhanger_strength": 6.0,
       "ai_standalone_clarity": 5.5,
+      "ai_emotional_impact": 6.35,
+      "explanation": "MOCK ANALYSIS (Ep24): This segment was selected by the mock client. Replace with real LLM for actual analysis."
+    },
+    {
+      "candidate_id": "PROMO_EP05_SC1_018",
+      "rank": 116,
+      "final_score": 6.4113,
+      "episodes": [
+        5
+      ],
+      "ai_hook_strength": 6.8,
+      "ai_cliffhanger_strength": 6.0,
+      "ai_standalone_clarity": 5.5,
+      "ai_emotional_impact": 6.0,
+      "explanation": "MOCK ANALYSIS (Ep5): This segment was selected by the mock client. Replace with real LLM for actual analysis."
+    },
+    {
+      "candidate_id": "PROMO_EP24_SC1_109",
+      "rank": 115,
+      "final_score": 6.4499,
+      "episodes": [
+        24
+      ],
+      "ai_hook_strength": 6.5,
+      "ai_cliffhanger_strength": 6.0,
+      "ai_standalone_clarity": 6.3,
       "ai_emotional_impact": 6.0,
       "explanation": "MOCK ANALYSIS (Ep24): This segment was selected by the mock client. Replace with real LLM for actual analysis."
     },
     {
-      "candidate_id": "PROMO_EP19_SC2_083",
-      "rank": 110,
-      "final_score": 6.325,
+      "candidate_id": "PROMO_EP07_SC1_025",
+      "rank": 114,
+      "final_score": 6.4638,
       "episodes": [
-        19
+        7
       ],
-      "ai_hook_strength": 6.5,
+      "ai_hook_strength": 6.8,
       "ai_cliffhanger_strength": 6.0,
       "ai_standalone_clarity": 5.5,
-      "ai_emotional_impact": 6.0,
-      "explanation": "MOCK ANALYSIS (Ep19): This segment was selected by the mock client. Replace with real LLM for actual analysis."
+      "ai_emotional_impact": 6.35,
+      "explanation": "MOCK ANALYSIS (Ep7): This segment was selected by the mock client. Replace with real LLM for actual analysis."
     },
     {
-      "candidate_id": "PROMO_EP30_SC1_133",
-      "rank": 109,
-      "final_score": 6.338,
+      "candidate_id": "PROMO_EP28_SC1_125",
+      "rank": 113,
+      "final_score": 6.4675,
+      "episodes": [
+        28
+      ],
+      "ai_hook_strength": 6.8,
+      "ai_cliffhanger_strength": 6.0,
+      "ai_standalone_clarity": 5.5,
+      "ai_emotional_impact": 6.35,
+      "explanation": "MOCK ANALYSIS (Ep28): This segment was selected by the mock client. Replace with real LLM for actual analysis."
+    },
+    {
+      "candidate_id": "PROMO_EP30_SC2_137",
+      "rank": 112,
+      "final_score": 6.4711,
       "episodes": [
         30
       ],
-      "ai_hook_strength": 6.5,
+      "ai_hook_strength": 6.8,
       "ai_cliffhanger_strength": 6.0,
       "ai_standalone_clarity": 5.5,
-      "ai_emotional_impact": 6.0,
+      "ai_emotional_impact": 6.35,
       "explanation": "MOCK ANALYSIS (Ep30): This segment was selected by the mock client. Replace with real LLM for actual analysis."
     },
     {
-      "candidate_id": "PROMO_EP33_SC1_147",
+      "candidate_id": "PROMO_EP11_SC2_044",
+      "rank": 111,
+      "final_score": 6.4822,
+      "episodes": [
+        11
+      ],
+      "ai_hook_strength": 7.1,
+      "ai_cliffhanger_strength": 6.6,
+      "ai_standalone_clarity": 5.1,
+      "ai_emotional_impact": 6.7,
+      "explanation": "MOCK ANALYSIS (Ep11): This segment was selected by the mock client. Replace with real LLM for actual analysis."
+    },
+    {
+      "candidate_id": "PROMO_EP15_SC1_061",
+      "rank": 110,
+      "final_score": 6.4838,
+      "episodes": [
+        15
+      ],
+      "ai_hook_strength": 7.4,
+      "ai_cliffhanger_strength": 6.0,
+      "ai_standalone_clarity": 5.1,
+      "ai_emotional_impact": 6.0,
+      "explanation": "MOCK ANALYSIS (Ep15): This segment was selected by the mock client. Replace with real LLM for actual analysis."
+    },
+    {
+      "candidate_id": "PROMO_EP40_SC1_172",
+      "rank": 109,
+      "final_score": 6.4974,
+      "episodes": [
+        40
+      ],
+      "ai_hook_strength": 6.8,
+      "ai_cliffhanger_strength": 6.0,
+      "ai_standalone_clarity": 5.5,
+      "ai_emotional_impact": 6.0,
+      "explanation": "MOCK ANALYSIS (Ep40): This segment was selected by the mock client. Replace with real LLM for actual analysis."
+    },
+    {
+      "candidate_id": "PROMO_EP28_SC1_124",
       "rank": 108,
-      "final_score": 6.35,
+      "final_score": 6.5075,
       "episodes": [
-        33
+        28
       ],
-      "ai_hook_strength": 6.5,
-      "ai_cliffhanger_strength": 6.0,
-      "ai_standalone_clarity": 5.5,
+      "ai_hook_strength": 6.8,
+      "ai_cliffhanger_strength": 6.6,
+      "ai_standalone_clarity": 5.1,
       "ai_emotional_impact": 6.0,
-      "explanation": "MOCK ANALYSIS (Ep33): This segment was selected by the mock client. Replace with real LLM for actual analysis."
+      "explanation": "MOCK ANALYSIS (Ep28): This segment was selected by the mock client. Replace with real LLM for actual analysis."
     },
     {
-      "candidate_id": "PROMO_EP26_SC1_119",
+      "candidate_id": "PROMO_EP35_SC3_152",
       "rank": 107,
-      "final_score": 6.356,
+      "final_score": 6.5084,
       "episodes": [
-        26
+        35
       ],
       "ai_hook_strength": 6.5,
       "ai_cliffhanger_strength": 6.0,
-      "ai_standalone_clarity": 5.5,
+      "ai_standalone_clarity": 6.3,
       "ai_emotional_impact": 6.0,
-      "explanation": "MOCK ANALYSIS (Ep26): This segment was selected by the mock client. Replace with real LLM for actual analysis."
+      "explanation": "MOCK ANALYSIS (Ep35): This segment was selected by the mock client. Replace with real LLM for actual analysis."
     },
     {
-      "candidate_id": "PROMO_EP46_SC1_197",
+      "candidate_id": "PROMO_EP31_SC1_140",
       "rank": 106,
-      "final_score": 6.358,
+      "final_score": 6.5178,
       "episodes": [
-        46
+        31
       ],
       "ai_hook_strength": 6.5,
       "ai_cliffhanger_strength": 6.0,
-      "ai_standalone_clarity": 5.5,
+      "ai_standalone_clarity": 6.3,
       "ai_emotional_impact": 6.0,
-      "explanation": "MOCK ANALYSIS (Ep46): This segment was selected by the mock client. Replace with real LLM for actual analysis."
+      "explanation": "MOCK ANALYSIS (Ep31): This segment was selected by the mock client. Replace with real LLM for actual analysis."
     },
     {
-      "candidate_id": "PROMO_EP49_SC1_213",
+      "candidate_id": "PROMO_EP37_SC2_160",
       "rank": 105,
-      "final_score": 6.375,
+      "final_score": 6.5201,
       "episodes": [
-        49
+        37
       ],
-      "ai_hook_strength": 6.5,
+      "ai_hook_strength": 7.3,
       "ai_cliffhanger_strength": 6.0,
       "ai_standalone_clarity": 5.5,
-      "ai_emotional_impact": 6.0,
-      "explanation": "MOCK ANALYSIS (Ep49): This segment was selected by the mock client. Replace with real LLM for actual analysis."
+      "ai_emotional_impact": 6.7,
+      "explanation": "MOCK ANALYSIS (Ep37): This segment was selected by the mock client. Replace with real LLM for actual analysis."
     },
     {
-      "candidate_id": "PROMO_EP49_SC1_214",
+      "candidate_id": "PROMO_EP41_SC1_176",
       "rank": 104,
-      "final_score": 6.377,
+      "final_score": 6.5313,
       "episodes": [
-        49
+        41
       ],
-      "ai_hook_strength": 6.5,
+      "ai_hook_strength": 7.6,
       "ai_cliffhanger_strength": 6.0,
-      "ai_standalone_clarity": 5.5,
+      "ai_standalone_clarity": 5.1,
       "ai_emotional_impact": 6.0,
-      "explanation": "MOCK ANALYSIS (Ep49): This segment was selected by the mock client. Replace with real LLM for actual analysis."
-    },
-    {
-      "candidate_id": "PROMO_EP27_SC1_122",
-      "rank": 103,
-      "final_score": 6.382,
-      "episodes": [
-        27
-      ],
-      "ai_hook_strength": 6.5,
-      "ai_cliffhanger_strength": 6.0,
-      "ai_standalone_clarity": 5.5,
-      "ai_emotional_impact": 6.0,
-      "explanation": "MOCK ANALYSIS (Ep27): This segment was selected by the mock client. Replace with real LLM for actual analysis."
+      "explanation": "MOCK ANALYSIS (Ep41): This segment was selected by the mock client. Replace with real LLM for actual analysis."
     },
     {
       "candidate_id": "PROMO_EP22_SC2_101",
-      "rank": 102,
-      "final_score": 6.392,
+      "rank": 103,
+      "final_score": 6.5486,
       "episodes": [
         22
       ],
-      "ai_hook_strength": 6.5,
+      "ai_hook_strength": 7.4,
       "ai_cliffhanger_strength": 6.0,
       "ai_standalone_clarity": 5.5,
       "ai_emotional_impact": 6.0,
       "explanation": "MOCK ANALYSIS (Ep22): This segment was selected by the mock client. Replace with real LLM for actual analysis."
     },
     {
-      "candidate_id": "PROMO_EP13_SC1_051",
+      "candidate_id": "PROMO_EP49_SC1_213",
+      "rank": 102,
+      "final_score": 6.5521,
+      "episodes": [
+        49
+      ],
+      "ai_hook_strength": 6.8,
+      "ai_cliffhanger_strength": 6.0,
+      "ai_standalone_clarity": 6.3,
+      "ai_emotional_impact": 6.0,
+      "explanation": "MOCK ANALYSIS (Ep49): This segment was selected by the mock client. Replace with real LLM for actual analysis."
+    },
+    {
+      "candidate_id": "PROMO_EP40_SC4_175",
       "rank": 101,
-      "final_score": 6.398,
+      "final_score": 6.5552,
       "episodes": [
-        13
+        40
       ],
-      "ai_hook_strength": 6.5,
+      "ai_hook_strength": 7.1,
       "ai_cliffhanger_strength": 6.0,
       "ai_standalone_clarity": 5.5,
       "ai_emotional_impact": 6.0,
-      "explanation": "MOCK ANALYSIS (Ep13): This segment was selected by the mock client. Replace with real LLM for actual analysis."
+      "explanation": "MOCK ANALYSIS (Ep40): This segment was selected by the mock client. Replace with real LLM for actual analysis."
     },
     {
-      "candidate_id": "PROMO_EP09_SC1_033",
-      "rank": 99,
-      "final_score": 6.405,
-      "episodes": [
-        9
-      ],
-      "ai_hook_strength": 6.5,
-      "ai_cliffhanger_strength": 6.0,
-      "ai_standalone_clarity": 5.5,
-      "ai_emotional_impact": 6.0,
-      "explanation": "MOCK ANALYSIS (Ep9): This segment was selected by the mock client. Replace with real LLM for actual analysis."
-    },
-    {
-      "candidate_id": "PROMO_EP09_SC1_034",
+      "candidate_id": "PROMO_EP06_SC2_022",
       "rank": 100,
-      "final_score": 6.405,
+      "final_score": 6.5598,
       "episodes": [
-        9
+        6
       ],
       "ai_hook_strength": 6.5,
       "ai_cliffhanger_strength": 6.0,
-      "ai_standalone_clarity": 5.5,
-      "ai_emotional_impact": 6.0,
-      "explanation": "MOCK ANALYSIS (Ep9): This segment was selected by the mock client. Replace with real LLM for actual analysis."
+      "ai_standalone_clarity": 6.3,
+      "ai_emotional_impact": 6.35,
+      "explanation": "MOCK ANALYSIS (Ep6): This segment was selected by the mock client. Replace with real LLM for actual analysis."
     },
     {
-      "candidate_id": "PROMO_EP23_SC1_107",
-      "rank": 97,
-      "final_score": 6.408,
+      "candidate_id": "PROMO_EP47_SC4_204",
+      "rank": 99,
+      "final_score": 6.5611,
       "episodes": [
-        23
+        47
       ],
-      "ai_hook_strength": 6.5,
+      "ai_hook_strength": 7.7,
       "ai_cliffhanger_strength": 6.0,
       "ai_standalone_clarity": 5.5,
       "ai_emotional_impact": 6.0,
-      "explanation": "MOCK ANALYSIS (Ep23): This segment was selected by the mock client. Replace with real LLM for actual analysis."
+      "explanation": "MOCK ANALYSIS (Ep47): This segment was selected by the mock client. Replace with real LLM for actual analysis."
     },
     {
-      "candidate_id": "PROMO_EP50_SC1_217",
+      "candidate_id": "PROMO_EP19_SC1_081",
       "rank": 98,
-      "final_score": 6.408,
+      "final_score": 6.5765,
       "episodes": [
-        50
+        19
       ],
-      "ai_hook_strength": 6.5,
+      "ai_hook_strength": 7.3,
       "ai_cliffhanger_strength": 6.0,
       "ai_standalone_clarity": 5.5,
       "ai_emotional_impact": 6.0,
-      "explanation": "MOCK ANALYSIS (Ep50): This segment was selected by the mock client. Replace with real LLM for actual analysis."
+      "explanation": "MOCK ANALYSIS (Ep19): This segment was selected by the mock client. Replace with real LLM for actual analysis."
     },
     {
-      "candidate_id": "PROMO_EP17_SC2_070",
+      "candidate_id": "PROMO_EP07_SC3_028",
+      "rank": 97,
+      "final_score": 6.5841,
+      "episodes": [
+        7
+      ],
+      "ai_hook_strength": 7.4,
+      "ai_cliffhanger_strength": 6.0,
+      "ai_standalone_clarity": 5.1,
+      "ai_emotional_impact": 6.35,
+      "explanation": "MOCK ANALYSIS (Ep7): This segment was selected by the mock client. Replace with real LLM for actual analysis."
+    },
+    {
+      "candidate_id": "PROMO_EP29_SC1_127",
       "rank": 96,
-      "final_score": 6.412,
+      "final_score": 6.5849,
       "episodes": [
-        17
+        29
       ],
-      "ai_hook_strength": 6.5,
-      "ai_cliffhanger_strength": 6.0,
-      "ai_standalone_clarity": 5.5,
+      "ai_hook_strength": 6.8,
+      "ai_cliffhanger_strength": 6.6,
+      "ai_standalone_clarity": 5.8,
       "ai_emotional_impact": 6.0,
-      "explanation": "MOCK ANALYSIS (Ep17): This segment was selected by the mock client. Replace with real LLM for actual analysis."
+      "explanation": "MOCK ANALYSIS (Ep29): This segment was selected by the mock client. Replace with real LLM for actual analysis."
     },
     {
-      "candidate_id": "PROMO_EP16_SC1_064",
-      "rank": 94,
-      "final_score": 6.415,
-      "episodes": [
-        16
-      ],
-      "ai_hook_strength": 6.5,
-      "ai_cliffhanger_strength": 6.0,
-      "ai_standalone_clarity": 5.5,
-      "ai_emotional_impact": 6.0,
-      "explanation": "MOCK ANALYSIS (Ep16): This segment was selected by the mock client. Replace with real LLM for actual analysis."
-    },
-    {
-      "candidate_id": "PROMO_EP28_SC1_124",
+      "candidate_id": "PROMO_EP26_SC1_118",
       "rank": 95,
-      "final_score": 6.415,
+      "final_score": 6.5893,
       "episodes": [
-        28
+        26
       ],
-      "ai_hook_strength": 6.5,
+      "ai_hook_strength": 6.8,
       "ai_cliffhanger_strength": 6.0,
-      "ai_standalone_clarity": 5.5,
+      "ai_standalone_clarity": 6.3,
       "ai_emotional_impact": 6.0,
-      "explanation": "MOCK ANALYSIS (Ep28): This segment was selected by the mock client. Replace with real LLM for actual analysis."
+      "explanation": "MOCK ANALYSIS (Ep26): This segment was selected by the mock client. Replace with real LLM for actual analysis."
     },
     {
-      "candidate_id": "PROMO_EP38_SC1_167",
-      "rank": 93,
-      "final_score": 6.418,
+      "candidate_id": "PROMO_EP47_SC3_203",
+      "rank": 94,
+      "final_score": 6.5912,
       "episodes": [
-        38
+        47
+      ],
+      "ai_hook_strength": 7.7,
+      "ai_cliffhanger_strength": 6.0,
+      "ai_standalone_clarity": 5.1,
+      "ai_emotional_impact": 6.0,
+      "explanation": "MOCK ANALYSIS (Ep47): This segment was selected by the mock client. Replace with real LLM for actual analysis."
+    },
+    {
+      "candidate_id": "PROMO_EP14_SC1_057",
+      "rank": 93,
+      "final_score": 6.5991,
+      "episodes": [
+        14
       ],
       "ai_hook_strength": 6.5,
       "ai_cliffhanger_strength": 6.0,
-      "ai_standalone_clarity": 5.5,
-      "ai_emotional_impact": 6.0,
-      "explanation": "MOCK ANALYSIS (Ep38): This segment was selected by the mock client. Replace with real LLM for actual analysis."
+      "ai_standalone_clarity": 6.3,
+      "ai_emotional_impact": 6.35,
+      "explanation": "MOCK ANALYSIS (Ep14): This segment was selected by the mock client. Replace with real LLM for actual analysis."
     }
   ],
   "known_system_limitations": [
