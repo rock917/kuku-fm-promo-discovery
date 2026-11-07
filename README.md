@@ -5,25 +5,41 @@
 
 ---
 
+## Architecture & Deployment
+
+- **Frontend (Vercel)**: React + Tailwind CSS web dashboard (`frontend/`) with candidate explorer, quality metrics, failure analysis, and screenplay viewer.
+- **Backend (Azure App Service / Container Apps)**: FastAPI REST API (`src/api.py`, `Dockerfile`, `startup.sh`) with CORS enabled.
+- **Database (Supabase PostgreSQL)**: Schema migration (`supabase_schema.sql`) and pipeline sync script (`src/sync_supabase.py`).
+- **Core Engine**: Modular Python (`src/`) with deterministic constraint validation and 5-dimension explainable scoring.
+- **LLM Inference**: Swappable providers supporting Groq (`llama-3.3-70b-versatile`), Gemini, OpenAI, or Mock.
+
+---
+
 ## Quick Start
 
+### 1. Run Pipeline (Core Python Engine)
 ```bash
-# 1. Clone / navigate to the project
-cd Kuku_FM_CASE_STUDY
-
-# 2. Install dependencies
-pip install -r requirements.txt
-
-# 3. (Optional) Configure an LLM key for real AI analysis
-cp .env.example .env
-# Edit .env and add your GEMINI_API_KEY
-
-# 4. Run the pipeline (mock mode — no API key needed)
+# Fast mock run (no API key needed)
 python src/pipeline.py --provider mock --top-n 20
 
-# 5. Launch the Streamlit UI
-streamlit run src/app.py
+# Real LLM run with Groq (requires GROQ_API_KEY in .env)
+python src/pipeline.py --provider groq --top-n 20
 ```
+
+### 2. Start Backend API (for Azure)
+```bash
+pip install -r requirements.txt
+uvicorn src.api:app --host 0.0.0.0 --port 8000
+```
+Swagger UI will be live at `http://localhost:8000/docs`.
+
+### 3. Run Frontend (for Vercel)
+```bash
+cd frontend
+npm install
+npm run dev
+```
+Web dashboard will be live at `http://localhost:3000`.
 
 ---
 
@@ -34,25 +50,33 @@ Kuku_FM_CASE_STUDY/
 ├── data/
 │   └── scripts/
 │       └── I Married a Broken Soldier. He was a Duke/   # 50 episode .txt files (READ-ONLY)
-├── src/
-│   ├── parser.py        # Screenplay parser — extracts episodes, scenes, events, timestamps
-│   ├── validator.py     # Deterministic validation (duration, timestamps, hallucination check)
-│   ├── llm_client.py    # LLM abstraction (Mock / Gemini / OpenAI) + file-based cache
-│   ├── analyzer.py      # Candidate window generation + LLM narrative analysis
-│   ├── scorer.py        # 5-dimension weighted scoring + ranking
-│   ├── reporter.py      # JSON / CSV / quality report / failure analysis writer
-│   ├── pipeline.py      # End-to-end orchestration (CLI entry point)
-│   └── app.py           # Streamlit UI
+├── frontend/                     # Modern Web UI (Vercel-ready)
+│   ├── src/components/           # PromosTab, QualityTab, FailureTab, SourceViewerTab
+│   ├── vercel.json               # Vercel deployment config
+│   └── package.json              # React, Vite, Tailwind CSS
+├── src/                          # Backend & Discovery Engine
+│   ├── api.py                   # FastAPI REST API (Azure App Service)
+│   ├── sync_supabase.py         # Supabase PostgreSQL database sync
+│   ├── parser.py                # Screenplay parser — extracts scenes, timestamps
+│   ├── validator.py             # Deterministic validation (duration, hallucination)
+│   ├── llm_client.py            # Swappable LLM client (Groq, Gemini, OpenAI, Mock)
+│   ├── analyzer.py              # Candidate windowing + LLM narrative analysis
+│   ├── scorer.py                # 5-dimension weighted scoring + ranking
+│   ├── reporter.py              # JSON / CSV / quality report / failure analysis
+│   └── pipeline.py              # End-to-end orchestration CLI
+├── supabase_schema.sql           # Supabase PostgreSQL tables & RLS policies
+├── Dockerfile                    # Azure Container Apps / App Service Dockerfile
+├── startup.sh                    # Azure App Service Linux startup script
 ├── config/
-│   └── config.yaml      # All paths, scoring weights, validation thresholds
-├── tests/
-│   └── test_parser.py   # Parser deep-verification test (all 50 episodes)
-├── outputs/
-│   ├── promos.json          # Ranked promo recommendations
-│   ├── promos.csv           # Same data in tabular format
-│   ├── quality_report.json  # Candidate counts, failure types, duplicate pairs
-│   └── failure_analysis.json # System limitations + individual failure details
+│   └── config.yaml              # Paths, scoring weights, validation thresholds
+├── outputs/                      # Generated raw pipeline deliverables
+│   ├── promos.json              # Ranked promo recommendations
+│   ├── promos.csv               # Same data in spreadsheet format
+│   ├── quality_report.json      # Pipeline stats, failure counts, duplicate pairs
+│   └── failure_analysis.json    # System limitations + disqualifications
 ├── requirements.txt
+├── solution_document.md          # Official 2-page solution document
+├── .env                          # Local credentials (STRICTLY GIT-IGNORED)
 ├── .env.example
 └── README.md
 ```
