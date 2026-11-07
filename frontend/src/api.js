@@ -2,7 +2,7 @@
 // api.js — Data Client for Azure FastAPI Backend & Local Fallback
 // =============================================================================
 
-const API_BASE = import.meta.env.VITE_API_URL || 'https://kuku-fm-rg-f4bsfnb0ejcbdkeb.centralindia-01.azurewebsites.net';
+const API_BASE = import.meta.env.VITE_API_URL || '';
 
 export async function fetchHealth() {
   try {
