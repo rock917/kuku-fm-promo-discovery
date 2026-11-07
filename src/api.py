@@ -28,8 +28,13 @@ from pydantic import BaseModel, Field
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger("kuku-promo-api")
 
-# Paths
+# Paths & Module Resolution
 ROOT = Path(__file__).resolve().parent.parent
+SRC_DIR = Path(__file__).resolve().parent
+for p in (SRC_DIR, ROOT):
+    if str(p) not in sys.path:
+        sys.path.insert(0, str(p))
+
 OUTPUTS = ROOT / "outputs"
 SCRIPTS = ROOT / "data" / "scripts" / "I Married a Broken Soldier. He was a Duke"
 PROMOS_JSON = OUTPUTS / "promos.json"
@@ -265,12 +270,20 @@ def analyze_custom_script(req: CustomAnalysisRequest):
     Returns ranked promo recommendations with explainable 5D scores.
     """
     import urllib.request
-    from parser import parse_episode_text
-    from analyzer import PromoAnalyzer
-    from validator import validate_all, ValidationConfig
-    from scorer import score_and_rank, DEFAULT_WEIGHTS
-    from reporter import _candidate_to_dict
-    from llm_client import create_llm_client, ResponseCache
+    try:
+        from parser import parse_episode_text
+        from analyzer import PromoAnalyzer
+        from validator import validate_all, ValidationConfig
+        from scorer import score_and_rank, DEFAULT_WEIGHTS
+        from reporter import _candidate_to_dict
+        from llm_client import create_llm_client, ResponseCache
+    except ImportError:
+        from src.parser import parse_episode_text
+        from src.analyzer import PromoAnalyzer
+        from src.validator import validate_all, ValidationConfig
+        from src.scorer import score_and_rank, DEFAULT_WEIGHTS
+        from src.reporter import _candidate_to_dict
+        from src.llm_client import create_llm_client, ResponseCache
 
     # 1. Fetch screenplay text
     text = ""
