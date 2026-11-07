@@ -15,8 +15,7 @@ venv/
 dist/
 build/
 
-# Data (screenplay scripts — not for public repos)
-data/scripts/
+# Screenplay archives
 *.zip
 *.pdf
 

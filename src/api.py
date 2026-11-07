@@ -102,7 +102,7 @@ def _get_episode_script(episode_number: int) -> str:
         raise HTTPException(status_code=404, detail="Screenplay scripts directory not found.")
     for file in SCRIPTS.glob("*.txt"):
         stem = file.stem.lower()
-        if f"episode {episode_number} " in stem + " " or f"episode {episode_number:02d} " in stem + " ":
+        if f"episode-{episode_number:03d}" in stem or f"episode {episode_number} " in stem + " " or f"episode {episode_number:02d}" in stem + " ":
             return file.read_text(encoding="utf-8", errors="replace")
     raise HTTPException(status_code=404, detail=f"Screenplay for Episode {episode_number} not found.")
 
@@ -198,7 +198,7 @@ def list_episodes():
     available = []
     for ep in range(1, 51):
         found = any(
-            f"episode {ep} " in f.stem.lower() + " " or f"episode {ep:02d} " in f.stem.lower() + " "
+            f"episode-{ep:03d}" in f.stem.lower() or f"episode {ep} " in f.stem.lower() + " " or f"episode {ep:02d} " in f.stem.lower() + " "
             for f in SCRIPTS.glob("*.txt")
         )
         available.append({"episode_number": ep, "available": found})
