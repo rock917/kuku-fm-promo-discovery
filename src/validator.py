@@ -589,14 +589,14 @@ if __name__ == "__main__":
                 start_sec=11.30, end_sec=43.10,
             )
         ],
-        opening_hook_text="Juliana, I have always loved you deeply!",  # Does not exist
+        opening_hook_text='"Juliana, I have always loved you deeply!"',  # Quoted verbatim line that does not exist
         closing_cliffhanger_text="Because he is marrying me.",
         narrative_context="Some context.",
         has_cliffhanger_sfx=False,
     )
     hallucinated.total_duration_sec = 43.10 - 11.30
     result4 = validate_candidate(hallucinated, ep_map, cfg)
-    status4 = "✓ VALID" if result4.is_valid else f"✗ INVALID"
+    status4 = "✓ DETECTED" if not result4.is_valid else "✗ MISSED"
     print(f"Test 4 (Hallucinated hook dialogue):      {status4}: {result4.validation_failures}")
 
     # --- Test 5: Duplicate detection ---
