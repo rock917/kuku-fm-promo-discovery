@@ -14,6 +14,7 @@ import {
   Check
 } from 'lucide-react';
 import TimelineScrubber from './TimelineScrubber';
+import RadarScoreCard from './RadarScoreCard';
 
 export default function StudioView({ promos, searchQuery }) {
   const [selectedId, setSelectedId] = useState(promos[0]?.candidate_id || null);
@@ -243,39 +244,8 @@ export default function StudioView({ promos, searchQuery }) {
                 </div>
               </div>
 
-              {/* 5-Dimension Radar / Telemetry Gauges (Linear Pro Metric Panel) */}
-              <div className="bg-white dark:bg-[#111420] border border-slate-200 dark:border-[#20273a] rounded-xl p-4 space-y-4 shadow-sm">
-                <div className="flex items-center justify-between text-xs border-b border-slate-100 dark:border-[#1b2132] pb-2">
-                  <span className="font-bold text-slate-800 dark:text-gray-200 uppercase tracking-wider">
-                    Explainable 5D Scoring Telemetry
-                  </span>
-                  <span className="text-[11px] font-mono text-emerald-600 dark:text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded">
-                    OpenAI GPT Analysis
-                  </span>
-                </div>
-
-                {/* Score Gauges Grid */}
-                <div className="grid grid-cols-2 sm:grid-cols-5 gap-3">
-                  {[
-                    { label: 'Hook (First 3s)', weight: '25%', score: aiScores.hook_strength?.score, color: 'text-cyan-600 dark:text-cyan-400', bar: 'bg-cyan-500' },
-                    { label: 'Cliffhanger', weight: '30%', score: aiScores.cliffhanger_strength?.score, color: 'text-rose-600 dark:text-rose-400', bar: 'bg-rose-500' },
-                    { label: 'Standalone', weight: '20%', score: aiScores.standalone_clarity?.score, color: 'text-amber-600 dark:text-amber-400', bar: 'bg-amber-500' },
-                    { label: 'Emotion Arc', weight: '15%', score: aiScores.emotional_impact?.score, color: 'text-purple-600 dark:text-purple-400', bar: 'bg-purple-500' },
-                    { label: 'Duration Opt.', weight: '10%', score: progScores.duration_quality?.score, color: 'text-emerald-600 dark:text-emerald-400', bar: 'bg-emerald-500' },
-                  ].map((dim, i) => (
-                    <div key={i} className="bg-slate-50 dark:bg-[#161a29] border border-slate-200/80 dark:border-[#252e44] p-3 rounded-lg text-center space-y-1">
-                      <div className="text-[10px] text-slate-500 dark:text-gray-400 truncate">{dim.label}</div>
-                      <div className={`text-lg font-mono font-black ${dim.color}`}>
-                        {dim.score?.toFixed(1) || '—'}
-                      </div>
-                      <div className="h-1 w-full bg-slate-200 dark:bg-[#20273a] rounded-full overflow-hidden mt-1">
-                        <div className={`h-full ${dim.bar} rounded-full`} style={{ width: `${((dim.score || 0) / 10) * 100}%` }} />
-                      </div>
-                      <div className="text-[9px] text-slate-400 dark:text-gray-500">{dim.weight} weight</div>
-                    </div>
-                  ))}
-                </div>
-              </div>
+              {/* 5-Dimension Radar & Telemetry Card (Exact match from screenshot) */}
+              <RadarScoreCard selectedPromo={selectedPromo} />
 
               {/* Screenplay Teleprompter Cards (Feature from Concept 2) */}
               <div className="space-y-3">
