@@ -190,30 +190,58 @@ class GeminiClient(LLMClient):
 
 
 # ---------------------------------------------------------------------------
-# OpenAI client
+# OpenAI client (Supports native urllib.request or openai SDK)
 # ---------------------------------------------------------------------------
 
 class OpenAIClient(LLMClient):
-    """OpenAI API client using openai SDK."""
+    """OpenAI API client supporting standard urllib.request with fallback to openai SDK."""
 
     def __init__(self, api_key: str, model: str = "gpt-4o-mini", **kwargs):
         super().__init__(model=model, **kwargs)
         self.provider = "openai"
-        try:
-            from openai import OpenAI
-            self._client = OpenAI(api_key=api_key)
-            logger.info(f"OpenAI client initialized: model={model}")
-        except ImportError:
-            raise ImportError("openai not installed. Run: pip install openai")
+        self.api_key = api_key
+        logger.info(f"OpenAI client initialized: model={model}")
 
     def _call_api(self, prompt: str) -> str:
-        response = self._client.chat.completions.create(
-            model=self.model,
-            messages=[{"role": "user", "content": prompt}],
-            temperature=self.temperature,
-            max_tokens=4096,
+        import urllib.request
+        import urllib.error
+
+        url = "https://api.openai.com/v1/chat/completions"
+        payload = {
+            "model": self.model,
+            "messages": [
+                {
+                    "role": "system",
+                    "content": "You are an expert microdrama screenplay analyst. Always respond in valid JSON format only."
+                },
+                {"role": "user", "content": prompt}
+            ],
+            "temperature": self.temperature,
+            "response_format": {"type": "json_object"},
+        }
+        data = json.dumps(payload).encode("utf-8")
+        req = urllib.request.Request(
+            url,
+            data=data,
+            headers={
+                "Content-Type": "application/json",
+                "Authorization": f"Bearer {self.api_key}",
+                "User-Agent": "Kuku-Promo-Discovery/1.0",
+            },
+            method="POST",
         )
-        return response.choices[0].message.content or ""
+
+        try:
+            with urllib.request.urlopen(req, timeout=45) as resp:
+                res_data = json.loads(resp.read().decode("utf-8"))
+                return res_data["choices"][0]["message"]["content"] or ""
+        except urllib.error.HTTPError as e:
+            err_body = e.read().decode("utf-8", errors="replace")
+            logger.error(f"OpenAI API HTTP Error {e.code}: {err_body}")
+            raise RuntimeError(f"OpenAI API Error ({e.code}): {err_body}")
+        except Exception as e:
+            logger.error(f"OpenAI API Request failed: {e}")
+            raise
 
 
 # ---------------------------------------------------------------------------
@@ -369,7 +397,9 @@ def create_llm_client(config: dict, cache_dir: Optional[Path] = None) -> LLMClie
         return GeminiClient(api_key=api_key, model=model or "gemini-1.5-flash", **kwargs)
 
     elif provider == "openai":
-        api_key = os.environ.get("OPENAI_API_KEY", "")
+        api_key = os.environ.get("OPENAI_API_KEY", "").strip().strip('"\'')
+        if api_key.upper().startswith("OPENAI_API_KEY="):
+            api_key = api_key.split("=", 1)[1].strip().strip('"\'')
         if not api_key:
             raise ValueError(
                 "OPENAI_API_KEY environment variable not set. "

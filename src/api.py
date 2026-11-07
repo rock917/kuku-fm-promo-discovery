@@ -56,8 +56,8 @@ app.add_middleware(
 # ---------------------------------------------------------------------------
 
 class PipelineRunRequest(BaseModel):
-    provider: str = Field(default="mock", description="LLM provider: mock, gemini, openai")
-    model: Optional[str] = Field(default="gemini-1.5-flash", description="Model name")
+    provider: str = Field(default="openai", description="LLM provider: openai, groq, gemini, mock")
+    model: Optional[str] = Field(default="gpt-4o-mini", description="Model name (e.g. gpt-4o-mini, gpt-4o)")
     top_n: int = Field(default=20, ge=1, le=100, description="Top N promos to rank")
     episodes: Optional[List[int]] = Field(default=None, description="Specific episode numbers to process")
 

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import Navbar from './components/Navbar';
-import PromosTab from './components/PromosTab';
+import Sidebar from './components/Sidebar';
+import Header from './components/Header';
+import StudioView from './components/StudioView';
 import QualityTab from './components/QualityTab';
 import FailureTab from './components/FailureTab';
 import SourceViewerTab from './components/SourceViewerTab';
@@ -8,13 +9,14 @@ import PipelineRunTab from './components/PipelineRunTab';
 import { fetchHealth, fetchPromos, fetchQualityReport, fetchFailureAnalysis } from './api';
 
 export default function App() {
-  const [activeTab, setActiveTab] = useState('promos');
+  const [activeTab, setActiveTab] = useState('studio');
   const [backendStatus, setBackendStatus] = useState('checking');
   const [promos, setPromos] = useState([]);
   const [qualityReport, setQualityReport] = useState(null);
   const [failureAnalysis, setFailureAnalysis] = useState(null);
   const [metadata, setMetadata] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [searchQuery, setSearchQuery] = useState('');
 
   const loadData = async () => {
     setLoading(true);
@@ -42,42 +44,93 @@ export default function App() {
     loadData();
   }, []);
 
+  const exportJSON = () => {
+    const blob = new Blob([JSON.stringify({ metadata, promos }, null, 2)], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'promos.json';
+    a.click();
+  };
+
+  const exportCSV = () => {
+    const headers = ['Rank', 'Candidate_ID', 'Episodes', 'Scene', 'Start_TS', 'End_TS', 'Duration_Sec', 'Final_Score', 'Hook_Text', 'Cliffhanger_Text'];
+    const rows = promos.map(p => [
+      p.rank,
+      p.candidate_id,
+      (p.episodes || []).join(';'),
+      p.segments?.[0]?.scene_number,
+      p.segments?.[0]?.start_ts,
+      p.segments?.[0]?.end_ts,
+      p.total_duration_sec,
+      p.final_score,
+      `"${(p.opening_hook?.text || '').replace(/"/g, '""')}"`,
+      `"${(p.closing_cliffhanger?.text || '').replace(/"/g, '""')}"`,
+    ]);
+    const csvContent = [headers.join(','), ...rows.map(r => r.join(','))].join('\n');
+    const blob = new Blob([csvContent], { type: 'text/csv' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'promos.csv';
+    a.click();
+  };
+
   return (
-    <div className="min-h-screen flex flex-col bg-[#0b0d13] text-gray-100">
-      <Navbar activeTab={activeTab} setActiveTab={setActiveTab} backendStatus={backendStatus} />
+    <div className="flex h-screen w-screen overflow-hidden bg-[#090a0f] text-gray-100 font-sans antialiased">
+      {/* Linear-Style Left Navigation Dock */}
+      <Sidebar activeTab={activeTab} setActiveTab={setActiveTab} />
 
-      <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8">
-        {loading ? (
-          <div className="flex flex-col items-center justify-center py-32 space-y-4">
-            <div className="w-10 h-10 border-4 border-red-500/20 border-t-red-500 rounded-full animate-spin"></div>
-            <p className="text-sm text-gray-400 font-medium">Loading Promo Discovery System...</p>
-          </div>
-        ) : (
-          <>
-            {activeTab === 'promos' && (
-              <PromosTab promos={promos} loading={loading} metadata={metadata} />
-            )}
-            {activeTab === 'quality' && (
-              <QualityTab qualityReport={qualityReport} />
-            )}
-            {activeTab === 'failure' && (
-              <FailureTab failureAnalysis={failureAnalysis} />
-            )}
-            {activeTab === 'source' && (
-              <SourceViewerTab />
-            )}
-            {activeTab === 'run' && (
-              <PipelineRunTab onPipelineSuccess={loadData} />
-            )}
-          </>
-        )}
-      </main>
+      {/* Main Content Area */}
+      <div className="flex-1 flex flex-col min-w-0 overflow-hidden">
+        {/* Top Header */}
+        <Header 
+          searchQuery={searchQuery}
+          setSearchQuery={setSearchQuery}
+          backendStatus={backendStatus}
+          totalPromos={promos.length}
+          onExportJSON={exportJSON}
+          onExportCSV={exportCSV}
+        />
 
-      <footer className="border-t border-[#1b2030] py-6 text-center text-xs text-gray-500">
-        <p>Kuku FM AI Generalist Assignment · Problem 1: Find the Promos</p>
-        <p className="mt-1">Architected for Vercel Frontend + Azure App Service Backend + Supabase PostgreSQL</p>
-      </footer>
+        {/* Dynamic Tab Views */}
+        <div className="flex-1 overflow-hidden flex flex-col">
+          {loading ? (
+            <div className="flex-1 flex flex-col items-center justify-center space-y-4">
+              <div className="w-10 h-10 border-4 border-rose-500/20 border-t-rose-500 rounded-full animate-spin"></div>
+              <p className="text-xs text-gray-400 font-mono tracking-wider uppercase">
+                Loading Kuku FM Promo Studio...
+              </p>
+            </div>
+          ) : (
+            <>
+              {activeTab === 'studio' && (
+                <StudioView promos={promos} searchQuery={searchQuery} />
+              )}
+              {activeTab === 'quality' && (
+                <div className="flex-1 overflow-y-auto p-6 max-w-7xl mx-auto w-full">
+                  <QualityTab qualityReport={qualityReport} />
+                </div>
+              )}
+              {activeTab === 'diagnostics' && (
+                <div className="flex-1 overflow-y-auto p-6 max-w-7xl mx-auto w-full">
+                  <FailureTab failureAnalysis={failureAnalysis} />
+                </div>
+              )}
+              {activeTab === 'screenplay' && (
+                <div className="flex-1 overflow-y-auto p-6 max-w-7xl mx-auto w-full">
+                  <SourceViewerTab />
+                </div>
+              )}
+              {activeTab === 'pipeline' && (
+                <div className="flex-1 overflow-y-auto p-6 max-w-7xl mx-auto w-full">
+                  <PipelineRunTab onPipelineSuccess={loadData} />
+                </div>
+              )}
+            </>
+          )}
+        </div>
+      </div>
     </div>
   );
 }
-

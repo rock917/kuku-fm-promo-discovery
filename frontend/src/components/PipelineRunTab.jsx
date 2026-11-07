@@ -3,8 +3,8 @@ import { Play, Cpu, Check, AlertCircle, RefreshCw } from 'lucide-react';
 import { triggerPipelineRun } from '../api';
 
 export default function PipelineRunTab({ onPipelineSuccess }) {
-  const [provider, setProvider] = useState('groq');
-  const [model, setModel] = useState('llama-3.3-70b-versatile');
+  const [provider, setProvider] = useState('openai');
+  const [model, setModel] = useState('gpt-4o-mini');
   const [topN, setTopN] = useState(20);
   const [submitting, setSubmitting] = useState(false);
   const [result, setResult] = useState(null);
