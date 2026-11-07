@@ -125,3 +125,4 @@ CREATE POLICY "Allow service role full access promo_candidates" ON promo_candida
 CREATE POLICY "Allow service role full access promo_segments" ON promo_segments FOR ALL USING (auth.role() = 'service_role');
 CREATE POLICY "Allow service role full access quality_reports" ON quality_reports FOR ALL USING (auth.role() = 'service_role');
 CREATE POLICY "Allow service role full access failure_analyses" ON failure_analyses FOR ALL USING (auth.role() = 'service_role');
+
