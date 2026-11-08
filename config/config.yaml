@@ -12,12 +12,10 @@ paths:
 
 llm:
   # Provider: "openai" | "groq" | "gemini" | "mock"
-  # Set to "mock" to run the full pipeline without any API key (for testing)
-  provider: "openai"
-  # OpenAI model: "gpt-4o-mini" (fast, cost-effective) or "gpt-4o" (deep reasoning)
-  model: "gpt-4o-mini"
-  # Seconds to wait between API calls (rate limiting)
-  request_delay: 4
+  provider: "groq"
+  model: "qwen/qwen3.8-27b"
+  # Seconds to wait between API calls (rate limiting for Groq free tier 7000 ITPM)
+  request_delay: 3.5
   # Maximum retries on API error
   max_retries: 3
   # Temperature for scoring (lower = more deterministic)

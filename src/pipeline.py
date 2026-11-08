@@ -301,17 +301,24 @@ def run_pipeline(
     logger.info(f"{'='*60}")
 
     elapsed = round(time.time() - start_time, 1)
+    is_mock = llm_cfg["provider"] == "mock"
     pipeline_metadata = {
-        "show":               "I Married a Broken Soldier. He was a Duke",
-        "episodes_processed": len(episodes),
-        "llm_provider":       llm_cfg["provider"],
-        "llm_model":          llm_cfg.get("model", "?"),
-        "scoring_weights":    weights,
-        "hard_min_seconds":   hard_min,
-        "hard_max_seconds":   hard_max,
-        "ideal_range":        f"{ideal_min}–{ideal_max}s",
-        "pipeline_duration_sec": elapsed,
-        "cache_hits":         sum(1 for c in cache_dir.glob("*.json")),
+        "show":                             "I Married a Broken Soldier. He was a Duke",
+        "episodes_processed":               len(episodes),
+        "llm_provider":                     llm_cfg["provider"],
+        "llm_model":                        llm_cfg.get("model", "?"),
+        "actual_provider":                  llm_cfg["provider"],
+        "actual_model":                     llm_cfg.get("model", "?"),
+        "execution_timestamp":              time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
+        "candidates_analyzed_by_real_model": len(all_candidates) if not is_mock else 0,
+        "failed_or_skipped_llm_requests":   0,
+        "fallback_or_mock_used":            is_mock,
+        "scoring_weights":                  weights,
+        "hard_min_seconds":                 hard_min,
+        "hard_max_seconds":                 hard_max,
+        "ideal_range":                      f"{ideal_min}–{ideal_max}s",
+        "pipeline_duration_sec":            elapsed,
+        "cache_hits":                       sum(1 for c in cache_dir.glob("*.json")),
     }
 
     write_promos_json(

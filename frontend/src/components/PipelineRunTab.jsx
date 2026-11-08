@@ -51,8 +51,8 @@ export default function PipelineRunTab({ onPipelineSuccess }) {
   const [inputMode, setInputMode] = useState('url');
   const [episodeUrl, setEpisodeUrl] = useState('');
   const [scriptText, setScriptText] = useState('');
-  const [provider, setProvider] = useState('openai');
-  const [model, setModel] = useState('gpt-4o-mini');
+  const [provider, setProvider] = useState('groq');
+  const [model, setModel] = useState('openai/gpt-oss-120b');
   const [topN, setTopN] = useState(5);
   const [submitting, setSubmitting] = useState(false);
   const [customResults, setCustomResults] = useState(null);
@@ -62,8 +62,8 @@ export default function PipelineRunTab({ onPipelineSuccess }) {
   const handleProviderChange = (e) => {
     const val = e.target.value;
     setProvider(val);
-    if (val === 'openai') setModel('gpt-4o-mini');
-    else if (val === 'groq') setModel('llama-3.3-70b-versatile');
+    if (val === 'groq') setModel('openai/gpt-oss-120b');
+    else if (val === 'openai') setModel('gpt-4o-mini');
     else if (val === 'gemini') setModel('gemini-1.5-flash');
     else if (val === 'mock') setModel('mock');
   };
@@ -245,10 +245,10 @@ export default function PipelineRunTab({ onPipelineSuccess }) {
                 onChange={handleProviderChange}
                 className="w-full bg-slate-50 dark:bg-[#161a29] border border-slate-200 dark:border-[#252e44] rounded-xl px-3 py-2 text-xs sm:text-sm text-slate-900 dark:text-gray-200 focus:outline-none focus:border-rose-500 shadow-sm"
               >
+                <option value="groq">Groq (GPT-OSS 120B / LPU)</option>
                 <option value="openai">OpenAI (GPT-4o Mini)</option>
-                <option value="groq">Groq (LLaMA 3.3 70B)</option>
                 <option value="gemini">Google Gemini 1.5</option>
-                <option value="mock">Mock (Instant Testing)</option>
+                <option value="mock">Offline Testing (Deterministic)</option>
               </select>
             </div>
 

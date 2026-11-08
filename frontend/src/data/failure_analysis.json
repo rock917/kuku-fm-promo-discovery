@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-11-08T03:54:47.789379",
+  "generated_at": "2026-11-08T16:08:28.785277",
   "summary": {
-    "total_generated": 218,
-    "passed_validation": 122,
-    "failed_validation": 96,
-    "weak_valid_candidates": 30,
+    "total_generated": 108,
+    "passed_validation": 61,
+    "failed_validation": 47,
+    "weak_valid_candidates": 15,
     "failure_type_counts": {
-      "DUPLICATE_OF": 96
+      "DUPLICATE_OF": 47
     },
-    "duplicate_pairs": 133
+    "duplicate_pairs": 63
   },
   "data_quality_notes": [
     {
@@ -918,1331 +918,203 @@
           "end": "00:32.00"
         }
       ]
-    },
-    {
-      "candidate_id": "PROMO_EP24_SC1_110",
-      "episodes": [
-        24
-      ],
-      "duration_sec": 44.8,
-      "failures": [
-        "DUPLICATE_OF: overlaps with PROMO_EP24_SC1_109 — Ep24 Sc1: 00:00.00–00:48.50 overlaps with 00:00.00–00:44.80 (≥60%)"
-      ],
-      "warnings": [],
-      "segments": [
-        {
-          "ep": 24,
-          "scene": 1,
-          "start": "00:00.00",
-          "end": "00:44.80"
-        }
-      ]
-    },
-    {
-      "candidate_id": "PROMO_EP24_SC1_111",
-      "episodes": [
-        24
-      ],
-      "duration_sec": 45.0,
-      "failures": [
-        "DUPLICATE_OF: overlaps with PROMO_EP24_SC1_109 — Ep24 Sc1: 00:00.00–00:48.50 overlaps with 00:03.50–00:48.50 (≥60%)"
-      ],
-      "warnings": [],
-      "segments": [
-        {
-          "ep": 24,
-          "scene": 1,
-          "start": "00:03.50",
-          "end": "00:48.50"
-        }
-      ]
-    },
-    {
-      "candidate_id": "PROMO_EP24_SC1_112",
-      "episodes": [
-        24
-      ],
-      "duration_sec": 32.5,
-      "failures": [
-        "DUPLICATE_OF: overlaps with PROMO_EP24_SC1_109 — Ep24 Sc1: 00:00.00–00:48.50 overlaps with 00:00.00–00:32.50 (≥60%)"
-      ],
-      "warnings": [],
-      "segments": [
-        {
-          "ep": 24,
-          "scene": 1,
-          "start": "00:00.00",
-          "end": "00:32.50"
-        }
-      ]
-    },
-    {
-      "candidate_id": "PROMO_EP24_SC2_114",
-      "episodes": [
-        24
-      ],
-      "duration_sec": 32.5,
-      "failures": [
-        "DUPLICATE_OF: overlaps with PROMO_EP24_SC2_113 — Ep24 Sc2: 00:48.50–01:32.00 overlaps with 00:48.50–01:21.00 (≥60%)"
-      ],
-      "warnings": [],
-      "segments": [
-        {
-          "ep": 24,
-          "scene": 2,
-          "start": "00:48.50",
-          "end": "01:21.00"
-        }
-      ]
-    },
-    {
-      "candidate_id": "PROMO_EP25_SC1_117",
-      "episodes": [
-        25
-      ],
-      "duration_sec": 32.8,
-      "failures": [
-        "DUPLICATE_OF: overlaps with PROMO_EP25_SC1_115 — Ep25 Sc1: 00:00.00–00:44.60 overlaps with 00:00.00–00:32.80 (≥60%)"
-      ],
-      "warnings": [],
-      "segments": [
-        {
-          "ep": 25,
-          "scene": 1,
-          "start": "00:00.00",
-          "end": "00:32.80"
-        }
-      ]
-    },
-    {
-      "candidate_id": "PROMO_EP26_SC1_120",
-      "episodes": [
-        26
-      ],
-      "duration_sec": 30.8,
-      "failures": [
-        "DUPLICATE_OF: overlaps with PROMO_EP26_SC1_118 — Ep26 Sc1: 00:00.00–00:43.50 overlaps with 00:00.00–00:30.80 (≥60%)"
-      ],
-      "warnings": [],
-      "segments": [
-        {
-          "ep": 26,
-          "scene": 1,
-          "start": "00:00.00",
-          "end": "00:30.80"
-        }
-      ]
-    },
-    {
-      "candidate_id": "PROMO_EP27_SC1_123",
-      "episodes": [
-        27
-      ],
-      "duration_sec": 32.1,
-      "failures": [
-        "DUPLICATE_OF: overlaps with PROMO_EP27_SC1_121 — Ep27 Sc1: 00:00.00–00:44.50 overlaps with 00:00.00–00:32.10 (≥60%)"
-      ],
-      "warnings": [],
-      "segments": [
-        {
-          "ep": 27,
-          "scene": 1,
-          "start": "00:00.00",
-          "end": "00:32.10"
-        }
-      ]
-    },
-    {
-      "candidate_id": "PROMO_EP28_SC1_126",
-      "episodes": [
-        28
-      ],
-      "duration_sec": 32.4,
-      "failures": [
-        "DUPLICATE_OF: overlaps with PROMO_EP28_SC1_124 — Ep28 Sc1: 00:00.00–00:45.30 overlaps with 00:00.00–00:32.40 (≥60%)"
-      ],
-      "warnings": [],
-      "segments": [
-        {
-          "ep": 28,
-          "scene": 1,
-          "start": "00:00.00",
-          "end": "00:32.40"
-        }
-      ]
-    },
-    {
-      "candidate_id": "PROMO_EP29_SC2_129",
-      "episodes": [
-        29
-      ],
-      "duration_sec": 45.3,
-      "failures": [
-        "DUPLICATE_OF: overlaps with PROMO_EP29_SC2_128 — Ep29 Sc2: 00:20.10–01:04.50 overlaps with 00:37.70–01:23.00 (≥60%)"
-      ],
-      "warnings": [],
-      "segments": [
-        {
-          "ep": 29,
-          "scene": 2,
-          "start": "00:37.70",
-          "end": "01:23.00"
-        }
-      ]
-    },
-    {
-      "candidate_id": "PROMO_EP29_SC2_130",
-      "episodes": [
-        29
-      ],
-      "duration_sec": 33.5,
-      "failures": [
-        "DUPLICATE_OF: overlaps with PROMO_EP29_SC2_128 — Ep29 Sc2: 00:20.10–01:04.50 overlaps with 00:20.10–00:53.60 (≥60%)"
-      ],
-      "warnings": [
-        "POSSIBLY_RESOLVED_ENDING: closing text matches resolved pattern '\\b(fade\\s+out|cut\\s+to\\s+black|the\\s+end|credits\\s+roll)\\b'"
-      ],
-      "segments": [
-        {
-          "ep": 29,
-          "scene": 2,
-          "start": "00:20.10",
-          "end": "00:53.60"
-        }
-      ]
-    },
-    {
-      "candidate_id": "PROMO_EP29_SC3_132",
-      "episodes": [
-        29
-      ],
-      "duration_sec": 31.8,
-      "failures": [
-        "DUPLICATE_OF: overlaps with PROMO_EP29_SC3_131 — Ep29 Sc3: 01:23.00–01:56.69 overlaps with 01:23.00–01:54.80 (≥60%)"
-      ],
-      "warnings": [],
-      "segments": [
-        {
-          "ep": 29,
-          "scene": 3,
-          "start": "01:23.00",
-          "end": "01:54.80"
-        }
-      ]
-    },
-    {
-      "candidate_id": "PROMO_EP30_SC1_134",
-      "episodes": [
-        30
-      ],
-      "duration_sec": 44.8,
-      "failures": [
-        "DUPLICATE_OF: overlaps with PROMO_EP30_SC1_133 — Ep30 Sc1: 00:00.00–00:47.60 overlaps with 00:00.00–00:44.80 (≥60%)"
-      ],
-      "warnings": [],
-      "segments": [
-        {
-          "ep": 30,
-          "scene": 1,
-          "start": "00:00.00",
-          "end": "00:44.80"
-        }
-      ]
-    },
-    {
-      "candidate_id": "PROMO_EP30_SC1_135",
-      "episodes": [
-        30
-      ],
-      "duration_sec": 44.6,
-      "failures": [
-        "DUPLICATE_OF: overlaps with PROMO_EP30_SC1_133 — Ep30 Sc1: 00:00.00–00:47.60 overlaps with 00:03.00–00:47.60 (≥60%)"
-      ],
-      "warnings": [],
-      "segments": [
-        {
-          "ep": 30,
-          "scene": 1,
-          "start": "00:03.00",
-          "end": "00:47.60"
-        }
-      ]
-    },
-    {
-      "candidate_id": "PROMO_EP30_SC1_136",
-      "episodes": [
-        30
-      ],
-      "duration_sec": 32.0,
-      "failures": [
-        "DUPLICATE_OF: overlaps with PROMO_EP30_SC1_133 — Ep30 Sc1: 00:00.00–00:47.60 overlaps with 00:00.00–00:32.00 (≥60%)"
-      ],
-      "warnings": [],
-      "segments": [
-        {
-          "ep": 30,
-          "scene": 1,
-          "start": "00:00.00",
-          "end": "00:32.00"
-        }
-      ]
-    },
-    {
-      "candidate_id": "PROMO_EP30_SC2_139",
-      "episodes": [
-        30
-      ],
-      "duration_sec": 34.9,
-      "failures": [
-        "DUPLICATE_OF: overlaps with PROMO_EP30_SC2_137 — Ep30 Sc2: 00:47.60–01:32.00 overlaps with 00:47.60–01:22.50 (≥60%)"
-      ],
-      "warnings": [],
-      "segments": [
-        {
-          "ep": 30,
-          "scene": 2,
-          "start": "00:47.60",
-          "end": "01:22.50"
-        }
-      ]
-    },
-    {
-      "candidate_id": "PROMO_EP31_SC1_142",
-      "episodes": [
-        31
-      ],
-      "duration_sec": 29.3,
-      "failures": [
-        "DUPLICATE_OF: overlaps with PROMO_EP31_SC1_140 — Ep31 Sc1: 00:00.00–00:43.20 overlaps with 00:00.00–00:29.30 (≥60%)"
-      ],
-      "warnings": [],
-      "segments": [
-        {
-          "ep": 31,
-          "scene": 1,
-          "start": "00:00.00",
-          "end": "00:29.30"
-        }
-      ]
-    },
-    {
-      "candidate_id": "PROMO_EP32_SC1_145",
-      "episodes": [
-        32
-      ],
-      "duration_sec": 32.8,
-      "failures": [
-        "DUPLICATE_OF: overlaps with PROMO_EP32_SC1_143 — Ep32 Sc1: 00:00.00–00:45.40 overlaps with 00:00.00–00:32.80 (≥60%)"
-      ],
-      "warnings": [],
-      "segments": [
-        {
-          "ep": 32,
-          "scene": 1,
-          "start": "00:00.00",
-          "end": "00:32.80"
-        }
-      ]
-    },
-    {
-      "candidate_id": "PROMO_EP33_SC1_148",
-      "episodes": [
-        33
-      ],
-      "duration_sec": 32.0,
-      "failures": [
-        "DUPLICATE_OF: overlaps with PROMO_EP33_SC1_146 — Ep33 Sc1: 00:00.00–00:44.80 overlaps with 00:00.00–00:32.00 (≥60%)"
-      ],
-      "warnings": [],
-      "segments": [
-        {
-          "ep": 33,
-          "scene": 1,
-          "start": "00:00.00",
-          "end": "00:32.00"
-        }
-      ]
-    },
-    {
-      "candidate_id": "PROMO_EP34_SC1_151",
-      "episodes": [
-        34
-      ],
-      "duration_sec": 31.7,
-      "failures": [
-        "DUPLICATE_OF: overlaps with PROMO_EP34_SC1_149 — Ep34 Sc1: 00:00.00–00:44.80 overlaps with 00:00.00–00:31.70 (≥60%)"
-      ],
-      "warnings": [],
-      "segments": [
-        {
-          "ep": 34,
-          "scene": 1,
-          "start": "00:00.00",
-          "end": "00:31.70"
-        }
-      ]
-    },
-    {
-      "candidate_id": "PROMO_EP35_SC3_154",
-      "episodes": [
-        35
-      ],
-      "duration_sec": 32.0,
-      "failures": [
-        "DUPLICATE_OF: overlaps with PROMO_EP35_SC3_152 — Ep35 Sc3: 00:27.50–01:11.50 overlaps with 00:27.50–00:59.50 (≥60%)"
-      ],
-      "warnings": [],
-      "segments": [
-        {
-          "ep": 35,
-          "scene": 3,
-          "start": "00:27.50",
-          "end": "00:59.50"
-        }
-      ]
-    },
-    {
-      "candidate_id": "PROMO_EP36_SC1_157",
-      "episodes": [
-        36
-      ],
-      "duration_sec": 32.0,
-      "failures": [
-        "DUPLICATE_OF: overlaps with PROMO_EP36_SC1_155 — Ep36 Sc1: 00:00.00–00:44.80 overlaps with 00:00.00–00:32.00 (≥60%)"
-      ],
-      "warnings": [],
-      "segments": [
-        {
-          "ep": 36,
-          "scene": 1,
-          "start": "00:00.00",
-          "end": "00:32.00"
-        }
-      ]
-    },
-    {
-      "candidate_id": "PROMO_EP37_SC1_159",
-      "episodes": [
-        37
-      ],
-      "duration_sec": 32.2,
-      "failures": [
-        "DUPLICATE_OF: overlaps with PROMO_EP37_SC1_158 — Ep37 Sc1: 00:00.00–00:34.50 overlaps with 00:00.00–00:32.20 (≥60%)"
-      ],
-      "warnings": [],
-      "segments": [
-        {
-          "ep": 37,
-          "scene": 1,
-          "start": "00:00.00",
-          "end": "00:32.20"
-        }
-      ]
-    },
-    {
-      "candidate_id": "PROMO_EP37_SC2_161",
-      "episodes": [
-        37
-      ],
-      "duration_sec": 47.3,
-      "failures": [
-        "DUPLICATE_OF: overlaps with PROMO_EP37_SC2_160 — Ep37 Sc2: 00:34.50–01:28.00 overlaps with 00:34.50–01:21.80 (≥60%)"
-      ],
-      "warnings": [],
-      "segments": [
-        {
-          "ep": 37,
-          "scene": 2,
-          "start": "00:34.50",
-          "end": "01:21.80"
-        }
-      ]
-    },
-    {
-      "candidate_id": "PROMO_EP37_SC2_162",
-      "episodes": [
-        37
-      ],
-      "duration_sec": 44.0,
-      "failures": [
-        "DUPLICATE_OF: overlaps with PROMO_EP37_SC2_160 — Ep37 Sc2: 00:34.50–01:28.00 overlaps with 00:44.00–01:28.00 (≥60%)"
-      ],
-      "warnings": [],
-      "segments": [
-        {
-          "ep": 37,
-          "scene": 2,
-          "start": "00:44.00",
-          "end": "01:28.00"
-        }
-      ]
-    },
-    {
-      "candidate_id": "PROMO_EP37_SC2_163",
-      "episodes": [
-        37
-      ],
-      "duration_sec": 32.0,
-      "failures": [
-        "DUPLICATE_OF: overlaps with PROMO_EP37_SC2_160 — Ep37 Sc2: 00:34.50–01:28.00 overlaps with 00:34.50–01:06.50 (≥60%)"
-      ],
-      "warnings": [],
-      "segments": [
-        {
-          "ep": 37,
-          "scene": 2,
-          "start": "00:34.50",
-          "end": "01:06.50"
-        }
-      ]
-    },
-    {
-      "candidate_id": "PROMO_EP37_SC4_166",
-      "episodes": [
-        37
-      ],
-      "duration_sec": 31.5,
-      "failures": [
-        "DUPLICATE_OF: overlaps with PROMO_EP37_SC4_165 — Ep37 Sc4: 01:56.50–02:36.47 overlaps with 01:56.50–02:28.00 (≥60%)"
-      ],
-      "warnings": [],
-      "segments": [
-        {
-          "ep": 37,
-          "scene": 4,
-          "start": "01:56.50",
-          "end": "02:28.00"
-        }
-      ]
-    },
-    {
-      "candidate_id": "PROMO_EP38_SC1_169",
-      "episodes": [
-        38
-      ],
-      "duration_sec": 31.0,
-      "failures": [
-        "DUPLICATE_OF: overlaps with PROMO_EP38_SC1_167 — Ep38 Sc1: 00:00.00–00:45.20 overlaps with 00:00.00–00:31.00 (≥60%)"
-      ],
-      "warnings": [],
-      "segments": [
-        {
-          "ep": 38,
-          "scene": 1,
-          "start": "00:00.00",
-          "end": "00:31.00"
-        }
-      ]
-    },
-    {
-      "candidate_id": "PROMO_EP40_SC1_173",
-      "episodes": [
-        40
-      ],
-      "duration_sec": 32.8,
-      "failures": [
-        "DUPLICATE_OF: overlaps with PROMO_EP40_SC1_172 — Ep40 Sc1: 00:00.00–00:34.20 overlaps with 00:00.00–00:32.80 (≥60%)"
-      ],
-      "warnings": [],
-      "segments": [
-        {
-          "ep": 40,
-          "scene": 1,
-          "start": "00:00.00",
-          "end": "00:32.80"
-        }
-      ]
-    },
-    {
-      "candidate_id": "PROMO_EP41_SC1_178",
-      "episodes": [
-        41
-      ],
-      "duration_sec": 31.7,
-      "failures": [
-        "DUPLICATE_OF: overlaps with PROMO_EP41_SC1_176 — Ep41 Sc1: 00:00.00–00:45.00 overlaps with 00:00.00–00:31.70 (≥60%)"
-      ],
-      "warnings": [],
-      "segments": [
-        {
-          "ep": 41,
-          "scene": 1,
-          "start": "00:00.00",
-          "end": "00:31.70"
-        }
-      ]
-    },
-    {
-      "candidate_id": "PROMO_EP42_SC1_181",
-      "episodes": [
-        42
-      ],
-      "duration_sec": 30.5,
-      "failures": [
-        "DUPLICATE_OF: overlaps with PROMO_EP42_SC1_179 — Ep42 Sc1: 00:00.00–00:44.80 overlaps with 00:00.00–00:30.50 (≥60%)"
-      ],
-      "warnings": [],
-      "segments": [
-        {
-          "ep": 42,
-          "scene": 1,
-          "start": "00:00.00",
-          "end": "00:30.50"
-        }
-      ]
-    },
-    {
-      "candidate_id": "PROMO_EP43_SC1_184",
-      "episodes": [
-        43
-      ],
-      "duration_sec": 33.4,
-      "failures": [
-        "DUPLICATE_OF: overlaps with PROMO_EP43_SC1_182 — Ep43 Sc1: 00:00.00–00:44.00 overlaps with 00:00.00–00:33.40 (≥60%)"
-      ],
-      "warnings": [],
-      "segments": [
-        {
-          "ep": 43,
-          "scene": 1,
-          "start": "00:00.00",
-          "end": "00:33.40"
-        }
-      ]
-    },
-    {
-      "candidate_id": "PROMO_EP44_SC2_186",
-      "episodes": [
-        44
-      ],
-      "duration_sec": 45.2,
-      "failures": [
-        "DUPLICATE_OF: overlaps with PROMO_EP44_SC2_185 — Ep44 Sc2: 00:13.80–01:10.50 overlaps with 00:13.80–00:59.00 (≥60%)"
-      ],
-      "warnings": [],
-      "segments": [
-        {
-          "ep": 44,
-          "scene": 2,
-          "start": "00:13.80",
-          "end": "00:59.00"
-        }
-      ]
-    },
-    {
-      "candidate_id": "PROMO_EP44_SC2_187",
-      "episodes": [
-        44
-      ],
-      "duration_sec": 45.3,
-      "failures": [
-        "DUPLICATE_OF: overlaps with PROMO_EP44_SC2_185 — Ep44 Sc2: 00:13.80–01:10.50 overlaps with 00:25.20–01:10.50 (≥60%)"
-      ],
-      "warnings": [],
-      "segments": [
-        {
-          "ep": 44,
-          "scene": 2,
-          "start": "00:25.20",
-          "end": "01:10.50"
-        }
-      ]
-    },
-    {
-      "candidate_id": "PROMO_EP44_SC2_188",
-      "episodes": [
-        44
-      ],
-      "duration_sec": 32.6,
-      "failures": [
-        "DUPLICATE_OF: overlaps with PROMO_EP44_SC2_185 — Ep44 Sc2: 00:13.80–01:10.50 overlaps with 00:13.80–00:46.40 (≥60%)"
-      ],
-      "warnings": [],
-      "segments": [
-        {
-          "ep": 44,
-          "scene": 2,
-          "start": "00:13.80",
-          "end": "00:46.40"
-        }
-      ]
-    },
-    {
-      "candidate_id": "PROMO_EP45_SC1_190",
-      "episodes": [
-        45
-      ],
-      "duration_sec": 46.0,
-      "failures": [
-        "DUPLICATE_OF: overlaps with PROMO_EP45_SC1_189 — Ep45 Sc1: 00:00.00–00:48.90 overlaps with 00:00.00–00:46.00 (≥60%)"
-      ],
-      "warnings": [],
-      "segments": [
-        {
-          "ep": 45,
-          "scene": 1,
-          "start": "00:00.00",
-          "end": "00:46.00"
-        }
-      ]
-    },
-    {
-      "candidate_id": "PROMO_EP45_SC1_191",
-      "episodes": [
-        45
-      ],
-      "duration_sec": 45.7,
-      "failures": [
-        "DUPLICATE_OF: overlaps with PROMO_EP45_SC1_189 — Ep45 Sc1: 00:00.00–00:48.90 overlaps with 00:03.20–00:48.90 (≥60%)"
-      ],
-      "warnings": [],
-      "segments": [
-        {
-          "ep": 45,
-          "scene": 1,
-          "start": "00:03.20",
-          "end": "00:48.90"
-        }
-      ]
-    },
-    {
-      "candidate_id": "PROMO_EP45_SC1_192",
-      "episodes": [
-        45
-      ],
-      "duration_sec": 33.0,
-      "failures": [
-        "DUPLICATE_OF: overlaps with PROMO_EP45_SC1_189 — Ep45 Sc1: 00:00.00–00:48.90 overlaps with 00:00.00–00:33.00 (≥60%)"
-      ],
-      "warnings": [],
-      "segments": [
-        {
-          "ep": 45,
-          "scene": 1,
-          "start": "00:00.00",
-          "end": "00:33.00"
-        }
-      ]
-    },
-    {
-      "candidate_id": "PROMO_EP45_SC2_194",
-      "episodes": [
-        45
-      ],
-      "duration_sec": 31.6,
-      "failures": [
-        "DUPLICATE_OF: overlaps with PROMO_EP45_SC2_193 — Ep45 Sc2: 00:48.90–01:26.50 overlaps with 00:48.90–01:20.50 (≥60%)"
-      ],
-      "warnings": [],
-      "segments": [
-        {
-          "ep": 45,
-          "scene": 2,
-          "start": "00:48.90",
-          "end": "01:20.50"
-        }
-      ]
-    },
-    {
-      "candidate_id": "PROMO_EP45_SC3_196",
-      "episodes": [
-        45
-      ],
-      "duration_sec": 31.5,
-      "failures": [
-        "DUPLICATE_OF: overlaps with PROMO_EP45_SC3_195 — Ep45 Sc3: 01:26.50–02:01.75 overlaps with 01:26.50–01:58.00 (≥60%)"
-      ],
-      "warnings": [],
-      "segments": [
-        {
-          "ep": 45,
-          "scene": 3,
-          "start": "01:26.50",
-          "end": "01:58.00"
-        }
-      ]
-    },
-    {
-      "candidate_id": "PROMO_EP46_SC1_199",
-      "episodes": [
-        46
-      ],
-      "duration_sec": 31.8,
-      "failures": [
-        "DUPLICATE_OF: overlaps with PROMO_EP46_SC1_197 — Ep46 Sc1: 00:00.00–00:47.00 overlaps with 00:00.00–00:31.80 (≥60%)"
-      ],
-      "warnings": [],
-      "segments": [
-        {
-          "ep": 46,
-          "scene": 1,
-          "start": "00:00.00",
-          "end": "00:31.80"
-        }
-      ]
-    },
-    {
-      "candidate_id": "PROMO_EP47_SC2_202",
-      "episodes": [
-        47
-      ],
-      "duration_sec": 33.3,
-      "failures": [
-        "DUPLICATE_OF: overlaps with PROMO_EP47_SC2_201 — Ep47 Sc2: 00:21.50–00:55.50 overlaps with 00:21.50–00:54.80 (≥60%)"
-      ],
-      "warnings": [],
-      "segments": [
-        {
-          "ep": 47,
-          "scene": 2,
-          "start": "00:21.50",
-          "end": "00:54.80"
-        }
-      ]
-    },
-    {
-      "candidate_id": "PROMO_EP47_SC4_205",
-      "episodes": [
-        47
-      ],
-      "duration_sec": 45.0,
-      "failures": [
-        "DUPLICATE_OF: overlaps with PROMO_EP47_SC4_204 — Ep47 Sc4: 01:23.50–02:14.00 overlaps with 01:23.50–02:08.50 (≥60%)"
-      ],
-      "warnings": [],
-      "segments": [
-        {
-          "ep": 47,
-          "scene": 4,
-          "start": "01:23.50",
-          "end": "02:08.50"
-        }
-      ]
-    },
-    {
-      "candidate_id": "PROMO_EP47_SC4_206",
-      "episodes": [
-        47
-      ],
-      "duration_sec": 45.8,
-      "failures": [
-        "DUPLICATE_OF: overlaps with PROMO_EP47_SC4_204 — Ep47 Sc4: 01:23.50–02:14.00 overlaps with 01:28.20–02:14.00 (≥60%)"
-      ],
-      "warnings": [],
-      "segments": [
-        {
-          "ep": 47,
-          "scene": 4,
-          "start": "01:28.20",
-          "end": "02:14.00"
-        }
-      ]
-    },
-    {
-      "candidate_id": "PROMO_EP47_SC4_207",
-      "episodes": [
-        47
-      ],
-      "duration_sec": 31.3,
-      "failures": [
-        "DUPLICATE_OF: overlaps with PROMO_EP47_SC4_204 — Ep47 Sc4: 01:23.50–02:14.00 overlaps with 01:23.50–01:54.80 (≥60%)"
-      ],
-      "warnings": [],
-      "segments": [
-        {
-          "ep": 47,
-          "scene": 4,
-          "start": "01:23.50",
-          "end": "01:54.80"
-        }
-      ]
-    },
-    {
-      "candidate_id": "PROMO_EP48_SC2_210",
-      "episodes": [
-        48
-      ],
-      "duration_sec": 44.1,
-      "failures": [
-        "DUPLICATE_OF: overlaps with PROMO_EP48_SC2_209 — Ep48 Sc2: 00:26.70–01:20.00 overlaps with 00:26.70–01:10.80 (≥60%)"
-      ],
-      "warnings": [],
-      "segments": [
-        {
-          "ep": 48,
-          "scene": 2,
-          "start": "00:26.70",
-          "end": "01:10.80"
-        }
-      ]
-    },
-    {
-      "candidate_id": "PROMO_EP48_SC2_211",
-      "episodes": [
-        48
-      ],
-      "duration_sec": 45.8,
-      "failures": [
-        "DUPLICATE_OF: overlaps with PROMO_EP48_SC2_209 — Ep48 Sc2: 00:26.70–01:20.00 overlaps with 00:34.20–01:20.00 (≥60%)"
-      ],
-      "warnings": [],
-      "segments": [
-        {
-          "ep": 48,
-          "scene": 2,
-          "start": "00:34.20",
-          "end": "01:20.00"
-        }
-      ]
-    },
-    {
-      "candidate_id": "PROMO_EP48_SC2_212",
-      "episodes": [
-        48
-      ],
-      "duration_sec": 31.8,
-      "failures": [
-        "DUPLICATE_OF: overlaps with PROMO_EP48_SC2_209 — Ep48 Sc2: 00:26.70–01:20.00 overlaps with 00:26.70–00:58.50 (≥60%)"
-      ],
-      "warnings": [],
-      "segments": [
-        {
-          "ep": 48,
-          "scene": 2,
-          "start": "00:26.70",
-          "end": "00:58.50"
-        }
-      ]
-    },
-    {
-      "candidate_id": "PROMO_EP49_SC1_215",
-      "episodes": [
-        49
-      ],
-      "duration_sec": 33.0,
-      "failures": [
-        "DUPLICATE_OF: overlaps with PROMO_EP49_SC1_213 — Ep49 Sc1: 00:00.00–00:46.50 overlaps with 00:00.00–00:33.00 (≥60%)"
-      ],
-      "warnings": [],
-      "segments": [
-        {
-          "ep": 49,
-          "scene": 1,
-          "start": "00:00.00",
-          "end": "00:33.00"
-        }
-      ]
-    },
-    {
-      "candidate_id": "PROMO_EP50_SC1_218",
-      "episodes": [
-        50
-      ],
-      "duration_sec": 31.0,
-      "failures": [
-        "DUPLICATE_OF: overlaps with PROMO_EP50_SC1_216 — Ep50 Sc1: 00:00.00–00:43.20 overlaps with 00:00.00–00:31.00 (≥60%)"
-      ],
-      "warnings": [],
-      "segments": [
-        {
-          "ep": 50,
-          "scene": 1,
-          "start": "00:00.00",
-          "end": "00:31.00"
-        }
-      ]
     }
   ],
   "weak_candidates": [
     {
-      "candidate_id": "PROMO_EP11_SC1_040",
-      "rank": 122,
-      "final_score": 6.2021,
-      "episodes": [
-        11
-      ],
-      "ai_hook_strength": 6.8,
-      "ai_cliffhanger_strength": 6.0,
-      "ai_standalone_clarity": 5.1,
-      "ai_emotional_impact": 6.0,
-      "explanation": "MOCK ANALYSIS (Ep11): This segment was selected by the mock client. Replace with real LLM for actual analysis."
-    },
-    {
-      "candidate_id": "PROMO_EP03_SC3_011",
-      "rank": 121,
-      "final_score": 6.3374,
-      "episodes": [
-        3
-      ],
-      "ai_hook_strength": 6.8,
-      "ai_cliffhanger_strength": 6.0,
-      "ai_standalone_clarity": 5.1,
-      "ai_emotional_impact": 6.0,
-      "explanation": "MOCK ANALYSIS (Ep3): This segment was selected by the mock client. Replace with real LLM for actual analysis."
-    },
-    {
-      "candidate_id": "PROMO_EP04_SC1_014",
-      "rank": 120,
-      "final_score": 6.3813,
-      "episodes": [
-        4
-      ],
-      "ai_hook_strength": 7.0,
-      "ai_cliffhanger_strength": 6.0,
-      "ai_standalone_clarity": 5.1,
-      "ai_emotional_impact": 6.0,
-      "explanation": "MOCK ANALYSIS (Ep4): This segment was selected by the mock client. Replace with real LLM for actual analysis."
-    },
-    {
-      "candidate_id": "PROMO_EP13_SC1_051",
-      "rank": 119,
-      "final_score": 6.3962,
-      "episodes": [
-        13
-      ],
-      "ai_hook_strength": 7.1,
-      "ai_cliffhanger_strength": 6.0,
-      "ai_standalone_clarity": 5.1,
-      "ai_emotional_impact": 6.0,
-      "explanation": "MOCK ANALYSIS (Ep13): This segment was selected by the mock client. Replace with real LLM for actual analysis."
-    },
-    {
-      "candidate_id": "PROMO_EP09_SC1_033",
-      "rank": 118,
-      "final_score": 6.4037,
-      "episodes": [
-        9
-      ],
-      "ai_hook_strength": 6.8,
-      "ai_cliffhanger_strength": 6.0,
-      "ai_standalone_clarity": 5.5,
-      "ai_emotional_impact": 6.0,
-      "explanation": "MOCK ANALYSIS (Ep9): This segment was selected by the mock client. Replace with real LLM for actual analysis."
-    },
-    {
-      "candidate_id": "PROMO_EP24_SC2_113",
-      "rank": 117,
-      "final_score": 6.4068,
-      "episodes": [
-        24
-      ],
-      "ai_hook_strength": 6.5,
-      "ai_cliffhanger_strength": 6.0,
-      "ai_standalone_clarity": 5.5,
-      "ai_emotional_impact": 6.35,
-      "explanation": "MOCK ANALYSIS (Ep24): This segment was selected by the mock client. Replace with real LLM for actual analysis."
-    },
-    {
-      "candidate_id": "PROMO_EP05_SC1_018",
-      "rank": 116,
-      "final_score": 6.4113,
-      "episodes": [
-        5
-      ],
-      "ai_hook_strength": 6.8,
-      "ai_cliffhanger_strength": 6.0,
-      "ai_standalone_clarity": 5.5,
-      "ai_emotional_impact": 6.0,
-      "explanation": "MOCK ANALYSIS (Ep5): This segment was selected by the mock client. Replace with real LLM for actual analysis."
-    },
-    {
-      "candidate_id": "PROMO_EP24_SC1_109",
-      "rank": 115,
-      "final_score": 6.4499,
-      "episodes": [
-        24
-      ],
-      "ai_hook_strength": 6.5,
-      "ai_cliffhanger_strength": 6.0,
-      "ai_standalone_clarity": 6.3,
-      "ai_emotional_impact": 6.0,
-      "explanation": "MOCK ANALYSIS (Ep24): This segment was selected by the mock client. Replace with real LLM for actual analysis."
-    },
-    {
-      "candidate_id": "PROMO_EP07_SC1_025",
-      "rank": 114,
-      "final_score": 6.4638,
-      "episodes": [
-        7
-      ],
-      "ai_hook_strength": 6.8,
-      "ai_cliffhanger_strength": 6.0,
-      "ai_standalone_clarity": 5.5,
-      "ai_emotional_impact": 6.35,
-      "explanation": "MOCK ANALYSIS (Ep7): This segment was selected by the mock client. Replace with real LLM for actual analysis."
-    },
-    {
-      "candidate_id": "PROMO_EP28_SC1_125",
-      "rank": 113,
-      "final_score": 6.4675,
-      "episodes": [
-        28
-      ],
-      "ai_hook_strength": 6.8,
-      "ai_cliffhanger_strength": 6.0,
-      "ai_standalone_clarity": 5.5,
-      "ai_emotional_impact": 6.35,
-      "explanation": "MOCK ANALYSIS (Ep28): This segment was selected by the mock client. Replace with real LLM for actual analysis."
-    },
-    {
-      "candidate_id": "PROMO_EP30_SC2_137",
-      "rank": 112,
-      "final_score": 6.4711,
-      "episodes": [
-        30
-      ],
-      "ai_hook_strength": 6.8,
-      "ai_cliffhanger_strength": 6.0,
-      "ai_standalone_clarity": 5.5,
-      "ai_emotional_impact": 6.35,
-      "explanation": "MOCK ANALYSIS (Ep30): This segment was selected by the mock client. Replace with real LLM for actual analysis."
-    },
-    {
-      "candidate_id": "PROMO_EP11_SC2_044",
-      "rank": 111,
-      "final_score": 6.4822,
-      "episodes": [
-        11
-      ],
-      "ai_hook_strength": 7.1,
-      "ai_cliffhanger_strength": 6.6,
-      "ai_standalone_clarity": 5.1,
-      "ai_emotional_impact": 6.7,
-      "explanation": "MOCK ANALYSIS (Ep11): This segment was selected by the mock client. Replace with real LLM for actual analysis."
-    },
-    {
-      "candidate_id": "PROMO_EP15_SC1_061",
-      "rank": 110,
-      "final_score": 6.4838,
-      "episodes": [
-        15
-      ],
-      "ai_hook_strength": 7.4,
-      "ai_cliffhanger_strength": 6.0,
-      "ai_standalone_clarity": 5.1,
-      "ai_emotional_impact": 6.0,
-      "explanation": "MOCK ANALYSIS (Ep15): This segment was selected by the mock client. Replace with real LLM for actual analysis."
-    },
-    {
-      "candidate_id": "PROMO_EP40_SC1_172",
-      "rank": 109,
-      "final_score": 6.4974,
-      "episodes": [
-        40
-      ],
-      "ai_hook_strength": 6.8,
-      "ai_cliffhanger_strength": 6.0,
-      "ai_standalone_clarity": 5.5,
-      "ai_emotional_impact": 6.0,
-      "explanation": "MOCK ANALYSIS (Ep40): This segment was selected by the mock client. Replace with real LLM for actual analysis."
-    },
-    {
-      "candidate_id": "PROMO_EP28_SC1_124",
-      "rank": 108,
-      "final_score": 6.5075,
-      "episodes": [
-        28
-      ],
-      "ai_hook_strength": 6.8,
-      "ai_cliffhanger_strength": 6.6,
-      "ai_standalone_clarity": 5.1,
-      "ai_emotional_impact": 6.0,
-      "explanation": "MOCK ANALYSIS (Ep28): This segment was selected by the mock client. Replace with real LLM for actual analysis."
-    },
-    {
-      "candidate_id": "PROMO_EP35_SC3_152",
-      "rank": 107,
-      "final_score": 6.5084,
-      "episodes": [
-        35
-      ],
-      "ai_hook_strength": 6.5,
-      "ai_cliffhanger_strength": 6.0,
-      "ai_standalone_clarity": 6.3,
-      "ai_emotional_impact": 6.0,
-      "explanation": "MOCK ANALYSIS (Ep35): This segment was selected by the mock client. Replace with real LLM for actual analysis."
-    },
-    {
-      "candidate_id": "PROMO_EP31_SC1_140",
-      "rank": 106,
-      "final_score": 6.5178,
-      "episodes": [
-        31
-      ],
-      "ai_hook_strength": 6.5,
-      "ai_cliffhanger_strength": 6.0,
-      "ai_standalone_clarity": 6.3,
-      "ai_emotional_impact": 6.0,
-      "explanation": "MOCK ANALYSIS (Ep31): This segment was selected by the mock client. Replace with real LLM for actual analysis."
-    },
-    {
-      "candidate_id": "PROMO_EP37_SC2_160",
-      "rank": 105,
-      "final_score": 6.5201,
-      "episodes": [
-        37
-      ],
-      "ai_hook_strength": 7.3,
-      "ai_cliffhanger_strength": 6.0,
-      "ai_standalone_clarity": 5.5,
-      "ai_emotional_impact": 6.7,
-      "explanation": "MOCK ANALYSIS (Ep37): This segment was selected by the mock client. Replace with real LLM for actual analysis."
-    },
-    {
-      "candidate_id": "PROMO_EP41_SC1_176",
-      "rank": 104,
-      "final_score": 6.5313,
-      "episodes": [
-        41
-      ],
-      "ai_hook_strength": 7.6,
-      "ai_cliffhanger_strength": 6.0,
-      "ai_standalone_clarity": 5.1,
-      "ai_emotional_impact": 6.0,
-      "explanation": "MOCK ANALYSIS (Ep41): This segment was selected by the mock client. Replace with real LLM for actual analysis."
-    },
-    {
-      "candidate_id": "PROMO_EP22_SC2_101",
-      "rank": 103,
-      "final_score": 6.5486,
-      "episodes": [
-        22
-      ],
-      "ai_hook_strength": 7.4,
-      "ai_cliffhanger_strength": 6.0,
-      "ai_standalone_clarity": 5.5,
-      "ai_emotional_impact": 6.0,
-      "explanation": "MOCK ANALYSIS (Ep22): This segment was selected by the mock client. Replace with real LLM for actual analysis."
-    },
-    {
-      "candidate_id": "PROMO_EP49_SC1_213",
-      "rank": 102,
-      "final_score": 6.5521,
-      "episodes": [
-        49
-      ],
-      "ai_hook_strength": 6.8,
-      "ai_cliffhanger_strength": 6.0,
-      "ai_standalone_clarity": 6.3,
-      "ai_emotional_impact": 6.0,
-      "explanation": "MOCK ANALYSIS (Ep49): This segment was selected by the mock client. Replace with real LLM for actual analysis."
-    },
-    {
-      "candidate_id": "PROMO_EP40_SC4_175",
-      "rank": 101,
-      "final_score": 6.5552,
-      "episodes": [
-        40
-      ],
-      "ai_hook_strength": 7.1,
-      "ai_cliffhanger_strength": 6.0,
-      "ai_standalone_clarity": 5.5,
-      "ai_emotional_impact": 6.0,
-      "explanation": "MOCK ANALYSIS (Ep40): This segment was selected by the mock client. Replace with real LLM for actual analysis."
-    },
-    {
-      "candidate_id": "PROMO_EP06_SC2_022",
-      "rank": 100,
-      "final_score": 6.5598,
+      "candidate_id": "PROMO_EP06_SC2_023",
+      "rank": 60,
+      "final_score": 5.0625,
       "episodes": [
         6
       ],
-      "ai_hook_strength": 6.5,
-      "ai_cliffhanger_strength": 6.0,
-      "ai_standalone_clarity": 6.3,
-      "ai_emotional_impact": 6.35,
-      "explanation": "MOCK ANALYSIS (Ep6): This segment was selected by the mock client. Replace with real LLM for actual analysis."
+      "ai_hook_strength": 4.5,
+      "ai_cliffhanger_strength": 2.0,
+      "ai_standalone_clarity": 6.5,
+      "ai_emotional_impact": 7.5,
+      "explanation": "The segment fails as a cold-traffic promo because it lacks a strong opening hook and ends on a resolved, peaceful note rather than a cliffhanger. While the emotional intimacy is high, the absence of narrative tension or a 'what happens next' driver makes it unlikely to convert viewers into episode watchers."
     },
     {
-      "candidate_id": "PROMO_EP47_SC4_204",
-      "rank": 99,
-      "final_score": 6.5611,
+      "candidate_id": "PROMO_EP08_SC1_030",
+      "rank": 61,
+      "final_score": 5.0625,
       "episodes": [
-        47
+        8
       ],
-      "ai_hook_strength": 7.7,
-      "ai_cliffhanger_strength": 6.0,
-      "ai_standalone_clarity": 5.5,
-      "ai_emotional_impact": 6.0,
-      "explanation": "MOCK ANALYSIS (Ep47): This segment was selected by the mock client. Replace with real LLM for actual analysis."
+      "ai_hook_strength": 4.5,
+      "ai_cliffhanger_strength": 3.0,
+      "ai_standalone_clarity": 6.5,
+      "ai_emotional_impact": 5.5,
+      "explanation": "The opening lacks a strong visual or verbal hook for cold traffic, relying on a quiet, somber moment that may not stop the scroll. The ending is a soft, humorous beat rather than a narrative cliffhanger, failing to create urgency to watch the next episode. While the chemistry is present, the pacing is too slow and the stakes too low for a high-conversion promo cut."
     },
     {
       "candidate_id": "PROMO_EP19_SC1_081",
-      "rank": 98,
-      "final_score": 6.5765,
+      "rank": 59,
+      "final_score": 5.1015,
       "episodes": [
         19
       ],
-      "ai_hook_strength": 7.3,
-      "ai_cliffhanger_strength": 6.0,
-      "ai_standalone_clarity": 5.5,
-      "ai_emotional_impact": 6.0,
-      "explanation": "MOCK ANALYSIS (Ep19): This segment was selected by the mock client. Replace with real LLM for actual analysis."
+      "ai_hook_strength": 4.5,
+      "ai_cliffhanger_strength": 2.0,
+      "ai_standalone_clarity": 6.5,
+      "ai_emotional_impact": 7.5,
+      "explanation": "The promo fails as a cold traffic converter because it lacks a high-stakes hook or a narrative cliffhanger; the ending is a quiet, resolved farewell rather than a tension-inducing reveal. While the emotional tone of loss is clear, the absence of the 'Duke' secret or the threat to his mother leaves the viewer without a compelling reason to continue watching."
     },
     {
-      "candidate_id": "PROMO_EP07_SC3_028",
-      "rank": 97,
-      "final_score": 6.5841,
+      "candidate_id": "PROMO_EP08_SC1_031",
+      "rank": 58,
+      "final_score": 5.1638,
+      "episodes": [
+        8
+      ],
+      "ai_hook_strength": 4.5,
+      "ai_cliffhanger_strength": 3.0,
+      "ai_standalone_clarity": 5.5,
+      "ai_emotional_impact": 7.5,
+      "explanation": "The clip lacks a strong cold-start hook, opening with a mid-conversation line that fails to immediately grab attention. While the emotional bonding is sweet, the ending resolves the tension rather than creating a cliffhanger, making it less effective for driving immediate engagement from new viewers."
+    },
+    {
+      "candidate_id": "PROMO_EP17_SC2_070",
+      "rank": 57,
+      "final_score": 5.3065,
+      "episodes": [
+        17
+      ],
+      "ai_hook_strength": 4.5,
+      "ai_cliffhanger_strength": 3.0,
+      "ai_standalone_clarity": 5.5,
+      "ai_emotional_impact": 8.5,
+      "explanation": "The segment lacks a strong cold-start hook, opening with a static intimate close-up rather than a high-stakes visual or conflict. While the emotional resonance is high and the dialogue is sweet, the ending resolves into a peaceful embrace rather than leaving a narrative question or tension that drives clicks."
+    },
+    {
+      "candidate_id": "PROMO_EP17_SC1_067",
+      "rank": 56,
+      "final_score": 5.3754,
+      "episodes": [
+        17
+      ],
+      "ai_hook_strength": 4.5,
+      "ai_cliffhanger_strength": 2.0,
+      "ai_standalone_clarity": 7.0,
+      "ai_emotional_impact": 8.5,
+      "explanation": "The promo fails as a cold traffic hook because the opening 3 seconds are a slow, static wide shot of a ruined garden without immediate visual or narrative conflict. While the emotional payoff of the protective vow is strong, the lack of a cliffhanger or unresolved tension at the end makes it feel like a complete scene rather than a teaser, reducing its effectiveness for stopping the scroll."
+    },
+    {
+      "candidate_id": "PROMO_EP07_SC1_025",
+      "rank": 55,
+      "final_score": 5.3863,
       "episodes": [
         7
       ],
-      "ai_hook_strength": 7.4,
-      "ai_cliffhanger_strength": 6.0,
-      "ai_standalone_clarity": 5.1,
-      "ai_emotional_impact": 6.35,
-      "explanation": "MOCK ANALYSIS (Ep7): This segment was selected by the mock client. Replace with real LLM for actual analysis."
+      "ai_hook_strength": 4.5,
+      "ai_cliffhanger_strength": 2.0,
+      "ai_standalone_clarity": 8.5,
+      "ai_emotional_impact": 7.0,
+      "explanation": "The promo clearly establishes the class conflict and Juliana's dignity, but it fails as a cold-traffic hook because it lacks the promised 'broken soldier' payoff. The scene ends on a static dialogue beat rather than the high-tension moment of the husband's arrival, leaving the viewer without the satisfying reversal or suspense needed to click through."
     },
     {
-      "candidate_id": "PROMO_EP29_SC1_127",
-      "rank": 96,
-      "final_score": 6.5849,
+      "candidate_id": "PROMO_EP17_SC2_069",
+      "rank": 54,
+      "final_score": 5.5174,
       "episodes": [
-        29
+        17
       ],
-      "ai_hook_strength": 6.8,
-      "ai_cliffhanger_strength": 6.6,
-      "ai_standalone_clarity": 5.8,
-      "ai_emotional_impact": 6.0,
-      "explanation": "MOCK ANALYSIS (Ep29): This segment was selected by the mock client. Replace with real LLM for actual analysis."
+      "ai_hook_strength": 4.5,
+      "ai_cliffhanger_strength": 3.0,
+      "ai_standalone_clarity": 6.5,
+      "ai_emotional_impact": 8.5,
+      "explanation": "The segment lacks a strong cold-traffic hook as it opens mid-scene with quiet dialogue rather than high-stakes action or a visual shock. While the emotional intimacy and 'enemies-to-lovers' tension are high, the ending resolves into a tender embrace rather than leaving a narrative cliffhanger, reducing its effectiveness for driving immediate episode completion."
     },
     {
-      "candidate_id": "PROMO_EP26_SC1_118",
-      "rank": 95,
-      "final_score": 6.5893,
+      "candidate_id": "PROMO_EP09_SC1_033",
+      "rank": 53,
+      "final_score": 5.7537,
       "episodes": [
-        26
+        9
       ],
-      "ai_hook_strength": 6.8,
-      "ai_cliffhanger_strength": 6.0,
-      "ai_standalone_clarity": 6.3,
-      "ai_emotional_impact": 6.0,
-      "explanation": "MOCK ANALYSIS (Ep26): This segment was selected by the mock client. Replace with real LLM for actual analysis."
+      "ai_hook_strength": 4.5,
+      "ai_cliffhanger_strength": 3.0,
+      "ai_standalone_clarity": 8.5,
+      "ai_emotional_impact": 7.5,
+      "explanation": "The scene lacks a strong visual or auditory hook in the first 3 seconds, starting with a static shot of herb grinding rather than immediate conflict. While the emotional stakes of saving a child are clear and compelling, the ending resolves the immediate tension with a promise of healing rather than leaving a narrative cliffhanger, reducing its effectiveness as a cold-traffic conversion tool."
     },
     {
-      "candidate_id": "PROMO_EP47_SC3_203",
-      "rank": 94,
-      "final_score": 6.5912,
+      "candidate_id": "PROMO_EP21_SC3_096",
+      "rank": 52,
+      "final_score": 5.8375,
       "episodes": [
-        47
+        21
       ],
-      "ai_hook_strength": 7.7,
-      "ai_cliffhanger_strength": 6.0,
-      "ai_standalone_clarity": 5.1,
-      "ai_emotional_impact": 6.0,
-      "explanation": "MOCK ANALYSIS (Ep47): This segment was selected by the mock client. Replace with real LLM for actual analysis."
+      "ai_hook_strength": 4.5,
+      "ai_cliffhanger_strength": 3.0,
+      "ai_standalone_clarity": 8.5,
+      "ai_emotional_impact": 8.0,
+      "explanation": "The segment is a self-contained emotional beat that clearly establishes the protagonist's competence and kindness, but it lacks the high-stakes conflict or narrative mystery required for a cold-traffic hook. The ending resolves the immediate tension (the boy is saved) rather than creating a cliffhanger, making it feel like a complete scene rather than a teaser for the next episode's plot about the Dowager Duchess."
     },
     {
-      "candidate_id": "PROMO_EP14_SC1_057",
-      "rank": 93,
-      "final_score": 6.5991,
+      "candidate_id": "PROMO_EP06_SC1_020",
+      "rank": 51,
+      "final_score": 5.9449,
       "episodes": [
-        14
+        6
       ],
-      "ai_hook_strength": 6.5,
+      "ai_hook_strength": 4.5,
+      "ai_cliffhanger_strength": 5.0,
+      "ai_standalone_clarity": 6.0,
+      "ai_emotional_impact": 7.5,
+      "explanation": "The visual contrast of a wedding gown in the mud provides a strong aesthetic hook, but the pacing is slow for a cold traffic promo, lacking a sharp verbal hook in the first 3 seconds. The ending resolves the immediate tension of the walk rather than escalating it, making it feel more like a scene conclusion than a cliffhanger. While emotionally resonant, it risks losing impatient viewers before the 'Duke' reveal or major conflict is established."
+    },
+    {
+      "candidate_id": "PROMO_EP06_SC2_022",
+      "rank": 50,
+      "final_score": 6.1223,
+      "episodes": [
+        6
+      ],
+      "ai_hook_strength": 4.5,
+      "ai_cliffhanger_strength": 5.0,
+      "ai_standalone_clarity": 6.5,
+      "ai_emotional_impact": 8.5,
+      "explanation": "The segment lacks a strong visual hook for cold traffic, relying on atmospheric entry rather than immediate conflict or mystery. However, the emotional core is strong, with the bride's vulnerability and the husband's humble response creating a compelling character dynamic that suggests a deeper story."
+    },
+    {
+      "candidate_id": "PROMO_EP22_SC2_101",
+      "rank": 49,
+      "final_score": 6.2986,
+      "episodes": [
+        22
+      ],
+      "ai_hook_strength": 4.5,
       "ai_cliffhanger_strength": 6.0,
-      "ai_standalone_clarity": 6.3,
-      "ai_emotional_impact": 6.35,
-      "explanation": "MOCK ANALYSIS (Ep14): This segment was selected by the mock client. Replace with real LLM for actual analysis."
+      "ai_standalone_clarity": 7.5,
+      "ai_emotional_impact": 6.5,
+      "explanation": "The segment effectively establishes the high-stakes tension of the infiltration through the Housekeeper's aggressive interrogation, creating a clear 'cat and mouse' dynamic. However, the opening hook is weak for cold traffic as it lacks immediate visual or verbal impact, relying on context that a new viewer may not possess. The ending provides a decent directional cliffhanger but lacks the visceral shock or emotional payoff needed to maximize conversion."
+    },
+    {
+      "candidate_id": "PROMO_EP20_SC2_088",
+      "rank": 48,
+      "final_score": 6.4119,
+      "episodes": [
+        20
+      ],
+      "ai_hook_strength": 4.5,
+      "ai_cliffhanger_strength": 6.0,
+      "ai_standalone_clarity": 7.5,
+      "ai_emotional_impact": 8.0,
+      "explanation": "The segment establishes clear antagonists and high-stakes betrayal, but the opening hook is weak as it begins with mundane dialogue rather than a visual or verbal shock. The ending provides a strong promise of power and conflict, but lacks a specific immediate threat or twist to maximize retention for cold traffic."
+    },
+    {
+      "candidate_id": "PROMO_EP22_SC1_099",
+      "rank": 47,
+      "final_score": 6.4157,
+      "episodes": [
+        22
+      ],
+      "ai_hook_strength": 4.5,
+      "ai_cliffhanger_strength": 6.0,
+      "ai_standalone_clarity": 7.5,
+      "ai_emotional_impact": 7.0,
+      "explanation": "The promo effectively establishes the high-stakes premise of a noblewoman risking her life in disguise to save a dying relative, which provides clear narrative context for cold traffic. However, the opening visual is relatively slow and lacks an immediate 'pattern interrupt' or shocking visual hook to stop the scroll in the first 3 seconds. The ending provides a solid transition into the next scene but relies on the established tension rather than a new, sharp cliffhanger."
     }
   ],
   "known_system_limitations": [

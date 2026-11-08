@@ -212,11 +212,12 @@ class OpenAIClient(LLMClient):
             "messages": [
                 {
                     "role": "system",
-                    "content": "You are an expert microdrama screenplay analyst. Always respond in valid JSON format only."
+                    "content": "You are an expert microdrama screenplay analyst. Keep reasoning brief and concise. Always respond in valid JSON format only."
                 },
                 {"role": "user", "content": prompt}
             ],
             "temperature": self.temperature,
+            "max_tokens": 350,
             "response_format": {"type": "json_object"},
         }
         data = json.dumps(payload).encode("utf-8")
@@ -254,8 +255,8 @@ class GroqClient(LLMClient):
     Groq's OpenAI-compatible completions endpoint without requiring external SDKs.
     """
 
-    def __init__(self, api_key: str, model: str = "llama-3.3-70b-versatile", **kwargs):
-        kwargs.setdefault("request_delay", 1.0)
+    def __init__(self, api_key: str, model: str = "qwen/qwen3.8-27b", **kwargs):
+        kwargs.setdefault("request_delay", 1.5)
         super().__init__(model=model, **kwargs)
         self.provider = "groq"
         self.api_key = api_key
@@ -271,11 +272,12 @@ class GroqClient(LLMClient):
             "messages": [
                 {
                     "role": "system",
-                    "content": "You are an expert microdrama screenplay analyst. Always respond in valid JSON format only."
+                    "content": "You are an expert microdrama screenplay analyst. Keep reasoning brief and concise. Always respond in valid JSON format only."
                 },
                 {"role": "user", "content": prompt}
             ],
             "temperature": self.temperature,
+            "max_tokens": 350,
             "response_format": {"type": "json_object"},
         }
         data = json.dumps(payload).encode("utf-8")
@@ -290,17 +292,36 @@ class GroqClient(LLMClient):
             method="POST",
         )
 
-        try:
-            with urllib.request.urlopen(req, timeout=30) as resp:
-                res_data = json.loads(resp.read().decode("utf-8"))
-                return res_data["choices"][0]["message"]["content"] or ""
-        except urllib.error.HTTPError as e:
-            err_body = e.read().decode("utf-8", errors="replace")
-            logger.error(f"Groq API HTTP Error {e.code}: {err_body}")
-            raise RuntimeError(f"Groq API Error ({e.code}): {err_body}")
-        except Exception as e:
-            logger.error(f"Groq API Request failed: {e}")
-            raise
+        for attempt in range(8):
+            try:
+                with urllib.request.urlopen(req, timeout=40) as resp:
+                    res_data = json.loads(resp.read().decode("utf-8"))
+                    return res_data["choices"][0]["message"]["content"] or ""
+            except urllib.error.HTTPError as e:
+                err_body = e.read().decode("utf-8", errors="replace")
+                logger.warning(f"Groq API HTTP Error {e.code} (attempt {attempt+1}/8): {err_body[:180]}")
+                if e.code == 429:
+                    import re
+                    wait_sec = 8.0
+                    min_match = re.search(r'try again in (?:(\d+)m)?([\d\.]+)s', err_body)
+                    if min_match:
+                        mins = float(min_match.group(1) or 0)
+                        secs = float(min_match.group(2) or 0)
+                        wait_sec = mins * 60 + secs + 2.0
+                    elif "TPD" in err_body or "tokens per day" in err_body:
+                        wait_sec = 60.0
+                    logger.warning(f"Groq rate limit reached (429). Waiting {wait_sec:.1f}s before retry...")
+                    time.sleep(wait_sec)
+                    continue
+                if attempt == 7:
+                    raise RuntimeError(f"Groq API Error ({e.code}): {err_body}")
+                time.sleep(3.0)
+            except Exception as e:
+                logger.error(f"Groq API Request failed: {e}")
+                if attempt == 7:
+                    raise
+                time.sleep(3.0)
+        raise RuntimeError("Groq API calls exhausted all retries.")
 
 
 # ---------------------------------------------------------------------------
@@ -416,7 +437,7 @@ def create_llm_client(config: dict, cache_dir: Optional[Path] = None) -> LLMClie
                 "GROQ_API_KEY environment variable not set. "
                 "Add it to your .env file or set provider=mock in config.yaml."
             )
-        return GroqClient(api_key=api_key, model=model or "llama-3.3-70b-versatile", **kwargs)
+        return GroqClient(api_key=api_key, model=model or "qwen/qwen3.8-27b", **kwargs)
 
     elif provider == "mock":
         return MockLLMClient(**kwargs)

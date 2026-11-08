@@ -233,73 +233,33 @@ def _build_analysis_prompt(window: CandidateWindow, episode: Episode) -> str:
 
     window_text = "\n".join(event_lines)
 
-    # Include episode context
+    # Concise, high-density prompt to minimize token footprint and eliminate rate limits
     prompt = textwrap.dedent(f"""
-    You are a promo editor for a streaming microdrama platform. Your task is to evaluate whether a specific screenplay segment makes an excellent promotional clip.
-
-    ## SHOW CONTEXT
+    Evaluate microdrama candidate promo cut (20-60s) for cold social traffic.
     Show: "I Married a Broken Soldier. He was a Duke"
-    Genre: Romantic period drama microdrama
-    
-    Episode {window.episode_number} Logline: {episode.logline}
-    Continuity: {episode.continuity_notes}
-    
-    ## CANDIDATE SEGMENT
-    Scene {window.scene_number}: {window.scene_heading}
-    Timestamps: {window.start_ts} → {window.end_ts} (scene-relative, {window.duration_sec:.1f}s)
-    
-    ## SEGMENT CONTENT
+    Episode {window.episode_number}: {episode.logline}
+    Scene {window.scene_number}: {window.scene_heading} ({window.start_ts}–{window.end_ts}, {window.duration_sec:.1f}s)
+
+    SEGMENT CONTENT:
     {window_text}
-    
-    ## EVALUATION TASK
-    Assess this segment as a 20–60 second promotional clip. Score each dimension 1–10.
-    
-    ### Scoring Rubric:
-    
-    **hook_strength (1–10):**
-    Does the segment open with something that immediately grabs attention within the first 3 seconds?
-    10 = visceral shock/betrayal/threat that demands continued watching
-    1 = calm scene establishment with no immediate tension
-    
-    **cliffhanger_strength (1–10):**
-    IMPORTANT: Do NOT score based solely on SOUND FX "cliffhanger" labels or ominous music descriptions.
-    Analyse the NARRATIVE SITUATION at the ending: is the core conflict unresolved? Does the viewer need to know what happens next?
-    10 = unresolved direct threat to protagonist with no path forward visible
-    5 = scene ends in a moment of change, but the stakes are unclear
-    1 = situation is resolved — viewer has closure
-    
-    **standalone_clarity (1–10):**
-    Can a viewer who has NEVER seen the show understand who these people are, what they want, and why it matters — within this clip alone?
-    10 = complete emotional context, no prior knowledge needed
-    5 = interesting but requires some backstory
-    1 = incomprehensible without watching previous episodes
-    
-    **emotional_impact (1–10):**
-    How powerful is the emotional experience of this segment? Consider: betrayal, fear, longing, rage, desperation, triumph.
-    10 = genuinely gut-punching, would make viewers feel something
-    1 = flat, procedural, no emotional stakes
-    
-    ## RESPONSE FORMAT
-    Respond ONLY with valid JSON. No commentary outside the JSON block.
-    
-    ```json
+
+    Score 1-10:
+    - hook_strength: 3s opening attention grab
+    - cliffhanger_strength: unresolved narrative tension at ending (not just SFX)
+    - standalone_clarity: can first-time viewer follow conflict
+    - emotional_impact: dramatic emotional stakes
+
+    Respond ONLY in valid JSON:
     {{
       "hook_strength": <1–10 float>,
-      "hook_text": "<exact quote or description from segment that IS the hook>",
-      "hook_reason": "<why this is or isn't a strong hook — 1–2 sentences>",
+      "hook_text": "<exact quote from opening>",
       "cliffhanger_strength": <1–10 float>,
-      "cliffhanger_text": "<exact final moment or last significant line/action>",
-      "cliffhanger_reason": "<explain the NARRATIVE SITUATION at the end — is it unresolved? why? — 1–2 sentences>",
+      "cliffhanger_text": "<exact quote from ending>",
       "standalone_clarity": <1–10 float>,
-      "standalone_reason": "<can a first-time viewer follow this? — 1 sentence>",
       "emotional_impact": <1–10 float>,
-      "emotional_reason": "<what emotion does this evoke and how strongly? — 1 sentence>",
-      "explanation": "<overall assessment: why this segment does or does not work as a promo — 2–3 sentences>",
-      "is_good_promo": <true|false>,
-      "suggested_start_ts": "<MM:SS.ss or null — only suggest a different start if the current one is clearly wrong>",
-      "suggested_end_ts": "<MM:SS.ss or null — only suggest a different end if the current one is clearly wrong>"
+      "explanation": "<2-3 sentences evaluating why this promo converts cold traffic>",
+      "is_good_promo": <true|false>
     }}
-    ```
     """).strip()
 
     return prompt
@@ -361,79 +321,90 @@ class PromoAnalyzer:
         logger.debug(f"Calling LLM for {cid}")
         response = self.llm.call(prompt, expect_json=True)
 
+        is_mock = getattr(self.llm, "provider", "") == "mock" or "mock" in str(getattr(self.llm, "model", "")).lower()
+
         if response.get("error"):
+            if not is_mock:
+                logger.error(f"{cid}: LLM evaluation failed with error: {response['error']}. Refusing silent fallback to mock.")
+                raise RuntimeError(f"Real LLM evaluation failed for candidate {cid}: {response['error']}")
             logger.warning(f"{cid}: LLM error — {response['error']}")
-            # Still create candidate with None scores (will be scored by rules only)
             parsed = {}
         else:
             parsed = response.get("parsed") or {}
 
-        # --- Extract LLM-generated scores and ground with screenplay features ---
+        # --- Extract LLM-generated scores ---
         ai_hook_raw       = self._safe_score(parsed.get("hook_strength"))
         ai_cliff_raw      = self._safe_score(parsed.get("cliffhanger_strength"))
         ai_standalone_raw = self._safe_score(parsed.get("standalone_clarity"))
         ai_emotional_raw  = self._safe_score(parsed.get("emotional_impact"))
         ai_explanation    = parsed.get("explanation", "")
 
-        # Grounding: Compute real continuous feature adjustments from window events
-        dlg_events = [e for e in window.all_events if e.event_type == "DIALOGUE"]
-        first_dlg  = dlg_events[0] if dlg_events else None
-        last_dlg   = dlg_events[-1] if dlg_events else None
-
-        # 1. Hook calibration
-        h_base = ai_hook_raw if (ai_hook_raw is not None and ai_hook_raw != 8.5) else 7.4
-        if first_dlg:
-            onset = first_dlg.start_sec - window.start_sec
-            if onset <= 1.5:
-                h_base += 0.9
-            elif onset <= 3.5:
-                h_base += 0.5
-            if first_dlg.emotion:
-                em_l = first_dlg.emotion.lower()
-                if any(w in em_l for w in ("cold", "command", "urgent", "screaming", "terrified", "alarmed", "defiant")):
-                    h_base += 0.6
-                elif any(w in em_l for w in ("whisper", "gentle", "pleading", "trembling")):
-                    h_base += 0.3
-            if 15 <= len(first_dlg.text) <= 95:
-                h_base += 0.3
+        if not is_mock and ai_hook_raw is not None and ai_cliff_raw is not None:
+            # Genuine real LLM scores direct from model evaluation
+            ai_hook = round(float(ai_hook_raw), 2)
+            ai_cliff = round(float(ai_cliff_raw), 2)
+            ai_standalone = round(float(ai_standalone_raw if ai_standalone_raw is not None else 7.0), 2)
+            ai_emotional = round(float(ai_emotional_raw if ai_emotional_raw is not None else 7.5), 2)
         else:
-            h_base -= 0.5
-        ai_hook = round(max(5.0, min(9.8, h_base)), 2)
+            # Fallback heuristic calibration for offline/mock testing
+            dlg_events = [e for e in window.all_events if e.event_type == "DIALOGUE"]
+            first_dlg  = dlg_events[0] if dlg_events else None
+            last_dlg   = dlg_events[-1] if dlg_events else None
 
-        # 2. Cliffhanger calibration
-        c_base = ai_cliff_raw if (ai_cliff_raw is not None and ai_cliff_raw != 8.0) else 7.1
-        if window.has_cliffhanger_sfx:
-            c_base += 1.1
-        if last_dlg:
-            txt_s = last_dlg.text.strip()
-            if txt_s.endswith("?") or txt_s.endswith("!"):
-                c_base += 0.6
-            elif txt_s.endswith("...") or txt_s.endswith("—"):
-                c_base += 0.7
-            if last_dlg.emotion and any(w in last_dlg.emotion.lower() for w in ("desperate", "defiant", "grave", "threat", "cold")):
-                c_base += 0.5
-        ai_cliff = round(max(5.0, min(9.8, c_base)), 2)
+            # 1. Hook calibration
+            h_base = ai_hook_raw if ai_hook_raw is not None else 7.4
+            if first_dlg:
+                onset = first_dlg.start_sec - window.start_sec
+                if onset <= 1.5:
+                    h_base += 0.9
+                elif onset <= 3.5:
+                    h_base += 0.5
+                if first_dlg.emotion:
+                    em_l = first_dlg.emotion.lower()
+                    if any(w in em_l for w in ("cold", "command", "urgent", "screaming", "terrified", "alarmed", "defiant")):
+                        h_base += 0.6
+                    elif any(w in em_l for w in ("whisper", "gentle", "pleading", "trembling")):
+                        h_base += 0.3
+                if 15 <= len(first_dlg.text) <= 95:
+                    h_base += 0.3
+            else:
+                h_base -= 0.5
+            ai_hook = round(max(5.0, min(9.8, h_base)), 2)
 
-        # 3. Standalone clarity calibration
-        s_base = ai_standalone_raw if (ai_standalone_raw is not None and ai_standalone_raw != 7.5) else 7.2
-        speakers = {e.speaker for e in dlg_events if e.speaker}
-        if len(speakers) == 2:
-            s_base += 0.8
-        elif len(speakers) == 1:
-            s_base += 0.3
-        elif len(speakers) > 3:
-            s_base -= 0.4
-        if window.dialogue_density >= 0.55:
-            s_base += 0.4
-        ai_standalone = round(max(5.0, min(9.6, s_base)), 2)
+            # 2. Cliffhanger calibration
+            c_base = ai_cliff_raw if ai_cliff_raw is not None else 7.1
+            if window.has_cliffhanger_sfx:
+                c_base += 1.1
+            if last_dlg:
+                txt_s = last_dlg.text.strip()
+                if txt_s.endswith("?") or txt_s.endswith("!"):
+                    c_base += 0.6
+                elif txt_s.endswith("...") or txt_s.endswith("—"):
+                    c_base += 0.7
+                if last_dlg.emotion and any(w in last_dlg.emotion.lower() for w in ("desperate", "defiant", "grave", "threat", "cold")):
+                    c_base += 0.5
+            ai_cliff = round(max(5.0, min(9.8, c_base)), 2)
 
-        # 4. Emotional impact calibration
-        e_base = ai_emotional_raw if (ai_emotional_raw is not None and ai_emotional_raw != 8.0) else 7.0
-        all_text = " ".join([e.text for e in window.all_events]).lower()
-        conflict_kw = ("soldier", "duke", "marry", "wedding", "betrayal", "scars", "fire", "kill", "dead", "honor", "blade", "blood")
-        kw_hits = sum(1 for kw in conflict_kw if kw in all_text)
-        e_base += min(1.4, kw_hits * 0.35)
-        ai_emotional = round(max(5.0, min(9.7, e_base)), 2)
+            # 3. Standalone clarity calibration
+            s_base = ai_standalone_raw if ai_standalone_raw is not None else 7.2
+            speakers = {e.speaker for e in dlg_events if e.speaker}
+            if len(speakers) == 2:
+                s_base += 0.8
+            elif len(speakers) == 1:
+                s_base += 0.3
+            elif len(speakers) > 3:
+                s_base -= 0.4
+            if window.dialogue_density >= 0.55:
+                s_base += 0.4
+            ai_standalone = round(max(5.0, min(9.6, s_base)), 2)
+
+            # 4. Emotional impact calibration
+            e_base = ai_emotional_raw if ai_emotional_raw is not None else 7.0
+            all_text = " ".join([e.text for e in window.all_events]).lower()
+            conflict_kw = ("soldier", "duke", "marry", "wedding", "betrayal", "scars", "fire", "kill", "dead", "honor", "blade", "blood")
+            kw_hits = sum(1 for kw in conflict_kw if kw in all_text)
+            e_base += min(1.4, kw_hits * 0.35)
+            ai_emotional = round(max(5.0, min(9.7, e_base)), 2)
 
         # --- Extract hook and cliffhanger text from LLM (verify against source) ---
         # We use LLM-provided text as the DESCRIPTION, but we validate it exists in source
