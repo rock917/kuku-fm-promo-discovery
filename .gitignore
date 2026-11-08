@@ -18,6 +18,8 @@ build/
 # Screenplay archives
 *.zip
 *.pdf
+!solution_document.pdf
+!outputs_bundle.zip
 
 # Outputs (regenerate with pipeline)
 # outputs/ — keep outputs in repo for submission
